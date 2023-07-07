@@ -6,11 +6,11 @@ using UnityEngine.UI;
 
 public class LevelDescription : MonoBehaviour
 {
-    /*    enum Levels
-       {
-           First,
-           Second
-       } */
+    [SerializeField]
+    private TMP_Text descriptionLevelText;
+
+    [SerializeField, TextArea]
+    private string[] descriptions;
 
     private TMP_Text levelTitle;
 
@@ -21,6 +21,16 @@ public class LevelDescription : MonoBehaviour
 
     void OnEnable()
     {
-        levelTitle.text = Buttons.levelName;
+        switch (Buttons.levelTitle)
+        {
+            case "Уровень 1":
+                levelTitle.text = Buttons.levelTitle;
+                descriptionLevelText.text = descriptions[0];
+                break;
+            case "Уровень 2":
+                levelTitle.text = Buttons.levelTitle;
+                descriptionLevelText.text = descriptions[1];
+                break;
+        }
     }
 }

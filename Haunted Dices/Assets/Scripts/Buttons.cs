@@ -8,14 +8,17 @@ using UnityEngine.EventSystems;
 
 public class Buttons : MonoBehaviour
 {
-    public static string levelName;
+    public static int levelCounter = 0;
+    public static string levelTitle;
     private bool isLevelSelectOpened;
     private GameObject panelAboutGame;
     private GameObject levelSelect;
+    private GameObject settings;
     private GameObject levelDescription;
 
     void Awake()
     {
+        settings = transform.Find("Settings").gameObject;
         levelDescription = transform.Find("LevelDescription").gameObject;
         levelSelect = transform.Find("LevelSelect").gameObject;
         panelAboutGame = transform.Find("PanelAbout").gameObject;
@@ -33,14 +36,22 @@ public class Buttons : MonoBehaviour
         isLevelSelectOpened = levelSelect.activeSelf;
         if (isLevelSelectOpened)
         {
+            levelTitle = EventSystem.current.currentSelectedGameObject.transform
+                .Find("Text (TMP)")
+                .gameObject.GetComponent<TMP_Text>()
+                .text;
             levelDescription.SetActive(true);
-            levelName = EventSystem.current.currentSelectedGameObject.name;
         }
         levelSelect.SetActive(true);
     }
 
     public void BackToMenu()
     {
+        if (settings.activeSelf)
+        {
+            settings.SetActive(false);
+            return;
+        }
         if (levelDescription.activeSelf)
         {
             levelDescription.SetActive(false);
@@ -50,7 +61,10 @@ public class Buttons : MonoBehaviour
         levelSelect.SetActive(!levelSelect.activeSelf);
     }
 
-    public void ShowSettings() { }
+    public void ShowSettings()
+    {
+        settings.SetActive(true);
+    }
 
     public void ShowPanelAboutGame()
     {
