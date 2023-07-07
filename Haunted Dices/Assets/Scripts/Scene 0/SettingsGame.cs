@@ -10,7 +10,7 @@ public class SettingsGame : MonoBehaviour
     private Slider sliderSoundEffects;
 
     [SerializeField]
-    private Image imgFullScreen;
+    private Toggle toggleFullScreen;
 
     [SerializeField]
     private Slider sliderMusic;
@@ -20,6 +20,7 @@ public class SettingsGame : MonoBehaviour
 
     void Start()
     {
+        Screen.fullScreen = isBtnFullScreen;
         toggleSound.isOn = !isSoundOn;
     }
 
@@ -30,20 +31,13 @@ public class SettingsGame : MonoBehaviour
 
     public void SoundMute()
     {
-        if (toggleSound.isOn)
-            AudioListener.pause = true;
-        else
-            AudioListener.pause = false;
+        AudioListener.pause = !AudioListener.pause;
         isSoundOn = !isSoundOn;
     }
 
     public void ChangeScreenState()
     {
         Screen.fullScreen = !Screen.fullScreen;
-        if (isBtnFullScreen)
-            imgFullScreen.color = Color.white;
-        else
-            imgFullScreen.color = Color.black;
-        isBtnFullScreen = !isBtnFullScreen;
+        isBtnFullScreen = Screen.fullScreen;
     }
 }
