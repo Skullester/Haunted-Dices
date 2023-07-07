@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class Buttons : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private GameObject panelAboutGame;
+
+    void Awake()
     {
-        
+        panelAboutGame = transform.Find("PanelAbout").gameObject;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start() { }
+
+    public void ExitGame()
     {
-        
+        Application.Quit();
+    }
+
+    public void ShowSettings() { }
+
+    public void ShowPanelAboutGame()
+    {
+        bool isPanelVisible = panelAboutGame.activeSelf;
+        panelAboutGame.SetActive(!isPanelVisible);
     }
 }
