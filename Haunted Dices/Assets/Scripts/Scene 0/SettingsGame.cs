@@ -18,6 +18,11 @@ public class SettingsGame : MonoBehaviour
     [SerializeField]
     private Toggle toggleSound;
 
+    void Start()
+    {
+        toggleSound.isOn = !isSoundOn;
+    }
+
     public void SlideMusicVolume()
     {
         AudioListener.volume = sliderMusic.value;
@@ -29,6 +34,7 @@ public class SettingsGame : MonoBehaviour
             AudioListener.pause = true;
         else
             AudioListener.pause = false;
+        isSoundOn = !isSoundOn;
     }
 
     public void ChangeScreenState()
