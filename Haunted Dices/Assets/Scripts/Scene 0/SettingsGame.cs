@@ -33,28 +33,7 @@ public class SettingsGame : MonoBehaviour
 
     void Awake()
     {
-        resolutionDropdown.ClearOptions();
-        resolutions = Screen.resolutions
-            .Select(
-                resolution =>
-                    new Resolution { width = resolution.width, height = resolution.height }
-            )
-            .Distinct()
-            .ToArray();
-        List<string> listOptions = new List<string>();
-        for (int i = 0; i < resolutions.Length; i++)
-        {
-            int width = resolutions[i].width;
-            int height = resolutions[i].height;
-            string option = width + "x" + height;
-            listOptions.Add(option);
-            if (
-                width == Screen.currentResolution.width && height == Screen.currentResolution.height
-            )
-                indexOfCurrentResolution = i;
-        }
-        resolutionDropdown.AddOptions(listOptions);
-        resolutionDropdown.RefreshShownValue();
+        GetResolutions();
         LoadSettings(indexOfCurrentResolution);
     }
 
@@ -89,6 +68,32 @@ public class SettingsGame : MonoBehaviour
         Resolution resolution = resolutions[indexOfOption];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
         PlayerPrefs.SetInt("ResolutionPref", indexOfOption);
+    }
+
+    void GetResolutions()
+    {
+        resolutionDropdown.ClearOptions();
+        resolutions = Screen.resolutions
+            .Select(
+                resolution =>
+                    new Resolution { width = resolution.width, height = resolution.height }
+            )
+            .Distinct()
+            .ToArray();
+        List<string> listOptions = new List<string>();
+        for (int i = 0; i < resolutions.Length; i++)
+        {
+            int width = resolutions[i].width;
+            int height = resolutions[i].height;
+            string option = width + "x" + height;
+            listOptions.Add(option);
+            if (
+                width == Screen.currentResolution.width && height == Screen.currentResolution.height
+            )
+                indexOfCurrentResolution = i;
+        }
+        resolutionDropdown.AddOptions(listOptions);
+        resolutionDropdown.RefreshShownValue();
     }
 
     public void LoadSettings(int indexOfCurrentOption)

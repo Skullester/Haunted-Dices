@@ -13,6 +13,8 @@ public class Buttons : MonoBehaviour
 
     void Awake()
     {
+        if (SceneManager.GetActiveScene().buildIndex != 0)
+            return;
         settings = transform.Find("Settings").gameObject;
         levelDescription = transform.Find("LevelDescription").gameObject;
         levelSelect = transform.Find("LevelSelect").gameObject;
