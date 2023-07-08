@@ -1,43 +1,36 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SettingsGame : MonoBehaviour
 {
-    private static bool isSoundOn = true;
-    private static bool isBtnFullScreen = true;
+    [SerializeField]
+    private TMP_Dropdown resolutionDropdown;
 
     [SerializeField]
     private Slider sliderSoundEffects;
 
     [SerializeField]
-    private Toggle toggleFullScreen;
-
-    [SerializeField]
     private Slider sliderMusic;
-
-    [SerializeField]
-    private Toggle toggleSound;
 
     void Start()
     {
-        Screen.fullScreen = isBtnFullScreen;
-        toggleSound.isOn = !isSoundOn;
+        //Screen.resolutions
+        resolutionDropdown.ClearOptions();
     }
 
-    public void SlideMusicVolume()
+    public void SlideMusicVolume(float value)
     {
-        AudioListener.volume = sliderMusic.value;
+        AudioListener.volume = value;
     }
 
-    public void SoundMute()
+    public void SoundMute(bool isSoundMute)
     {
-        AudioListener.pause = !AudioListener.pause;
-        isSoundOn = !isSoundOn;
+        AudioListener.pause = isSoundMute;
     }
 
-    public void ChangeScreenState()
+    public void ChangeScreenState(bool isFullScreen)
     {
-        Screen.fullScreen = !Screen.fullScreen;
-        isBtnFullScreen = Screen.fullScreen;
+        Screen.fullScreen = isFullScreen;
     }
 }

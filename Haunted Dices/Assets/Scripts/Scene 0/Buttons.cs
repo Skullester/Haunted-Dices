@@ -16,7 +16,7 @@ public class Buttons : MonoBehaviour
         settings = transform.Find("Settings").gameObject;
         levelDescription = transform.Find("LevelDescription").gameObject;
         levelSelect = transform.Find("LevelSelect").gameObject;
-        panelAboutGame = transform.Find("PanelAbout").gameObject;
+        panelAboutGame = transform.Find("About").gameObject;
     }
 
     public void ExitGame()
@@ -41,6 +41,11 @@ public class Buttons : MonoBehaviour
 
     public void BackToMenu()
     {
+        if (panelAboutGame.activeSelf)
+        {
+            panelAboutGame.SetActive(false);
+            return;
+        }
         if (settings.activeSelf)
         {
             settings.SetActive(false);
@@ -61,6 +66,6 @@ public class Buttons : MonoBehaviour
 
     public void ShowPanelAboutGame()
     {
-        panelAboutGame.SetActive(!panelAboutGame.activeSelf);
+        panelAboutGame.SetActive(true);
     }
 }
