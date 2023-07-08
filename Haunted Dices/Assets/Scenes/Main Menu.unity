@@ -3114,7 +3114,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
+  m_MatchWidthOrHeight: 0.136
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -4596,19 +4596,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1659420234604018641, guid: 20a61433a7e3a6648a45364f5e55dd5e, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1659420234604018641, guid: 20a61433a7e3a6648a45364f5e55dd5e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1659420234604018641, guid: 20a61433a7e3a6648a45364f5e55dd5e, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3571605570535423788, guid: 20a61433a7e3a6648a45364f5e55dd5e, type: 3}
       propertyPath: m_Name
       value: Settings
+      objectReference: {fileID: 0}
+    - target: {fileID: 3571605570535423788, guid: 20a61433a7e3a6648a45364f5e55dd5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4049281065296920173, guid: 20a61433a7e3a6648a45364f5e55dd5e, type: 3}
       propertyPath: m_Pivot.x
@@ -4696,11 +4700,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4688770843053556379, guid: 20a61433a7e3a6648a45364f5e55dd5e, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4688770843053556379, guid: 20a61433a7e3a6648a45364f5e55dd5e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5426060958115898759, guid: 20a61433a7e3a6648a45364f5e55dd5e, type: 3}
       propertyPath: audioSourceMusic
@@ -4712,23 +4716,23 @@ PrefabInstance:
       objectReference: {fileID: 1215987098}
     - target: {fileID: 6180766919604165384, guid: 20a61433a7e3a6648a45364f5e55dd5e, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6180766919604165384, guid: 20a61433a7e3a6648a45364f5e55dd5e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6180766919604165384, guid: 20a61433a7e3a6648a45364f5e55dd5e, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9051372823070619898, guid: 20a61433a7e3a6648a45364f5e55dd5e, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9051372823070619898, guid: 20a61433a7e3a6648a45364f5e55dd5e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
