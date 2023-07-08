@@ -1,16 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.EventSystems;
 
 public class Buttons : MonoBehaviour
 {
-    public static int levelCounter = 0;
     public static string levelTitle;
-    private bool isLevelSelectOpened;
     private GameObject panelAboutGame;
     private GameObject levelSelect;
     private GameObject settings;
@@ -33,8 +28,7 @@ public class Buttons : MonoBehaviour
     {
         if (levelDescription.activeSelf)
             SceneManager.LoadScene("Game");
-        isLevelSelectOpened = levelSelect.activeSelf;
-        if (isLevelSelectOpened)
+        if (levelSelect.activeSelf)
         {
             levelTitle = EventSystem.current.currentSelectedGameObject.transform
                 .Find("Text (TMP)")
@@ -57,7 +51,6 @@ public class Buttons : MonoBehaviour
             levelDescription.SetActive(false);
             return;
         }
-        isLevelSelectOpened = levelSelect.activeSelf;
         levelSelect.SetActive(!levelSelect.activeSelf);
     }
 
@@ -68,7 +61,6 @@ public class Buttons : MonoBehaviour
 
     public void ShowPanelAboutGame()
     {
-        bool isPanelVisible = panelAboutGame.activeSelf;
-        panelAboutGame.SetActive(!isPanelVisible);
+        panelAboutGame.SetActive(!panelAboutGame.activeSelf);
     }
 }
