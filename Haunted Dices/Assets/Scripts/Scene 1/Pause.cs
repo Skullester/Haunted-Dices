@@ -8,6 +8,8 @@ using UnityEngine.Rendering;
 
 public class Pause : MonoBehaviour
 {
+    [SerializeField]
+    private Animator animTransition;
     private DepthOfField dof;
     private AudioSource audioSourceMusic;
 
@@ -52,7 +54,12 @@ public class Pause : MonoBehaviour
     public void ReturnToMenu()
     {
         if (warning.activeSelf)
-            SceneManager.LoadScene(0);
+        {
+            Time.timeScale = 1f;
+            animTransition.gameObject.SetActive(true);
+            animTransition.SetTrigger("Start");
+            StartCoroutine(DelayBetweenTrans());
+        }
         warning.SetActive(true);
     }
 
@@ -67,5 +74,11 @@ public class Pause : MonoBehaviour
             settings.SetActive(false);
         else
             settings.SetActive(true);
+    }
+
+    IEnumerator DelayBetweenTrans()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(0);
     }
 }

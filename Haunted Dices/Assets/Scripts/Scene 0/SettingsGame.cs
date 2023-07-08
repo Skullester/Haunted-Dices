@@ -112,7 +112,8 @@ public class SettingsGame : MonoBehaviour
         if (PlayerPrefs.HasKey("VolumeSoundsSliderPref"))
         {
             sliderSoundEffects.value = PlayerPrefs.GetFloat("VolumeSoundsSliderPref");
-            audioSourceSounds.volume = sliderMusic.value;
+            if (audioSourceSounds != null)
+                audioSourceSounds.volume = sliderMusic.value;
         }
         if (PlayerPrefs.HasKey("FullScreenPref"))
         {
