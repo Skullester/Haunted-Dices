@@ -31,7 +31,6 @@ public class SwitchCharacter : MonoBehaviour
             .Find("Text (TMP)")
             .gameObject.GetComponent<TMP_Text>()
             .text;
-        Debug.Log(textBtn);
         if (textBtn == "Character 1")
         {
             sRenderer.sprite = firstCharacter;

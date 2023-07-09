@@ -1,8 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
-using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.Rendering;
 
@@ -32,9 +30,6 @@ public class Pause : MonoBehaviour
         if (volume.profile.TryGet<DepthOfField>(out var tmp))
             dof = tmp;
     }
-
-    void Update() { }
-
     public void SetPause()
     {
         pauseUI.SetActive(true);

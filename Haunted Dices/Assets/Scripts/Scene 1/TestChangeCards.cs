@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TestChangeCards : MonoBehaviour
@@ -12,13 +11,11 @@ public class TestChangeCards : MonoBehaviour
     private int indexOfCharacter;
     private static int characterNumbers = 2;
     private Transform[] characters = new Transform[characterNumbers];
-    private Transform selectedCardPos;
 
     void Awake()
     {
         characters[0] = transform.Find("Character 1 BTN");
         characters[1] = transform.Find("Character 2 BTN");
-        selectedCardPos = characters[0];
     }
 
     // Update is called once per frame
@@ -26,7 +23,14 @@ public class TestChangeCards : MonoBehaviour
 
     public void ChangeCharacter()
     {
-        anim.SetBool("isChanging", true);
-        anim2.SetBool("isChanging", true);
+        anim.SetBool("IsChanging", true);
+        anim2.SetBool("IsChanging", true);
+        StartCoroutine(DelayAnim());
+    }
+
+    IEnumerator DelayAnim()
+    {
+        yield return new WaitForSeconds(0.5f);
+        characters[0].SetAsFirstSibling();
     }
 }
