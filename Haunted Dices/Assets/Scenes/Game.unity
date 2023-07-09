@@ -681,8 +681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45f6d1ddc4c413040a5b969b88d8e1ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstCharacter: {fileID: 21300000, guid: a6c30360bbea920429ecbb96cc06e8bc, type: 3}
-  sRenderer: {fileID: 1974132061}
   firstCharacterBtn: {fileID: 1686197727}
   secondCharacterBtn: {fileID: 1717406514}
 --- !u!114 &142540147
@@ -2694,8 +2692,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45f6d1ddc4c413040a5b969b88d8e1ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstCharacter: {fileID: 21300000, guid: a6c30360bbea920429ecbb96cc06e8bc, type: 3}
-  sRenderer: {fileID: 0}
   firstCharacterBtn: {fileID: 0}
   secondCharacterBtn: {fileID: 0}
 --- !u!1 &853662244
@@ -4521,8 +4517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e9e7408388088543ab1b516f4eb014e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 1686197730}
-  anim2: {fileID: 1717406517}
+  secondSprite: {fileID: 21300000, guid: a6c30360bbea920429ecbb96cc06e8bc, type: 3}
+  sRenderer: {fileID: 1974132061}
 --- !u!1 &1576413991
 GameObject:
   m_ObjectHideFlags: 0
@@ -4995,10 +4991,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 142540146}
-        m_TargetAssemblyTypeName: SwitchCharacter, Assembly-CSharp
-        m_MethodName: ChangeSprite
-        m_Mode: 1
+      - m_Target: {fileID: 1523835993}
+        m_TargetAssemblyTypeName: SwitchingCharacter, Assembly-CSharp
+        m_MethodName: ChangeCardsOfCharacter
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5153,12 +5149,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1523835993}
         m_TargetAssemblyTypeName: TestChangeCards, Assembly-CSharp
-        m_MethodName: ChangeCharacter
-        m_Mode: 1
+        m_MethodName: ChangeCardsOfCharacter
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7151,7 +7147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.04362041, y: 0.13143569}
   m_AnchorMax: {x: 0.38459057, y: 0.46177348}
-  m_AnchoredPosition: {x: -11.500061, y: 0}
+  m_AnchoredPosition: {x: -11.5, y: 0}
   m_SizeDelta: {x: -20.574188, y: 9.987396}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2044499323461489749

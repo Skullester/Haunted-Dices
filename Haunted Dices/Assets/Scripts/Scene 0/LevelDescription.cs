@@ -18,14 +18,14 @@ public class LevelDescription : MonoBehaviour
 
     void OnEnable()
     {
-        switch (Buttons.levelTitle)
+        switch (Buttons.s_levelTitleNumber)
         {
-            case "Уровень 1":
-                levelTitle.text = Buttons.levelTitle;
+            case 0:
+                levelTitle.text = "Уровень 1";
                 descriptionLevelText.text = descriptions[0];
                 break;
-            case "Уровень 2":
-                levelTitle.text = Buttons.levelTitle;
+            case 1:
+                levelTitle.text = "Уровень 2";
                 descriptionLevelText.text = descriptions[1];
                 break;
         }

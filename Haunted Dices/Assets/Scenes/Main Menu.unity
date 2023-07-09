@@ -1577,7 +1577,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1215987098}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
         m_MethodName: Play
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1924,7 +1924,6 @@ RectTransform:
   - {fileID: 237697054}
   - {fileID: 397952582}
   - {fileID: 1738942695}
-  - {fileID: 1012062727}
   m_Father: {fileID: 1215987097}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2020,7 +2019,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1215987098}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
         m_MethodName: Play
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2811,13 +2810,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1929511339}
-  m_Father: {fileID: 530746391}
+  m_Father: {fileID: 1738942695}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2616518, y: 0.4702127}
   m_AnchorMax: {x: 0.42318755, y: 0.7613821}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
-  m_SizeDelta: {x: -0.25231934, y: -2.515442}
+  m_AnchoredPosition: {x: 0.000061035156, y: 4.540625}
+  m_SizeDelta: {x: -0.25231934, y: -2.2434387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1012062728
 MonoBehaviour:
@@ -2866,11 +2865,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1215987098}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
         m_MethodName: Play
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3578,7 +3577,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1215987098}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
         m_MethodName: Play
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3790,6 +3789,7 @@ RectTransform:
   m_Children:
   - {fileID: 621938706}
   - {fileID: 540312955}
+  - {fileID: 1012062727}
   m_Father: {fileID: 530746391}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

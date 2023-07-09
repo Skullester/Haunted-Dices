@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class Buttons : MonoBehaviour
 {
-    public static string levelTitle;
+    public static int s_levelTitleNumber;
     private GameObject panelAboutGame;
     private GameObject levelSelect;
     private GameObject settings;
@@ -26,16 +26,13 @@ public class Buttons : MonoBehaviour
         Application.Quit();
     }
 
-    public void Play()
+    public void Play(int indexOfButton)
     {
         if (levelDescription.activeSelf)
             SceneManager.LoadScene("Game");
         if (levelSelect.activeSelf)
         {
-            levelTitle = EventSystem.current.currentSelectedGameObject.transform
-                .Find("Text (TMP)")
-                .gameObject.GetComponent<TMP_Text>()
-                .text;
+            s_levelTitleNumber = indexOfButton;
             levelDescription.SetActive(true);
         }
         levelSelect.SetActive(true);
