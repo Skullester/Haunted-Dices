@@ -19,7 +19,14 @@ public class TestChangeCards : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update() { }
+    void Update()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            Debug.Log("FIRE");
+            PlayerPrefs.DeleteAll();
+        }
+    }
 
     public void ChangeCharacter()
     {
