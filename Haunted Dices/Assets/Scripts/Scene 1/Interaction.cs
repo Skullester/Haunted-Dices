@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Interaction : MonoBehaviour
@@ -23,8 +21,6 @@ public class Interaction : MonoBehaviour
         playerMoving = player.GetComponent<CharacterMoving>();
     }
 
-    void Update() { }
-
     void OnMouseEnter()
     {
         Cursor.SetCursor(cursorTexture, hotSpot, CursorMode.Auto);
@@ -37,7 +33,6 @@ public class Interaction : MonoBehaviour
 
     void OnMouseOver()
     {
-        Debug.Log((player.position - transform.position).sqrMagnitude);
         if (
             Input.GetKeyDown(KeyCode.Mouse1)
             && (player.position - transform.position).sqrMagnitude < sqrDistance * sqrDistance
