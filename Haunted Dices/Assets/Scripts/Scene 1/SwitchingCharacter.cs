@@ -54,7 +54,6 @@ public class SwitchingCharacter : MonoBehaviour
                 btnSecondCharacter.interactable = true;
                 break;
             case 1:
-
                 sRenderer.sprite = secondSprite;
                 btnSecondCharacter.interactable = false;
                 btnFirstCharacter.interactable = true;
