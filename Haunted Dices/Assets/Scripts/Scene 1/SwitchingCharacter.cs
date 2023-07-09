@@ -15,8 +15,7 @@ public class SwitchingCharacter : MonoBehaviour
 
     [SerializeField]
     private SpriteRenderer sRenderer;
-    private Animator animBtn1;
-    private Animator animBtn2;
+    private Animator[] animButtons = new Animator[s_characterNumbers];
 
     private Transform[] characters = new Transform[s_characterNumbers];
 
@@ -25,14 +24,28 @@ public class SwitchingCharacter : MonoBehaviour
         firstSprite = sRenderer.sprite;
         characters[0] = transform.Find("Character 1 BTN");
         characters[1] = transform.Find("Character 2 BTN");
-        animBtn1 = characters[0].gameObject.GetComponent<Animator>();
-        animBtn2 = characters[1].gameObject.GetComponent<Animator>();
+        animButtons[0] = characters[0].gameObject.GetComponent<Animator>();
+        animButtons[1] = characters[1].gameObject.GetComponent<Animator>();
         btnFirstCharacter = characters[0].gameObject.GetComponent<Button>();
         btnSecondCharacter = characters[1].gameObject.GetComponent<Button>();
     }
 
     public void ChangeCardsOfCharacter(int buttonIndex)
     {
+        for (int i = 0; i < animButtons.Length; i++)
+        {
+            bool animBtnBool = animButtons[i].GetBool("Selected");
+            animButtons[i].SetBool("Selected", !animBtnBool);
+        }
+        StartCoroutine(DelayAnim(buttonIndex));
+    }
+
+    IEnumerator DelayAnim(int buttonIndex)
+    {
+        yield return new WaitForSeconds(0.5f);
+        if (indexOfCharacter == s_characterNumbers)
+            indexOfCharacter = 0;
+        characters[indexOfCharacter++].SetAsFirstSibling();
         switch (buttonIndex)
         {
             case 0:
@@ -41,21 +54,11 @@ public class SwitchingCharacter : MonoBehaviour
                 btnSecondCharacter.interactable = true;
                 break;
             case 1:
+
                 sRenderer.sprite = secondSprite;
                 btnSecondCharacter.interactable = false;
                 btnFirstCharacter.interactable = true;
                 break;
         }
-        animBtn1.SetBool("IsChanging", true);
-        animBtn2.SetBool("IsChanging", true);
-        StartCoroutine(DelayAnim());
-    }
-
-    IEnumerator DelayAnim()
-    {
-        yield return new WaitForSeconds(0.5f);
-        if (indexOfCharacter == s_characterNumbers)
-            indexOfCharacter = 0;
-        characters[indexOfCharacter++].SetAsFirstSibling();
     }
 }

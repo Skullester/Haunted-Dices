@@ -681,8 +681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45f6d1ddc4c413040a5b969b88d8e1ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstCharacterBtn: {fileID: 1686197727}
-  secondCharacterBtn: {fileID: 1717406514}
 --- !u!114 &142540147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2692,8 +2690,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45f6d1ddc4c413040a5b969b88d8e1ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstCharacterBtn: {fileID: 0}
-  secondCharacterBtn: {fileID: 0}
 --- !u!1 &853662244
 GameObject:
   m_ObjectHideFlags: 0
