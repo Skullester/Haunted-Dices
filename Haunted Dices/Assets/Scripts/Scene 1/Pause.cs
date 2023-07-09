@@ -8,7 +8,7 @@ public class Pause : MonoBehaviour
 {
     [SerializeField]
     private Animator animTransition;
-    private DepthOfField dof;
+    public static DepthOfField s_dof;
     private AudioSource audioSourceMusic;
 
     [SerializeField]
@@ -28,12 +28,13 @@ public class Pause : MonoBehaviour
         settings = transform.Find("Settings").gameObject;
         pauseUI = transform.Find("PauseMenu").gameObject;
         if (volume.profile.TryGet<DepthOfField>(out var tmp))
-            dof = tmp;
+            s_dof = tmp;
     }
+
     public void SetPause()
     {
         pauseUI.SetActive(true);
-        dof.active = true;
+        s_dof.active = true;
         audioSourceSounds.mute = true;
         Time.timeScale = 0f;
     }
@@ -41,7 +42,7 @@ public class Pause : MonoBehaviour
     public void Continue()
     {
         pauseUI.SetActive(false);
-        dof.active = false;
+        s_dof.active = false;
         audioSourceSounds.mute = false;
         Time.timeScale = 1f;
     }
