@@ -3,8 +3,13 @@ using TMPro;
 
 public class Interaction : MonoBehaviour
 {
+    private bool isDistanceAccept;
+
     [SerializeField, TextArea, Space(1)]
     private string[] textsOfPoints;
+
+    [SerializeField]
+    private TMP_Text textDice;
 
     //private static int s_indexOfInteractedPoint;
     public static bool isButtonClicked;
@@ -13,8 +18,7 @@ public class Interaction : MonoBehaviour
     [SerializeField]
     private GameObject[] keyPointsObjects;
 
-    [SerializeField, Range(1f, 15f)]
-    private float sqrDistance;
+    private float sqrDistancePlayer = 3;
 
     [SerializeField]
     private Transform player;
@@ -34,9 +38,16 @@ public class Interaction : MonoBehaviour
         textHint = hintPoint.transform.Find("Text (TMP)").GetComponent<TMP_Text>();
     }
 
+    private void Update()
+    {
+        isDistanceAccept =
+            (player.position - transform.position).sqrMagnitude
+            < sqrDistancePlayer * sqrDistancePlayer;
+    }
+
     void OnMouseEnter()
     {
-        if ((player.position - transform.position).sqrMagnitude < sqrDistance * sqrDistance)
+        if (isDistanceAccept)
             Cursor.SetCursor(cursorTexture, hotSpot, CursorMode.Auto);
     }
 
@@ -47,17 +58,11 @@ public class Interaction : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (
-            Input.GetKeyDown(KeyCode.Mouse1)
-            && (player.position - transform.position).sqrMagnitude < sqrDistance * sqrDistance
-        )
+        if (Input.GetKeyDown(KeyCode.Mouse1) && isDistanceAccept)
         {
             CallHintMenu();
         }
-        if (
-            Input.GetKeyDown(KeyCode.Mouse0)
-            && (player.position - transform.position).sqrMagnitude < sqrDistance * sqrDistance
-        )
+        if (Input.GetKeyDown(KeyCode.Mouse0) && isDistanceAccept)
         {
             if (isButtonClicked)
                 UseSkill(indexSkillButton);
@@ -71,18 +76,7 @@ public class Interaction : MonoBehaviour
         Debug.Log(
             $"{SwitchingCharacter.indexOfCharacter + 1} перс и {indexSkillButton + 1} кнопка"
         );
-        /*     if (SwitchingCharacter.indexOfCharacter == 0)
-                if (indexSkillButton == 0)
-                    Debug.Log($"1 персонаж 1 кнопка");
-                else
-                    Debug.Log($"1 персонаж 2 кнопка");
-            else
-            {
-                if (indexSkillButton == 0)
-                    Debug.Log($"2 персонаж 1 кнопка");
-                else
-                    Debug.Log($"2 персонаж 2 кнопка");
-            } */
+        textDice.text = Dice.GetRandomNumber().ToString();
     }
 
     private void CallHintMenu(string textHint = "")

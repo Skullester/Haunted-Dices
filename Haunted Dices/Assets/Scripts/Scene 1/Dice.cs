@@ -5,12 +5,7 @@ using TMPro;
 
 public class Dice : MonoBehaviour
 {
-    public void RollDice()
-    {
-        int randomNumber = GetRandomNumber();
-    }
-
-    int GetRandomNumber()
+    public static int GetRandomNumber()
     {
         int minScore = 1,
             maxScore = 12;
