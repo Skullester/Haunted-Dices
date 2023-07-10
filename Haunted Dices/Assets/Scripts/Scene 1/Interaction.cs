@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System;
 
 public class Interaction : MonoBehaviour
 {
@@ -76,7 +77,9 @@ public class Interaction : MonoBehaviour
         Debug.Log(
             $"{SwitchingCharacter.indexOfCharacter + 1} перс и {indexSkillButton + 1} кнопка"
         );
-        textDice.text = Dice.GetRandomNumber().ToString();
+        int randomNumber = Dice.GetRandomNumber();
+        textDice.text = randomNumber.ToString();
+        HpSystem.ChangeNumberSouls(randomNumber, randomNumber >= HpSystem.currentHp);
     }
 
     private void CallHintMenu(string textHint = "")

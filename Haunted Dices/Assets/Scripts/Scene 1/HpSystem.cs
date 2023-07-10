@@ -5,21 +5,33 @@ using UnityEngine.UI;
 public class HpSystem : MonoBehaviour
 {
     [SerializeField, Space]
-    private List<Image> hearts;
+    private static List<Image> hearts = new List<Image>();
+    private int maxHp = 12;
+    public static int currentHp;
 
-    [SerializeField, Min(1)]
-    private int priceSkill;
-
-    void Update()
+    void Awake()
     {
-        if (Input.GetButtonDown("Jump"))
+        currentHp = maxHp;
+        for (int i = 0; i < maxHp; i++)
         {
-            int countOfList = hearts.Count;
-            for (int i = countOfList - 1; i > countOfList - 1 - priceSkill; i--)
-            {
-                hearts[i].enabled = false;
-                hearts.RemoveAt(i);
-            }
+            hearts.Add(transform.Find($"Image ({i})").gameObject.GetComponent<Image>());
+        }
+    }
+
+    public static void ChangeNumberSouls(int priceSkill, bool GameOver)
+    {
+        int countOfList = hearts.Count;
+        priceSkill = GameOver ? hearts.Count : priceSkill;
+        Debug.Log(priceSkill);
+        for (int i = countOfList - 1; i > countOfList - 1 - priceSkill; i--)
+        {
+            hearts[i].enabled = false;
+            hearts.RemoveAt(i);
+        }
+        currentHp -= priceSkill;
+        if (currentHp == 0)
+        {
+            Debug.Log("GameOver");
         }
     }
 }
