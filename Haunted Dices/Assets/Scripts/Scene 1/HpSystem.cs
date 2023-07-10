@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class HpSystem : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField, Space]
     private List<Image> hearts;
 
     [SerializeField, Range(1, 3)]
