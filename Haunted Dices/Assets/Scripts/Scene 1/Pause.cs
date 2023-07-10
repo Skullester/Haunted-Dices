@@ -51,6 +51,7 @@ public class Pause : MonoBehaviour
     {
         if (warning.activeSelf || HpSystem.currentHp == 0)
         {
+            Interaction.isButtonClicked = false;
             Time.timeScale = 1f;
             animTransition.gameObject.SetActive(true);
             animTransition.SetTrigger("Start");

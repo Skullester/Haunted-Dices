@@ -45,10 +45,10 @@ public class SettingsGame : MonoBehaviour
 
     public void SlideSoundsVolume(float value)
     {
+        PlayerPrefs.SetFloat("VolumeSoundsSliderPref", value);
         if (audioSourceSounds == null)
             return;
         audioSourceSounds.volume = value;
-        PlayerPrefs.SetFloat("VolumeSoundsSliderPref", value);
     }
 
     public void SoundMute(bool isSoundMute)

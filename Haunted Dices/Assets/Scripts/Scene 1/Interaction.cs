@@ -146,6 +146,7 @@ public class Interaction : MonoBehaviour
         if (HpSystem.currentHp == 0)
         {
             HpSystem.currentHp = 0;
+            Pause.s_dof.active = true;
             gameOverObj.SetActive(true);
             isButtonClicked = false;
         }
