@@ -3,7 +3,7 @@ using TMPro;
 
 public class Interaction : MonoBehaviour
 {
-    [SerializeField, TextArea]
+    [SerializeField, TextArea, Space(1)]
     private string[] textsOfPoints;
 
     //private static int s_indexOfInteractedPoint;
