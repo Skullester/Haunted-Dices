@@ -7,6 +7,8 @@ public class Interaction : MonoBehaviour
     private string[] textsOfPoints;
 
     //private static int s_indexOfInteractedPoint;
+    public static bool isButtonClicked;
+    private int indexSkillButton;
 
     [SerializeField]
     private GameObject[] keyPointsObjects;
@@ -52,14 +54,35 @@ public class Interaction : MonoBehaviour
         {
             CallHintMenu();
         }
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (
+            Input.GetKeyDown(KeyCode.Mouse0)
+            && (player.position - transform.position).sqrMagnitude < sqrDistance * sqrDistance
+        )
         {
-            bool isSomething = false;
-            if (isSomething)
-                Debug.Log("dsada");
+            if (isButtonClicked)
+                UseSkill(indexSkillButton);
             else
                 CallHintMenu("Для взаимодействия с точкой сначала выберите умение персонажа!");
         }
+    }
+
+    private void UseSkill(int indexSkillButton)
+    {
+        Debug.Log(
+            $"{SwitchingCharacter.indexOfCharacter + 1} перс и {indexSkillButton + 1} кнопка"
+        );
+        /*     if (SwitchingCharacter.indexOfCharacter == 0)
+                if (indexSkillButton == 0)
+                    Debug.Log($"1 персонаж 1 кнопка");
+                else
+                    Debug.Log($"1 персонаж 2 кнопка");
+            else
+            {
+                if (indexSkillButton == 0)
+                    Debug.Log($"2 персонаж 1 кнопка");
+                else
+                    Debug.Log($"2 персонаж 2 кнопка");
+            } */
     }
 
     private void CallHintMenu(string textHint = "")
@@ -100,5 +123,11 @@ public class Interaction : MonoBehaviour
         hintPoint.SetActive(false);
         Pause.s_dof.active = false;
         playerMoving.enabled = true;
+    }
+
+    public void ChooseSkill(int indexButton)
+    {
+        this.indexSkillButton = indexButton;
+        isButtonClicked = true;
     }
 }
