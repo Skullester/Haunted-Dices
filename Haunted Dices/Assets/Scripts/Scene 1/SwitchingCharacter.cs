@@ -1,17 +1,24 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 public class SwitchingCharacter : MonoBehaviour
 {
     private static int s_characterNumbers = 2;
-    private int indexOfCharacter;
-    private Button btnFirstCharacter;
-    private Button btnSecondCharacter;
-    private Sprite firstSprite;
+    public static int indexOfCharacter;
 
     [SerializeField]
-    private Sprite secondSprite;
+    private Image[] skillBtnsImgs;
+
+    [SerializeField]
+    private Sprite[] skillsSprites;
+    private Button btnFirstCharacter;
+    private Button btnSecondCharacter;
+    private Sprite firstSpriteCharacter;
+
+    [SerializeField, FormerlySerializedAs("secondSprite")]
+    private Sprite secondSpriteCharacter;
 
     [SerializeField]
     private SpriteRenderer sRenderer;
@@ -21,7 +28,7 @@ public class SwitchingCharacter : MonoBehaviour
 
     void Awake()
     {
-        firstSprite = sRenderer.sprite;
+        firstSpriteCharacter = sRenderer.sprite;
         characters[0] = transform.Find("Character 1 BTN");
         characters[1] = transform.Find("Character 2 BTN");
         animButtons[0] = characters[0].gameObject.GetComponent<Animator>();
@@ -32,6 +39,7 @@ public class SwitchingCharacter : MonoBehaviour
 
     public void ChangeCardsOfCharacter(int buttonIndex)
     {
+        Interaction.isButtonClicked = false;
         for (int i = 0; i < animButtons.Length; i++)
         {
             bool animBtnBool = animButtons[i].GetBool("Selected");
@@ -43,18 +51,26 @@ public class SwitchingCharacter : MonoBehaviour
     IEnumerator DelayAnim(int buttonIndex)
     {
         yield return new WaitForSeconds(0.5f);
+        characters[indexOfCharacter++].SetAsFirstSibling();
         if (indexOfCharacter == s_characterNumbers)
             indexOfCharacter = 0;
-        characters[indexOfCharacter++].SetAsFirstSibling();
         switch (buttonIndex)
         {
             case 0:
-                sRenderer.sprite = firstSprite;
+                for (int i = 0; i < skillBtnsImgs.Length; i++)
+                {
+                    skillBtnsImgs[i].sprite = skillsSprites[i];
+                }
+                sRenderer.sprite = firstSpriteCharacter;
                 btnFirstCharacter.interactable = false;
                 btnSecondCharacter.interactable = true;
                 break;
             case 1:
-                sRenderer.sprite = secondSprite;
+                for (int i = 0; i < skillBtnsImgs.Length; i++)
+                {
+                    skillBtnsImgs[i].sprite = skillsSprites[i + 2];
+                }
+                sRenderer.sprite = secondSpriteCharacter;
                 btnSecondCharacter.interactable = false;
                 btnFirstCharacter.interactable = true;
                 break;
