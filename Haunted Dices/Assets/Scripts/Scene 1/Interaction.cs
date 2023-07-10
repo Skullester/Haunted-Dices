@@ -1,9 +1,18 @@
 using UnityEngine;
 using TMPro;
 using System;
+using System.Collections;
 
 public class Interaction : MonoBehaviour
 {
+    [SerializeField]
+    private AudioSource audioSourceSounds;
+
+    [SerializeField]
+    private AudioClip audioClipHPLost;
+
+    [SerializeField]
+    private GameObject gameOverObj;
     private bool isDistanceAccept;
 
     [SerializeField, TextArea, Space(1)]
@@ -12,7 +21,6 @@ public class Interaction : MonoBehaviour
     [SerializeField]
     private TMP_Text textDice;
 
-    //private static int s_indexOfInteractedPoint;
     public static bool isButtonClicked;
     private int indexSkillButton;
 
@@ -49,7 +57,9 @@ public class Interaction : MonoBehaviour
     void OnMouseEnter()
     {
         if (isDistanceAccept)
+        {
             Cursor.SetCursor(cursorTexture, hotSpot, CursorMode.Auto);
+        }
     }
 
     void OnMouseExit()
@@ -79,7 +89,7 @@ public class Interaction : MonoBehaviour
         );
         int randomNumber = Dice.GetRandomNumber();
         textDice.text = randomNumber.ToString();
-        HpSystem.ChangeNumberSouls(randomNumber, randomNumber >= HpSystem.currentHp);
+        StartCoroutine(TimerDice(randomNumber));
     }
 
     private void CallHintMenu(string textHint = "")
@@ -126,5 +136,18 @@ public class Interaction : MonoBehaviour
     {
         this.indexSkillButton = indexButton;
         isButtonClicked = true;
+    }
+
+    IEnumerator TimerDice(int randomNumber)
+    {
+        yield return new WaitForSeconds(2f);
+        HpSystem.ChangeNumberSouls(randomNumber, randomNumber >= HpSystem.currentHp);
+        audioSourceSounds.PlayOneShot(audioClipHPLost);
+        if (HpSystem.currentHp == 0)
+        {
+            HpSystem.currentHp = 0;
+            gameOverObj.SetActive(true);
+            isButtonClicked = false;
+        }
     }
 }

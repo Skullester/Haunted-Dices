@@ -35,6 +35,7 @@ public class SwitchingCharacter : MonoBehaviour
         animButtons[1] = characters[1].gameObject.GetComponent<Animator>();
         btnFirstCharacter = characters[0].gameObject.GetComponent<Button>();
         btnSecondCharacter = characters[1].gameObject.GetComponent<Button>();
+        characters[1].SetAsFirstSibling();
     }
 
     public void ChangeCardsOfCharacter(int buttonIndex)

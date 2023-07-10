@@ -5,10 +5,16 @@ using TMPro;
 
 public class Dice : MonoBehaviour
 {
-    public static int counterHighScores = 5;
+    public static int counterHighScores;
+
+    private void Start()
+    {
+        counterHighScores = 5;
+    }
 
     public static int GetRandomNumber()
     {
+        Debug.Log(counterHighScores);
         int minScore = 1,
             maxScore = 12;
         int randomNumber = Random.Range(minScore, maxScore + 1);

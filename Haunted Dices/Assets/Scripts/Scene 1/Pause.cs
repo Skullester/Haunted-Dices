@@ -49,7 +49,7 @@ public class Pause : MonoBehaviour
 
     public void ReturnToMenu()
     {
-        if (warning.activeSelf)
+        if (warning.activeSelf || HpSystem.currentHp == 0)
         {
             Time.timeScale = 1f;
             animTransition.gameObject.SetActive(true);
