@@ -47,6 +47,9 @@ public class Interaction : MonoBehaviour
     private GameObject hintPoint;
     private TMP_Text textHint;
 
+    [SerializeField]
+    private ToggleSystem indTog;
+
     void Awake()
     {
         playerMoving = player.GetComponent<CharacterMoving>();
@@ -96,6 +99,7 @@ public class Interaction : MonoBehaviour
         int randomNumber = Dice.GetRandomNumber();
         textDice.text = randomNumber.ToString();
         StartCoroutine(TimerDice(randomNumber));
+        indTog.MissionCompleted(GetIndexOfPoint());
     }
 
     private void CallHintMenu(string textHint = "")
@@ -128,6 +132,7 @@ public class Interaction : MonoBehaviour
                 }
             }
         }
+        Debug.Log(indexOfPoint);
         return indexOfPoint;
     }
 
