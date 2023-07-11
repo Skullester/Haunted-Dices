@@ -4631,6 +4631,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterMoving: {fileID: 1974132063}
+  hpSystem: {fileID: 234698823}
   audioSourceSounds: {fileID: 1974132064}
   audioClipHPLost: {fileID: 8300000, guid: 8364a0164350c1444a6b7bde096aa528, type: 3}
   gameOverObj: {fileID: 686070820}
@@ -5376,6 +5378,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterMoving: {fileID: 1974132063}
+  hpSystem: {fileID: 234698823}
   audioSourceSounds: {fileID: 1974132064}
   audioClipHPLost: {fileID: 8300000, guid: 8364a0164350c1444a6b7bde096aa528, type: 3}
   gameOverObj: {fileID: 686070820}
@@ -6226,6 +6230,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterMoving: {fileID: 1974132063}
+  hpSystem: {fileID: 234698823}
   audioSourceSounds: {fileID: 1974132064}
   audioClipHPLost: {fileID: 8300000, guid: 8364a0164350c1444a6b7bde096aa528, type: 3}
   gameOverObj: {fileID: 686070820}
@@ -10061,6 +10067,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterMoving: {fileID: 1974132063}
+  hpSystem: {fileID: 234698823}
   audioSourceSounds: {fileID: 1974132064}
   audioClipHPLost: {fileID: 8300000, guid: 8364a0164350c1444a6b7bde096aa528, type: 3}
   gameOverObj: {fileID: 686070820}
@@ -10705,6 +10713,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterMoving: {fileID: 1974132063}
+  hpSystem: {fileID: 234698823}
   audioSourceSounds: {fileID: 1974132064}
   audioClipHPLost: {fileID: 8300000, guid: 8364a0164350c1444a6b7bde096aa528, type: 3}
   gameOverObj: {fileID: 686070820}
@@ -10888,6 +10898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6.22
+  rb: {fileID: 0}
 --- !u!82 &1974132064
 AudioSource:
   m_ObjectHideFlags: 0

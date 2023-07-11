@@ -6,6 +6,12 @@ using System.Collections;
 public class Interaction : MonoBehaviour
 {
     [SerializeField]
+    private CharacterMoving characterMoving;
+
+    [SerializeField]
+    private HpSystem hpSystem;
+
+    [SerializeField]
     private AudioSource audioSourceSounds;
 
     [SerializeField]
@@ -15,7 +21,7 @@ public class Interaction : MonoBehaviour
     private GameObject gameOverObj;
     private bool isDistanceAccept;
 
-    [SerializeField, TextArea, Space(1)]
+    [SerializeField, TextArea]
     private string[] textsOfPoints;
 
     [SerializeField]
@@ -103,7 +109,7 @@ public class Interaction : MonoBehaviour
         Pause.s_dof.active = true;
         hintPoint.SetActive(true);
         playerMoving.enabled = false;
-        CharacterMoving.rb.velocity = new Vector2(0, 0);
+        characterMoving.rb.velocity = new Vector2(0, 0);
     }
 
     private int GetIndexOfPoint()
@@ -141,11 +147,10 @@ public class Interaction : MonoBehaviour
     IEnumerator TimerDice(int randomNumber)
     {
         yield return new WaitForSeconds(2f);
-        HpSystem.ChangeNumberSouls(randomNumber, randomNumber >= HpSystem.currentHp);
+        hpSystem.ChangeNumberSouls(randomNumber, randomNumber >= HpSystem.currentHp);
         audioSourceSounds.PlayOneShot(audioClipHPLost);
         if (HpSystem.currentHp == 0)
         {
-            HpSystem.currentHp = 0;
             Pause.s_dof.active = true;
             gameOverObj.SetActive(true);
             isButtonClicked = false;

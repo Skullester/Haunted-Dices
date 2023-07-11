@@ -4,7 +4,7 @@ public class CharacterMoving : MonoBehaviour
 {
     [SerializeField, Range(1f, 10f)]
     private float speed;
-    public static Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     void Start()
     {

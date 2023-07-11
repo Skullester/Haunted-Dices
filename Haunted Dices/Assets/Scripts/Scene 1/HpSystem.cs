@@ -4,8 +4,7 @@ using UnityEngine.UI;
 
 public class HpSystem : MonoBehaviour
 {
-    [SerializeField]
-    private static List<Image> hearts = new List<Image>();
+    private List<Image> hearts = new List<Image>();
     private int maxHp = 12;
     public static int currentHp;
 
@@ -18,7 +17,7 @@ public class HpSystem : MonoBehaviour
         }
     }
 
-    public static void ChangeNumberSouls(int priceSkill, bool GameOver)
+    public void ChangeNumberSouls(int priceSkill, bool GameOver)
     {
         int countOfList = hearts.Count;
         priceSkill = GameOver ? hearts.Count : priceSkill;
