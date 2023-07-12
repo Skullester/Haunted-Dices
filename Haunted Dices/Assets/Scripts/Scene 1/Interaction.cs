@@ -110,10 +110,8 @@ public class Interaction : MonoBehaviour
         }
         else
             this.textHint.text = textHint;
-        Pause.s_dof.active = true;
+        LockMovement();
         hintPoint.SetActive(true);
-        playerMoving.enabled = false;
-        characterMoving.rb.velocity = new Vector2(0, 0);
     }
 
     private int GetIndexOfPoint()
@@ -156,9 +154,16 @@ public class Interaction : MonoBehaviour
         audioSourceSounds.PlayOneShot(audioClipHPLost);
         if (HpSystem.currentHp == 0)
         {
-            Pause.s_dof.active = true;
+            LockMovement();
             gameOverObj.SetActive(true);
             isButtonClicked = false;
         }
+    }
+
+    private void LockMovement()
+    {
+        Pause.s_dof.active = true;
+        playerMoving.enabled = false;
+        characterMoving.rb.velocity = new Vector2(0, 0);
     }
 }
