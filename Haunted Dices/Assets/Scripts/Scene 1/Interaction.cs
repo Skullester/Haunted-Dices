@@ -152,7 +152,7 @@ public class Interaction : MonoBehaviour
     IEnumerator TimerDice(int randomNumber)
     {
         yield return new WaitForSeconds(2f);
-        hpSystem.ChangeNumberSouls(randomNumber, randomNumber >= HpSystem.currentHp);
+        hpSystem.ChangeNumberSouls(randomNumber);
         audioSourceSounds.PlayOneShot(audioClipHPLost);
         if (HpSystem.currentHp == 0)
         {

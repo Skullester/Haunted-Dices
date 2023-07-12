@@ -1,31 +1,24 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using TMPro;
 
 public class HpSystem : MonoBehaviour
 {
-    private List<Image> hearts = new List<Image>();
-    private int maxHp = 12;
+    [SerializeField]
+    private TMP_Text textHp;
+    private int maxHp = 36;
     public static int currentHp;
 
     void Awake()
     {
         currentHp = maxHp;
-        for (int i = 0; i < maxHp; i++)
-        {
-            hearts.Add(transform.Find($"Image ({i})").gameObject.GetComponent<Image>());
-        }
     }
 
-    public void ChangeNumberSouls(int priceSkill, bool GameOver)
+    public void ChangeNumberSouls(int priceSkill)
     {
-        int countOfList = hearts.Count;
-        priceSkill = GameOver ? hearts.Count : priceSkill;
-        for (int i = countOfList - 1; i > countOfList - 1 - priceSkill; i--)
-        {
-            hearts[i].enabled = false;
-            hearts.RemoveAt(i);
-        }
         currentHp -= priceSkill;
+        currentHp = currentHp < 0 ? 0 : currentHp;
+        textHp.text = currentHp.ToString();
     }
 }
