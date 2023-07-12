@@ -58,9 +58,12 @@ public class SwitchingCharacter : MonoBehaviour
 
     void ChangeCharacter(int buttonIndex)
     {
+        int index = 0;
         for (int i = 0; i < skillBtnsImgs.Length; i++)
         {
-            skillBtnsImgs[i].sprite = skillsSprites[i + buttonIndex + 1];
+            if (buttonIndex == 1)
+                index = 1;
+            skillBtnsImgs[i].sprite = skillsSprites[i + buttonIndex + index];
             btnCharacters[i].interactable = !btnCharacters[i].interactable;
         }
         sRenderer.sprite = spritesCharacters[buttonIndex];
