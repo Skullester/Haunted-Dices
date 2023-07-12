@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class ToggleSystem : MonoBehaviour
 {
     [SerializeField]
-    private Toggle[] numToggles = new Toggle[4];
+    private Toggle[] numToggles;
 
     public void MissionCompleted(int indexTog)
     {

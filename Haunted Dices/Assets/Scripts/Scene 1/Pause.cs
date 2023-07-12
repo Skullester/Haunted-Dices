@@ -49,7 +49,7 @@ public class Pause : MonoBehaviour
 
     public void ReturnToMenu()
     {
-        if (warning.activeSelf || HpSystem.currentHp == 0)
+        if (warning.activeSelf || Characters.Hp == 0)
         {
             Interaction.isButtonClicked = false;
             Time.timeScale = 1f;

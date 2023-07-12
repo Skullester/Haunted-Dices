@@ -1,10 +1,11 @@
 using UnityEngine;
 using TMPro;
-using System;
 using System.Collections;
 
 public class Interaction : MonoBehaviour
 {
+    private Characters[] characters = new Characters[SwitchingCharacter.s_characterNumbers];
+
     [SerializeField]
     private CharacterMoving characterMoving;
 
@@ -76,6 +77,7 @@ public class Interaction : MonoBehaviour
         Cursor.SetCursor(null, hotSpot, CursorMode.Auto);
     }
 
+    #region cringe
     void OnMouseOver()
     {
         if (Input.GetKeyDown(KeyCode.Mouse1) && isDistanceAccept)
@@ -93,9 +95,9 @@ public class Interaction : MonoBehaviour
 
     private void UseSkill(int indexSkillButton)
     {
-        Debug.Log(
+        /* Debug.Log(
             $"{SwitchingCharacter.indexOfCharacter + 1} перс и {indexSkillButton + 1} кнопка"
-        );
+        ); */
         int randomNumber = Dice.GetRandomNumber();
         textDice.text = randomNumber.ToString();
         StartCoroutine(TimerDice(randomNumber));
@@ -104,14 +106,14 @@ public class Interaction : MonoBehaviour
 
     private void CallHintMenu(string textHint = "")
     {
+        hintPoint.SetActive(true);
+        LockMovement();
         if (textHint == string.Empty)
         {
             this.textHint.text = textsOfPoints[GetIndexOfPoint()];
+            return;
         }
-        else
-            this.textHint.text = textHint;
-        LockMovement();
-        hintPoint.SetActive(true);
+        this.textHint.text = textHint;
     }
 
     private int GetIndexOfPoint()
@@ -130,7 +132,6 @@ public class Interaction : MonoBehaviour
                 }
             }
         }
-        Debug.Log(indexOfPoint);
         return indexOfPoint;
     }
 
@@ -152,7 +153,7 @@ public class Interaction : MonoBehaviour
         yield return new WaitForSeconds(2f);
         hpSystem.ChangeNumberSouls(randomNumber);
         audioSourceSounds.PlayOneShot(audioClipHPLost);
-        if (HpSystem.currentHp == 0)
+        if (Characters.Hp == 0)
         {
             LockMovement();
             gameOverObj.SetActive(true);
@@ -166,4 +167,5 @@ public class Interaction : MonoBehaviour
         playerMoving.enabled = false;
         characterMoving.rb.velocity = new Vector2(0, 0);
     }
+    #endregion
 }

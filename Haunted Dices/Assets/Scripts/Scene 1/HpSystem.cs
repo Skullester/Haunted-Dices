@@ -1,6 +1,4 @@
 using UnityEngine;
-using System.Collections.Generic;
-using UnityEngine.UI;
 using TMPro;
 
 public class HpSystem : MonoBehaviour
@@ -8,17 +6,16 @@ public class HpSystem : MonoBehaviour
     [SerializeField]
     private TMP_Text textHp;
     private int maxHp = 36;
-    public static int currentHp;
 
     void Awake()
     {
-        currentHp = maxHp;
+        Characters.Hp = maxHp;
     }
 
     public void ChangeNumberSouls(int priceSkill)
     {
-        currentHp -= priceSkill;
-        currentHp = currentHp < 0 ? 0 : currentHp;
-        textHp.text = currentHp.ToString();
+        Characters.Hp -= priceSkill;
+        Characters.Hp = Characters.Hp < 0 ? 0 : Characters.Hp;
+        textHp.text = Characters.Hp.ToString();
     }
 }
