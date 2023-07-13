@@ -11,6 +11,8 @@ TagManager:
   - Magazine
   - Btn1
   - Btn2
+  - Yes
+  - No
   layers:
   - Default
   - TransparentFX

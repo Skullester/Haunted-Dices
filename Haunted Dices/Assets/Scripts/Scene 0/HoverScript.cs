@@ -12,9 +12,6 @@ public class HoverScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private TMP_Text textHint;
 
     [SerializeField]
-    private TMP_Text textSkill;
-
-    [SerializeField]
     private GameObject objText;
     private Outline outline;
 
@@ -30,7 +27,7 @@ public class HoverScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     private void Awake()
     {
-        outline = GetComponent<Outline>();
+        outline = GetComponent<Outline>() ?? null;
     }
 
     public void OnPointerEnter(PointerEventData pointerEventData)
@@ -39,6 +36,8 @@ public class HoverScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             outline.enabled = true;
         switch (this.gameObject.tag)
         {
+            case "Yes":
+
             case "Radio":
                 textHint.text = "Настройки";
                 break;
