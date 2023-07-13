@@ -9,6 +9,9 @@ public class EventTree : MonoBehaviour
         new Dictionary<int, Action<int, int>>();
 
     [SerializeField]
+    private GameObject victoryObj;
+
+    [SerializeField]
     private Interaction hint;
 
     [SerializeField, TextArea]
@@ -38,7 +41,7 @@ public class EventTree : MonoBehaviour
     void Update()
     {
         if (indTog.CheckWin())
-            gameOver.LockMovement();
+            victoryObj.SetActive(true);
     }
 
     public void FirstPointInteraction(int indexChar, int indexSkill) //0 Тело
