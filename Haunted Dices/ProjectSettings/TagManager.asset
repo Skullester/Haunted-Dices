@@ -9,6 +9,8 @@ TagManager:
   - Board
   - Lamp
   - Magazine
+  - Btn1
+  - Btn2
   layers:
   - Default
   - TransparentFX

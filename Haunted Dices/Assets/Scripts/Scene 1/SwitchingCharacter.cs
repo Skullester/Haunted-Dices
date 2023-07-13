@@ -7,6 +7,7 @@ using System;
 public class SwitchingCharacter : MonoBehaviour
 {
     public static int s_characterNumbers = 2;
+    public static int s_buttonIndex;
     public static int indexOfCharacter;
 
     [SerializeField]
@@ -52,6 +53,7 @@ public class SwitchingCharacter : MonoBehaviour
 
     IEnumerator DelayAnim(int buttonIndex)
     {
+        s_buttonIndex = buttonIndex;
         yield return new WaitForSeconds(0.5f);
         for (int i = 0; i < skillBtnsImgs.Length; i++)
         {
