@@ -121,33 +121,11 @@ public class Interaction : MonoBehaviour
         Transform textTransorm = this.hintPoint.transform.Find("Text (TMP)");
         if (SwitchingCharacter.indexOfCharacter == 0)
         {
-            imgChar[0].gameObject.SetActive(true);
-            scale.localScale = new Vector3(
-                scale.localScale.x * -1,
-                scale.localScale.y,
-                scale.localScale.z
-            );
-            textTransorm.localScale = new Vector3(
-                textTransorm.localScale.x * -1,
-                textTransorm.localScale.y,
-                textTransorm.localScale.z
-            );
-            hintPoint.SetActive(true);
+            ChangeScaleHint(0, textTransorm);
         }
         else if (SwitchingCharacter.indexOfCharacter == 1)
         {
-            imgChar[1].gameObject.SetActive(true);
-            scale.localScale = new Vector3(
-                scale.localScale.x * -1,
-                scale.localScale.y,
-                scale.localScale.z
-            );
-            textTransorm.localScale = new Vector3(
-                textTransorm.localScale.x * -1,
-                textTransorm.localScale.y,
-                textTransorm.localScale.z
-            );
-            hintPoint.SetActive(true);
+            ChangeScaleHint(1, textTransorm);
         }
 
         LockMovement();
@@ -157,6 +135,22 @@ public class Interaction : MonoBehaviour
             return;
         }
         this.textHint.text = textHint;
+    }
+
+    private void ChangeScaleHint(int indexChar, Transform textTransorm)
+    {
+        imgChar[indexChar].gameObject.SetActive(true);
+        scale.localScale = new Vector3(
+            scale.localScale.x * -1,
+            scale.localScale.y,
+            scale.localScale.z
+        );
+        textTransorm.localScale = new Vector3(
+            textTransorm.localScale.x * -1,
+            textTransorm.localScale.y,
+            textTransorm.localScale.z
+        );
+        hintPoint.SetActive(true);
     }
 
     private int GetIndexOfPoint()
