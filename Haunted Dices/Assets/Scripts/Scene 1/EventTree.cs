@@ -70,7 +70,7 @@ public class EventTree : MonoBehaviour
         }
     }
 
-    public void SecondPointInteraction(int indexSkill, int indexChar) //1 Игрушки
+    public void SecondPointInteraction(int indexChar, int indexSkill) //1 Игрушки
     {
         if (indexChar == 0 & indexSkill == 0)
         {
@@ -103,14 +103,16 @@ public class EventTree : MonoBehaviour
         }
     }
 
-    public void ThirdPointInteraction(int indexSkill, int indexChar) //2 Закрытая дверь
+    public void ThirdPointInteraction(int indexChar, int indexSkill) //2 Закрытая дверь
     {
         if (indexChar == 0 & indexSkill == 0)
         {
+            Debug.Log($"{indexChar}, {indexChar}");
             hint.CallHintMenu(text[8]);
         }
         else if (indexChar == 0 & indexSkill == 1)
         {
+            Debug.Log($"{indexChar}, {indexChar}");
             hint.CallHintMenu(text[9]);
         }
         else if (indexChar == 1 & indexSkill == 0)
@@ -126,7 +128,7 @@ public class EventTree : MonoBehaviour
         }
     }
 
-    public void FourthPointInteraction(int indexSkill, int indexChar) //3 Письмо
+    public void FourthPointInteraction(int indexChar, int indexSkill) //3 Письмо
     {
         if (indexChar == 0 & indexSkill == 0)
         {
@@ -154,7 +156,7 @@ public class EventTree : MonoBehaviour
         }
     }
 
-    public void FifthPointInteraction(int indexSkill, int indexChar) //4 Отпечатки ладоней
+    public void FifthPointInteraction(int indexChar, int indexSkill) //4 Отпечатки ладоней
     {
         if (indexChar == 0 & indexSkill == 0)
         {
@@ -178,7 +180,7 @@ public class EventTree : MonoBehaviour
         }
     }
 
-    public void SixthPointInteraction(int indexSkill, int indexChar) //5 Коробка с фильмами
+    public void SixthPointInteraction(int indexChar, int indexSkill) //5 Коробка с фильмами
     {
         if (indexChar == 0 & indexSkill == 0)
         {
@@ -206,7 +208,7 @@ public class EventTree : MonoBehaviour
         }
     }
 
-    public void SeventhPointInteraction(int indexSkill, int indexChar) //6 Таинственная коробка
+    public void SeventhPointInteraction(int indexChar, int indexSkill) //6 Таинственная коробка
     {
         if (indexChar == 0 & indexSkill == 0)
         {
@@ -231,7 +233,7 @@ public class EventTree : MonoBehaviour
         }
     }
 
-    public void EighthPointInteraction(int indexSkill, int indexChar) //7 Ванна
+    public void EighthPointInteraction(int indexChar, int indexSkill) //7 Ванна
     {
         if (indexChar == 0 & indexSkill == 0)
         {
@@ -259,7 +261,7 @@ public class EventTree : MonoBehaviour
         }
     }
 
-    public void NinthPointInteraction(int indexSkill, int indexChar) //8 Черный порошок
+    public void NinthPointInteraction(int indexChar, int indexSkill) //8 Черный порошок
     {
         if (indexChar == 0 & indexSkill == 0)
         {
@@ -282,7 +284,7 @@ public class EventTree : MonoBehaviour
         }
     }
 
-    public void TenthPointInteraction(int indexSkill, int indexChar) //9 Призрак
+    public void TenthPointInteraction(int indexChar, int indexSkill) //9 Призрак
     {
         if (indexChar == 0 & indexSkill == 0)
         {
