@@ -7,10 +7,14 @@ using System.Linq;
 
 public class SettingsGame : MonoBehaviour
 {
-    private int indexOfCurrentResolution;
+    private bool isOn = true;
 
     [SerializeField]
-    private Toggle toggleVolumeMute;
+    private Image imgBtn;
+
+    [SerializeField]
+    private Sprite[] spritesToggleSound;
+    private int indexOfCurrentResolution;
 
     [SerializeField]
     private Toggle toggleFullScreen;
@@ -25,14 +29,33 @@ public class SettingsGame : MonoBehaviour
     private AudioSource audioSourceSounds;
 
     [SerializeField]
+    private AudioSource audioSourceCommon;
+
+    [SerializeField]
     private Slider sliderSoundEffects;
 
     [SerializeField]
     private Slider sliderMusic;
     private Resolution[] resolutions;
 
+    [SerializeField]
+    private AudioClip[] clipSoundToggle;
+
+    [SerializeField]
+    private AudioClip[] songsRadio;
+
+    private void Update()
+    {
+        if (!audioSourceMusic.isPlaying)
+        {
+            int index = UnityEngine.Random.Range(0, 3 + 1);
+            audioSourceMusic.PlayOneShot(songsRadio[index]);
+        }
+    }
+
     void Awake()
     {
+        audioSourceCommon.ignoreListenerPause = true;
         GetResolutions();
         LoadSettings(indexOfCurrentResolution);
     }
@@ -51,10 +74,14 @@ public class SettingsGame : MonoBehaviour
         audioSourceSounds.volume = value;
     }
 
-    public void SoundMute(bool isSoundMute)
+    public void SoundMute()
     {
-        AudioListener.pause = isSoundMute;
-        PlayerPrefs.SetInt("VolumeMutedPref", isSoundMute ? 1 : 0);
+        isOn = !isOn;
+        int index = Convert.ToInt32(isOn);
+        imgBtn.sprite = spritesToggleSound[index];
+        AudioListener.pause = !isOn;
+        audioSourceCommon.PlayOneShot(clipSoundToggle[index]);
+        PlayerPrefs.SetInt("VolumeMutedPref", index);
     }
 
     public void ChangeScreenState(bool isFullScreen)
@@ -100,8 +127,9 @@ public class SettingsGame : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("VolumeMutedPref"))
         {
-            AudioListener.pause = Convert.ToBoolean(PlayerPrefs.GetInt("VolumeMutedPref"));
-            toggleVolumeMute.isOn = AudioListener.pause;
+            isOn = Convert.ToBoolean(PlayerPrefs.GetInt("VolumeMutedPref"));
+            AudioListener.pause = !isOn;
+            imgBtn.sprite = spritesToggleSound[Convert.ToInt32(isOn)];
         }
 
         if (PlayerPrefs.HasKey("VolumeMusicSliderPref"))
