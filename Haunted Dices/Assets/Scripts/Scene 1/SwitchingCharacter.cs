@@ -23,6 +23,9 @@ public class SwitchingCharacter : MonoBehaviour
     private SpriteRenderer sRenderer;
     private Animator[] animButtons = new Animator[s_characterNumbers];
 
+    [SerializeField]
+    private Animator[] animSkills = new Animator[s_characterNumbers];
+
     private Transform[] characters = new Transform[s_characterNumbers];
 
     void Awake()
@@ -50,9 +53,18 @@ public class SwitchingCharacter : MonoBehaviour
     IEnumerator DelayAnim(int buttonIndex)
     {
         yield return new WaitForSeconds(0.5f);
+        for (int i = 0; i < skillBtnsImgs.Length; i++)
+        {
+            btnCharacters[i].interactable = !btnCharacters[i].interactable;
+        }
         characters[indexOfCharacter++].SetAsFirstSibling();
         if (indexOfCharacter == s_characterNumbers)
             indexOfCharacter = 0;
+        for (int i = 0; i < animSkills.Length; i++)
+        {
+            animSkills[i].SetTrigger("Anim");
+        }
+        yield return new WaitForSeconds(1f);
         ChangeCharacter(buttonIndex);
     }
 
@@ -64,7 +76,6 @@ public class SwitchingCharacter : MonoBehaviour
             if (buttonIndex == 1)
                 index = 1;
             skillBtnsImgs[i].sprite = skillsSprites[i + buttonIndex + index];
-            btnCharacters[i].interactable = !btnCharacters[i].interactable;
         }
         sRenderer.sprite = spritesCharacters[buttonIndex];
     }
