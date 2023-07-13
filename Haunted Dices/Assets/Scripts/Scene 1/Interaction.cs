@@ -2,9 +2,19 @@ using UnityEngine;
 using TMPro;
 using System;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Interaction : MonoBehaviour
 {
+    [SerializeField]
+    private Sprite[] skillsSprites;
+    public static int s_buttonIndex;
+
+    [SerializeField]
+    private Image[] skillBtnsImgs;
+
+    [SerializeField]
+    private Sprite[] skillsSpritesActive;
     private Characters[] characters = new Characters[SwitchingCharacter.s_characterNumbers];
 
     [SerializeField]
@@ -140,8 +150,21 @@ public class Interaction : MonoBehaviour
 
     public void ChooseSkill(int indexButton)
     {
+        if (SwitchingCharacter.indexOfCharacter == 0)
+        {
+            if (s_buttonIndex != indexButton)
+                skillBtnsImgs[s_buttonIndex].sprite = skillsSprites[s_buttonIndex];
+            skillBtnsImgs[indexButton].sprite = skillsSpritesActive[indexButton];
+        }
+        if (SwitchingCharacter.indexOfCharacter == 1)
+        {
+            if (s_buttonIndex != indexButton)
+                skillBtnsImgs[s_buttonIndex].sprite = skillsSprites[s_buttonIndex + 2];
+            skillBtnsImgs[indexButton].sprite = skillsSpritesActive[indexButton + 2];
+        }
         this.indexSkillButton = indexButton;
         isButtonClicked = true;
+        s_buttonIndex = indexButton;
     }
 
     IEnumerator TimerDice(int randomNumber)
