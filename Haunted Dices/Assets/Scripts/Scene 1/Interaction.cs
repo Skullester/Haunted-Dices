@@ -59,6 +59,12 @@ public class Interaction : MonoBehaviour
     private GameObject hintPoint;
     private TMP_Text textHint;
 
+    [SerializeField]
+    private RectTransform scale;
+
+    [SerializeField]
+    private Image[] imgChar;
+
     void Awake()
     {
         playerMoving = player.GetComponent<CharacterMoving>();
@@ -112,7 +118,16 @@ public class Interaction : MonoBehaviour
 
     public void CallHintMenu(string textHint = "")
     {
-        hintPoint.SetActive(true);
+        Transform textTransorm = this.hintPoint.transform.Find("Text (TMP)");
+        if (SwitchingCharacter.indexOfCharacter == 0)
+        {
+            ChangeScaleHint(0, textTransorm);
+        }
+        else if (SwitchingCharacter.indexOfCharacter == 1)
+        {
+            ChangeScaleHint(1, textTransorm);
+        }
+
         LockMovement();
         if (textHint == string.Empty)
         {
@@ -120,6 +135,22 @@ public class Interaction : MonoBehaviour
             return;
         }
         this.textHint.text = textHint;
+    }
+
+    private void ChangeScaleHint(int indexChar, Transform textTransorm)
+    {
+        imgChar[indexChar].gameObject.SetActive(true);
+        scale.localScale = new Vector3(
+            scale.localScale.x * -1,
+            scale.localScale.y,
+            scale.localScale.z
+        );
+        textTransorm.localScale = new Vector3(
+            textTransorm.localScale.x * -1,
+            textTransorm.localScale.y,
+            textTransorm.localScale.z
+        );
+        hintPoint.SetActive(true);
     }
 
     private int GetIndexOfPoint()
@@ -146,6 +177,10 @@ public class Interaction : MonoBehaviour
         hintPoint.SetActive(false);
         Pause.s_dof.active = false;
         playerMoving.enabled = true;
+        if (SwitchingCharacter.indexOfCharacter == 0)
+            GameObject.Find("MartinDialog").SetActive(false);
+        else
+            GameObject.Find("SheronDialog").SetActive(false);
     }
 
     public void ChooseSkill(int indexButton)
