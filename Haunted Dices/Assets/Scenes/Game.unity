@@ -1404,21 +1404,20 @@ MonoBehaviour:
   spritesToggleSound:
   - {fileID: 21300000, guid: 0ee4b7658bfaa8249956a162e433799e, type: 3}
   - {fileID: 21300000, guid: d5832cbed85f71d4fa440439918425d3, type: 3}
-  toggleFullScreen: {fileID: 2044499323461489749}
-  resolutionDropdown: {fileID: 2152411174076512353}
+  toggleFullScreen: {fileID: 324113149}
+  resolutionDropdown: {fileID: 324113148}
   audioSourceMusic: {fileID: 142540148}
   audioSourceSounds: {fileID: 1974132064}
   audioSourceCommon: {fileID: 20539240}
-  sliderSoundEffects: {fileID: 2623619719542254310}
-  sliderMusic: {fileID: 1373673248718208254}
+  sliderSoundEffects: {fileID: 324113147}
+  sliderMusic: {fileID: 324113146}
   clipSoundToggle:
   - {fileID: 8300000, guid: b884c81909f16d44095ab74e6d1127f3, type: 3}
   - {fileID: 8300000, guid: bb18316f0da50c2448690d01d528b1cf, type: 3}
   songsRadio:
-  - {fileID: 8300000, guid: 0cb5617e8946ea24b92c36ea787f0ea5, type: 3}
-  - {fileID: 8300000, guid: 919394fd5d12fe347b948f67ce9dbd66, type: 3}
-  - {fileID: 8300000, guid: b9c7390983f292e44b90ce04d68cfa4b, type: 3}
-  - {fileID: 8300000, guid: ea9e6b1bb9c6efa428ab9a9fbf72deb5, type: 3}
+  - {fileID: 8300000, guid: 064ab70154d69704da2ea869d109f377, type: 3}
+  - {fileID: 8300000, guid: 783b1f89b865cf445b3777cd54fa7467, type: 3}
+  - {fileID: 8300000, guid: cf4a07f0a30e6884da39e3ffc5dd9211, type: 3}
 --- !u!1 &183141061
 GameObject:
   m_ObjectHideFlags: 0
@@ -2375,6 +2374,50 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &324113146 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4620918862651941161, guid: 8d287e5391a781142a766366ee7cbe7a, type: 3}
+  m_PrefabInstance: {fileID: 324113143}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &324113147 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7187761492442266536, guid: 8d287e5391a781142a766366ee7cbe7a, type: 3}
+  m_PrefabInstance: {fileID: 324113143}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &324113148 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5183920157416770604, guid: 8d287e5391a781142a766366ee7cbe7a, type: 3}
+  m_PrefabInstance: {fileID: 324113143}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &324113149 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8893118702984788991, guid: 8d287e5391a781142a766366ee7cbe7a, type: 3}
+  m_PrefabInstance: {fileID: 324113143}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &353192839
