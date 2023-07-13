@@ -59,20 +59,20 @@ public class HoverScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
                 }
                 else
                 {
-                    textHint.text =
-                        "Призрачная связь\nСпособность связаться с потусторонним миром через что/кого угодно";
+                    textHint.text = "Идеальная отмычка\nПоможет вскрыть что/кого угодно";
                     //textSkill.text = "Призрачная связь";
                 }
                 break;
             case "Btn2":
                 if (SwitchingCharacter.indexOfCharacter == 1)
                 {
-                    textHint.text = "Орлиный глаз\nПодмечает всевозможные детали на чем/ком угодно";
+                    textHint.text =
+                        "Призрачная связь\nСпособность связаться с потусторонним миром через что/кого угодно";
                     // textSkill.text = "Орлиный глаз";
                 }
                 else
                 {
-                    textHint.text = "Идеальная отмычка\nПоможет вскрыть что/кого угодно";
+                    textHint.text = "Орлиный глаз\nПодмечает всевозможные детали на чем/ком угодно";
                     //textSkill.text = "Идеальная отмычка";
                 }
                 break;
