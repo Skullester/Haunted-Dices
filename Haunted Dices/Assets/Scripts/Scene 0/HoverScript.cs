@@ -8,7 +8,10 @@ using TMPro;
 public class HoverScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField]
-    private TMP_Text objText;
+    private TMP_Text textHint;
+
+    [SerializeField]
+    private GameObject objText;
     private Outline outline;
 
     [SerializeField]
@@ -17,9 +20,8 @@ public class HoverScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     private void Update()
     {
-        /*     Transform tmp = objText.transform;
-            if (tmp.position != Input.mousePosition)
-                objText.transform.position = Input.mousePosition; */
+        /*  if (objText.gameObject.transform.position != Input.mousePosition)
+             objText.transform.position = Input.mousePosition; */
     }
 
     private void Awake()
@@ -29,14 +31,30 @@ public class HoverScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
-        objText.enabled = true;
+        switch (this.gameObject.tag)
+        {
+            case "Radio":
+                textHint.text = "Настройки";
+                break;
+            case "Board":
+                textHint.text = "Играть";
+                break;
+            case "Magazine":
+                textHint.text = "Об игре";
+                break;
+            case "Lamp":
+                textHint.text = "Выйти";
+                break;
+        }
+        objText.transform.position = Input.mousePosition;
+        objText.SetActive(true);
         Cursor.SetCursor(cursorTexture, hotSpot, CursorMode.Auto);
         outline.enabled = true;
     }
 
     public void OnPointerExit(PointerEventData pointerEventData)
     {
-        objText.enabled = false;
+        objText.SetActive(false);
         Cursor.SetCursor(null, hotSpot, CursorMode.Auto);
         outline.enabled = false;
     }
