@@ -7,6 +7,7 @@ using System;
 public class SwitchingCharacter : MonoBehaviour
 {
     public static int s_characterNumbers = 2;
+    public static int s_buttonIndex;
     public static int indexOfCharacter;
 
     [SerializeField]
@@ -22,6 +23,9 @@ public class SwitchingCharacter : MonoBehaviour
     [SerializeField]
     private SpriteRenderer sRenderer;
     private Animator[] animButtons = new Animator[s_characterNumbers];
+
+    [SerializeField]
+    private Animator[] animSkills = new Animator[s_characterNumbers];
 
     private Transform[] characters = new Transform[s_characterNumbers];
 
@@ -49,10 +53,20 @@ public class SwitchingCharacter : MonoBehaviour
 
     IEnumerator DelayAnim(int buttonIndex)
     {
+        s_buttonIndex = buttonIndex;
         yield return new WaitForSeconds(0.5f);
+        for (int i = 0; i < skillBtnsImgs.Length; i++)
+        {
+            btnCharacters[i].interactable = !btnCharacters[i].interactable;
+        }
         characters[indexOfCharacter++].SetAsFirstSibling();
         if (indexOfCharacter == s_characterNumbers)
             indexOfCharacter = 0;
+        for (int i = 0; i < animSkills.Length; i++)
+        {
+            animSkills[i].SetTrigger("Anim");
+        }
+        yield return new WaitForSeconds(1f);
         ChangeCharacter(buttonIndex);
     }
 
@@ -64,7 +78,6 @@ public class SwitchingCharacter : MonoBehaviour
             if (buttonIndex == 1)
                 index = 1;
             skillBtnsImgs[i].sprite = skillsSprites[i + buttonIndex + index];
-            btnCharacters[i].interactable = !btnCharacters[i].interactable;
         }
         sRenderer.sprite = spritesCharacters[buttonIndex];
     }

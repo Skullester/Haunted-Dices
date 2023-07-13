@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Points
+  - Radio
+  - Board
+  - Lamp
+  - Magazine
+  - Btn1
+  - Btn2
   layers:
   - Default
   - TransparentFX
