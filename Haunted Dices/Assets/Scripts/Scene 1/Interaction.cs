@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System;
 using System.Collections;
 
 public class Interaction : MonoBehaviour
@@ -48,9 +49,6 @@ public class Interaction : MonoBehaviour
     private GameObject hintPoint;
     private TMP_Text textHint;
 
-    [SerializeField]
-    private ToggleSystem indTog;
-
     void Awake()
     {
         playerMoving = player.GetComponent<CharacterMoving>();
@@ -95,16 +93,14 @@ public class Interaction : MonoBehaviour
 
     private void UseSkill(int indexSkillButton)
     {
-        /* Debug.Log(
-            $"{SwitchingCharacter.indexOfCharacter + 1} перс и {indexSkillButton + 1} кнопка"
-        ); */
         int randomNumber = Dice.GetRandomNumber();
         textDice.text = randomNumber.ToString();
         StartCoroutine(TimerDice(randomNumber));
-        indTog.MissionCompleted(GetIndexOfPoint());
+        Action<int, int> action = EventTree.eventDict[GetIndexOfPoint()];
+        action.Invoke(SwitchingCharacter.indexOfCharacter, indexSkillButton);
     }
 
-    private void CallHintMenu(string textHint = "")
+    public void CallHintMenu(string textHint = "")
     {
         hintPoint.SetActive(true);
         LockMovement();
@@ -161,7 +157,7 @@ public class Interaction : MonoBehaviour
         }
     }
 
-    private void LockMovement()
+    public void LockMovement()
     {
         Pause.s_dof.active = true;
         playerMoving.enabled = false;

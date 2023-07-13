@@ -10,4 +10,17 @@ public class ToggleSystem : MonoBehaviour
     {
         numToggles[indexTog].isOn = true;
     }
+
+    public bool CheckWin()
+    {
+        int count = 0;
+        for (int i = 0; i < numToggles.Length; i++)
+        {
+            if (numToggles[i].isOn)
+                count += 1;
+        }
+        if (count == 4)
+            return true;
+        return false;
+    }
 }
