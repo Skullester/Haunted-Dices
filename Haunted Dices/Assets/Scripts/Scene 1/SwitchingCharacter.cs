@@ -52,6 +52,10 @@ public class SwitchingCharacter : MonoBehaviour
 
     IEnumerator DelayAnim(int buttonIndex)
     {
+        for (int i = 0; i < animSkills.Length; i++)
+        {
+            animSkills[i].SetTrigger("Anim");
+        }
         yield return new WaitForSeconds(0.5f);
         for (int i = 0; i < skillBtnsImgs.Length; i++)
         {
@@ -60,10 +64,7 @@ public class SwitchingCharacter : MonoBehaviour
         characters[indexOfCharacter++].SetAsFirstSibling();
         if (indexOfCharacter == s_characterNumbers)
             indexOfCharacter = 0;
-        for (int i = 0; i < animSkills.Length; i++)
-        {
-            animSkills[i].SetTrigger("Anim");
-        }
+        CharacterMoving.animCharacter.SetInteger("isWoman", indexOfCharacter);
         yield return new WaitForSeconds(1f);
         ChangeCharacter(buttonIndex);
     }
