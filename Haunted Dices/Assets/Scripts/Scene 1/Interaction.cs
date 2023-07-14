@@ -70,6 +70,9 @@ public class Interaction : MonoBehaviour
 
     private int tempChar = -1;
 
+    [SerializeField]
+    private Animator animDice;
+
     void Awake()
     {
         playerMoving = player.GetComponent<CharacterMoving>();
@@ -114,6 +117,7 @@ public class Interaction : MonoBehaviour
 
     private void UseSkill(int indexSkillButton)
     {
+        animDice.SetTrigger("Rotate");
         int randomNumber = Dice.GetRandomNumber();
         textDice.text = randomNumber.ToString();
         StartCoroutine(TimerDice(randomNumber));
