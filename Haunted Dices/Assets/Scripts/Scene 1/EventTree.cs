@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 
 public class EventTree : MonoBehaviour
@@ -22,7 +23,11 @@ public class EventTree : MonoBehaviour
 
     [SerializeField]
     private Interaction[] points;
-    private Interaction gameOver;
+
+    [SerializeField]
+    private Interaction gameOverobj;
+
+    public Image[] imgGameOver;
 
     void Awake()
     {
@@ -201,7 +206,11 @@ public class EventTree : MonoBehaviour
         else if (indexChar == 1 & indexSkill == 0)
         {
             hint.CallHintMenu(text[22]);
-            //Метод GAME OVER
+            gameOverobj.LockMovement();
+            gameOverobj.gameObject.SetActive(true);
+            Interaction.isButtonClicked = false;
+            imgGameOver[0].enabled = true;
+            eventDict.Clear();
         }
         else if (indexChar == 1 & indexSkill == 1)
         {
