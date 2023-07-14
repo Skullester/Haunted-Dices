@@ -122,6 +122,7 @@ public class Interaction : MonoBehaviour
         textDice.text = randomNumber.ToString();
         StartCoroutine(TimerDice(randomNumber));
         Action<int, int> action = EventTree.eventDict[GetIndexOfPoint()];
+        Debug.Log(GetIndexOfPoint());
         action.Invoke(SwitchingCharacter.indexOfCharacter, indexSkillButton);
     }
 

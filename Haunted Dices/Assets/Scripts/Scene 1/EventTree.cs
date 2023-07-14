@@ -29,6 +29,12 @@ public class EventTree : MonoBehaviour
 
     public Image[] imgGameOver;
 
+    [SerializeField]
+    private GameObject steps;
+
+    [SerializeField]
+    private GameObject storage;
+
     void Awake()
     {
         eventDict.Add(0, FirstPointInteraction);
@@ -51,6 +57,7 @@ public class EventTree : MonoBehaviour
 
     public void FirstPointInteraction(int indexChar, int indexSkill) //0 Тело
     {
+        Debug.Log("Нулевой поинт");
         if (indexChar == 0 & indexSkill == 0)
         {
             hint.CallHintMenu(text[0]);
@@ -60,7 +67,7 @@ public class EventTree : MonoBehaviour
         else if (indexChar == 0 & indexSkill == 1)
         {
             indTog.MissionCompleted(0); //0-Who
-
+            steps.SetActive(true);
             hint.CallHintMenu(text[1]);
 
             points[1].gameObject.GetComponent<BoxCollider>().enabled = true;
@@ -80,6 +87,7 @@ public class EventTree : MonoBehaviour
 
     public void SecondPointInteraction(int indexChar, int indexSkill) //1 Игрушки
     {
+        Debug.Log("Первый поинт");
         if (indexChar == 0 & indexSkill == 0)
         {
             indTog.MissionCompleted(3); //3-ByWhat
@@ -113,6 +121,7 @@ public class EventTree : MonoBehaviour
 
     public void ThirdPointInteraction(int indexChar, int indexSkill) //2 Закрытая дверь
     {
+        Debug.Log("Второй поинт");
         if (indexChar == 0 & indexSkill == 0)
         {
             Debug.Log($"{indexChar}, {indexChar}");
@@ -138,6 +147,7 @@ public class EventTree : MonoBehaviour
 
     public void FourthPointInteraction(int indexChar, int indexSkill) //3 Письмо
     {
+        Debug.Log("Третий поинт");
         if (indexChar == 0 & indexSkill == 0)
         {
             hint.CallHintMenu(text[12]);
@@ -166,6 +176,7 @@ public class EventTree : MonoBehaviour
 
     public void FifthPointInteraction(int indexChar, int indexSkill) //4 Отпечатки ладоней
     {
+        Debug.Log("Четвертый поинт");
         if (indexChar == 0 & indexSkill == 0)
         {
             hint.CallHintMenu(text[16]);
@@ -190,6 +201,7 @@ public class EventTree : MonoBehaviour
 
     public void SixthPointInteraction(int indexChar, int indexSkill) //5 Коробка с фильмами
     {
+        Debug.Log("Пятый поинт");
         if (indexChar == 0 & indexSkill == 0)
         {
             hint.CallHintMenu(text[20]);
@@ -206,11 +218,11 @@ public class EventTree : MonoBehaviour
         else if (indexChar == 1 & indexSkill == 0)
         {
             hint.CallHintMenu(text[22]);
-            gameOverobj.LockMovement();
-            gameOverobj.gameObject.SetActive(true);
-            Interaction.isButtonClicked = false;
-            imgGameOver[0].enabled = true;
-            eventDict.Clear();
+            // gameOverobj.LockMovement();
+            // gameOverobj.gameObject.SetActive(true);
+            // Interaction.isButtonClicked = false;
+            // imgGameOver[0].enabled = true;
+            // eventDict.Clear();
         }
         else if (indexChar == 1 & indexSkill == 1)
         {
@@ -222,6 +234,7 @@ public class EventTree : MonoBehaviour
 
     public void SeventhPointInteraction(int indexChar, int indexSkill) //6 Таинственная коробка
     {
+        Debug.Log("Шестой поинт");
         if (indexChar == 0 & indexSkill == 0)
         {
             hint.CallHintMenu(text[24]);
@@ -247,6 +260,7 @@ public class EventTree : MonoBehaviour
 
     public void EighthPointInteraction(int indexChar, int indexSkill) //7 Ванна
     {
+        Debug.Log("Седьмой поинт");
         if (indexChar == 0 & indexSkill == 0)
         {
             hint.CallHintMenu(text[28]);
@@ -275,6 +289,7 @@ public class EventTree : MonoBehaviour
 
     public void NinthPointInteraction(int indexChar, int indexSkill) //8 Черный порошок
     {
+        Debug.Log("Восьмой поинт");
         if (indexChar == 0 & indexSkill == 0)
         {
             hint.CallHintMenu(text[32]);
@@ -298,6 +313,7 @@ public class EventTree : MonoBehaviour
 
     public void TenthPointInteraction(int indexChar, int indexSkill) //9 Призрак
     {
+        Debug.Log("Девятый поинт");
         if (indexChar == 0 & indexSkill == 0)
         {
             indTog.MissionCompleted(0); //0-Who

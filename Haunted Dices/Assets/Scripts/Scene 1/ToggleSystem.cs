@@ -19,6 +19,7 @@ public class ToggleSystem : MonoBehaviour
             if (numToggles[i].isOn)
                 count += 1;
         }
+        Debug.Log(count);
         if (count == 4)
             return true;
         return false;
