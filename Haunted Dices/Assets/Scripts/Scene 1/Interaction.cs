@@ -65,6 +65,11 @@ public class Interaction : MonoBehaviour
     [SerializeField]
     private Image[] imgChar;
 
+    [SerializeField]
+    private EventTree imageEnd;
+
+    private int tempChar = -1;
+
     void Awake()
     {
         playerMoving = player.GetComponent<CharacterMoving>();
@@ -119,11 +124,17 @@ public class Interaction : MonoBehaviour
     public void CallHintMenu(string textHint = "")
     {
         Transform textTransorm = this.hintPoint.transform.Find("Text (TMP)");
-        if (SwitchingCharacter.indexOfCharacter == 0)
+        if (
+            SwitchingCharacter.indexOfCharacter == 0
+            & tempChar != SwitchingCharacter.indexOfCharacter
+        )
         {
             ChangeScaleHint(0, textTransorm);
         }
-        else if (SwitchingCharacter.indexOfCharacter == 1)
+        else if (
+            SwitchingCharacter.indexOfCharacter == 1
+            & tempChar != SwitchingCharacter.indexOfCharacter
+        )
         {
             ChangeScaleHint(1, textTransorm);
         }
@@ -135,6 +146,7 @@ public class Interaction : MonoBehaviour
             return;
         }
         this.textHint.text = textHint;
+        this.tempChar = SwitchingCharacter.indexOfCharacter;
     }
 
     private void ChangeScaleHint(int indexChar, Transform textTransorm)
@@ -212,6 +224,8 @@ public class Interaction : MonoBehaviour
             LockMovement();
             gameOverObj.SetActive(true);
             isButtonClicked = false;
+            imageEnd.imgGameOver[1].enabled = true;
+            EventTree.eventDict.Clear();
         }
     }
 
