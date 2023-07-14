@@ -108,40 +108,34 @@ public class Interaction : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Mouse0) && isDistanceAccept)
         {
+            Debug.Log($"Используем скилл №{indexSkillButton}");
             if (isButtonClicked)
-                UseSkill(indexSkillButton);
+                UseSkill();
             else
                 CallHintMenu("Для взаимодействия с точкой сначала выберите умение персонажа!");
         }
     }
 
-    private void UseSkill(int indexSkillButton)
+    private void UseSkill()
     {
         animDice.SetTrigger("Rotate");
         int randomNumber = Dice.GetRandomNumber();
         textDice.text = randomNumber.ToString();
         StartCoroutine(TimerDice(randomNumber));
         Action<int, int> action = EventTree.eventDict[GetIndexOfPoint()];
-        Debug.Log(GetIndexOfPoint());
         action.Invoke(SwitchingCharacter.indexOfCharacter, indexSkillButton);
     }
 
     public void CallHintMenu(string textHint = "")
     {
         Transform textTransorm = this.hintPoint.transform.Find("Text (TMP)");
-        if (
-            SwitchingCharacter.indexOfCharacter == 0
-            & tempChar != SwitchingCharacter.indexOfCharacter
-        )
+        if (SwitchingCharacter.indexOfCharacter == 0)
         {
-            ChangeScaleHint(0, textTransorm);
+            ChangeScaleHint(0, textTransorm, tempChar);
         }
-        else if (
-            SwitchingCharacter.indexOfCharacter == 1
-            & tempChar != SwitchingCharacter.indexOfCharacter
-        )
+        else if (SwitchingCharacter.indexOfCharacter == 1)
         {
-            ChangeScaleHint(1, textTransorm);
+            ChangeScaleHint(1, textTransorm, tempChar);
         }
 
         LockMovement();
@@ -154,19 +148,22 @@ public class Interaction : MonoBehaviour
         this.tempChar = SwitchingCharacter.indexOfCharacter;
     }
 
-    private void ChangeScaleHint(int indexChar, Transform textTransorm)
+    private void ChangeScaleHint(int indexChar, Transform textTransorm, int tempChar)
     {
         imgChar[indexChar].gameObject.SetActive(true);
-        scale.localScale = new Vector3(
-            scale.localScale.x * -1,
-            scale.localScale.y,
-            scale.localScale.z
-        );
-        textTransorm.localScale = new Vector3(
-            textTransorm.localScale.x * -1,
-            textTransorm.localScale.y,
-            textTransorm.localScale.z
-        );
+        if (indexChar != tempChar)
+        {
+            scale.localScale = new Vector3(
+                scale.localScale.x * -1,
+                scale.localScale.y,
+                scale.localScale.z
+            );
+            textTransorm.localScale = new Vector3(
+                textTransorm.localScale.x * -1,
+                textTransorm.localScale.y,
+                textTransorm.localScale.z
+            );
+        }
         hintPoint.SetActive(true);
     }
 
@@ -214,9 +211,10 @@ public class Interaction : MonoBehaviour
                 skillBtnsImgs[s_buttonIndex].sprite = skillsSprites[s_buttonIndex + 2];
             skillBtnsImgs[indexButton].sprite = skillsSpritesActive[indexButton + 2];
         }
-        this.indexSkillButton = indexButton;
+        indexSkillButton = indexButton;
         isButtonClicked = true;
         s_buttonIndex = indexButton;
+        Debug.Log(indexSkillButton);
     }
 
     IEnumerator TimerDice(int randomNumber)
