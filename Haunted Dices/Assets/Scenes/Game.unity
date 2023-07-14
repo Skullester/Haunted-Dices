@@ -441,18 +441,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillsSprites:
-  - {fileID: 21300000, guid: a9878e82136ec3e48a3c81b6265815a5, type: 3}
-  - {fileID: 21300000, guid: c90b4d27f9d348c4fb3feeed4578b66b, type: 3}
-  - {fileID: 21300000, guid: 4eb7b9f56efa2d247b5eca18627f0cf6, type: 3}
-  - {fileID: 21300000, guid: a8054509d424d4b4f9287d87d53e149a, type: 3}
+  - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
+  - {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
+  - {fileID: 21300000, guid: eabce6fb7120fc74a80651c432aedea3, type: 3}
+  - {fileID: 21300000, guid: ff042691ca32a2e488da89f6f4392cd1, type: 3}
   skillBtnsImgs:
   - {fileID: 1486441355}
   - {fileID: 1038905261}
   skillsSpritesActive:
-  - {fileID: 21300000, guid: a19246b2b7d705a4c89c356b555e98b6, type: 3}
-  - {fileID: 21300000, guid: c7b370dfc6c1e5f4ca8bf050d4ac59e2, type: 3}
-  - {fileID: 21300000, guid: 76372bf8f5d159c49b178d1f30074a38, type: 3}
-  - {fileID: 21300000, guid: e48b44fec2115ea42b859137b5175b5e, type: 3}
+  - {fileID: 21300000, guid: 616cdf632feee2c49a3c5e8cd68dd14b, type: 3}
+  - {fileID: 21300000, guid: e71f2d3e19848ef49938a04899819984, type: 3}
+  - {fileID: 21300000, guid: b516399cde5e9f7489e6210af6a7d3dc, type: 3}
+  - {fileID: 21300000, guid: 3d35d3db85a8a1c47829c88fd117d24b, type: 3}
   characterMoving: {fileID: 1974132063}
   hpSystem: {fileID: 234698823}
   audioSourceSounds: {fileID: 1974132064}
@@ -1239,18 +1239,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillsSprites:
-  - {fileID: 21300000, guid: a9878e82136ec3e48a3c81b6265815a5, type: 3}
-  - {fileID: 21300000, guid: c90b4d27f9d348c4fb3feeed4578b66b, type: 3}
-  - {fileID: 21300000, guid: 4eb7b9f56efa2d247b5eca18627f0cf6, type: 3}
-  - {fileID: 21300000, guid: a8054509d424d4b4f9287d87d53e149a, type: 3}
+  - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
+  - {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
+  - {fileID: 21300000, guid: eabce6fb7120fc74a80651c432aedea3, type: 3}
+  - {fileID: 21300000, guid: ff042691ca32a2e488da89f6f4392cd1, type: 3}
   skillBtnsImgs:
   - {fileID: 1486441355}
   - {fileID: 1038905261}
   skillsSpritesActive:
-  - {fileID: 21300000, guid: a19246b2b7d705a4c89c356b555e98b6, type: 3}
-  - {fileID: 21300000, guid: c7b370dfc6c1e5f4ca8bf050d4ac59e2, type: 3}
-  - {fileID: 21300000, guid: 76372bf8f5d159c49b178d1f30074a38, type: 3}
-  - {fileID: 21300000, guid: e48b44fec2115ea42b859137b5175b5e, type: 3}
+  - {fileID: 21300000, guid: 616cdf632feee2c49a3c5e8cd68dd14b, type: 3}
+  - {fileID: 21300000, guid: e71f2d3e19848ef49938a04899819984, type: 3}
+  - {fileID: 21300000, guid: b516399cde5e9f7489e6210af6a7d3dc, type: 3}
+  - {fileID: 21300000, guid: 3d35d3db85a8a1c47829c88fd117d24b, type: 3}
   characterMoving: {fileID: 1974132063}
   hpSystem: {fileID: 234698823}
   audioSourceSounds: {fileID: 1974132064}
@@ -1496,18 +1496,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillsSprites:
-  - {fileID: 21300000, guid: a9878e82136ec3e48a3c81b6265815a5, type: 3}
-  - {fileID: 21300000, guid: c90b4d27f9d348c4fb3feeed4578b66b, type: 3}
-  - {fileID: 21300000, guid: 4eb7b9f56efa2d247b5eca18627f0cf6, type: 3}
-  - {fileID: 21300000, guid: a8054509d424d4b4f9287d87d53e149a, type: 3}
+  - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
+  - {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
+  - {fileID: 21300000, guid: eabce6fb7120fc74a80651c432aedea3, type: 3}
+  - {fileID: 21300000, guid: ff042691ca32a2e488da89f6f4392cd1, type: 3}
   skillBtnsImgs:
   - {fileID: 1486441355}
   - {fileID: 1038905261}
   skillsSpritesActive:
-  - {fileID: 21300000, guid: a19246b2b7d705a4c89c356b555e98b6, type: 3}
-  - {fileID: 21300000, guid: c7b370dfc6c1e5f4ca8bf050d4ac59e2, type: 3}
-  - {fileID: 21300000, guid: 76372bf8f5d159c49b178d1f30074a38, type: 3}
-  - {fileID: 21300000, guid: e48b44fec2115ea42b859137b5175b5e, type: 3}
+  - {fileID: 21300000, guid: 616cdf632feee2c49a3c5e8cd68dd14b, type: 3}
+  - {fileID: 21300000, guid: e71f2d3e19848ef49938a04899819984, type: 3}
+  - {fileID: 21300000, guid: b516399cde5e9f7489e6210af6a7d3dc, type: 3}
+  - {fileID: 21300000, guid: 3d35d3db85a8a1c47829c88fd117d24b, type: 3}
   characterMoving: {fileID: 1974132063}
   hpSystem: {fileID: 234698823}
   audioSourceSounds: {fileID: 1974132064}
@@ -3137,18 +3137,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillsSprites:
-  - {fileID: 21300000, guid: a9878e82136ec3e48a3c81b6265815a5, type: 3}
-  - {fileID: 21300000, guid: c90b4d27f9d348c4fb3feeed4578b66b, type: 3}
-  - {fileID: 21300000, guid: 4eb7b9f56efa2d247b5eca18627f0cf6, type: 3}
-  - {fileID: 21300000, guid: a8054509d424d4b4f9287d87d53e149a, type: 3}
+  - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
+  - {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
+  - {fileID: 21300000, guid: eabce6fb7120fc74a80651c432aedea3, type: 3}
+  - {fileID: 21300000, guid: ff042691ca32a2e488da89f6f4392cd1, type: 3}
   skillBtnsImgs:
   - {fileID: 1486441355}
   - {fileID: 1038905261}
   skillsSpritesActive:
-  - {fileID: 21300000, guid: a19246b2b7d705a4c89c356b555e98b6, type: 3}
-  - {fileID: 21300000, guid: c7b370dfc6c1e5f4ca8bf050d4ac59e2, type: 3}
-  - {fileID: 21300000, guid: 76372bf8f5d159c49b178d1f30074a38, type: 3}
-  - {fileID: 21300000, guid: e48b44fec2115ea42b859137b5175b5e, type: 3}
+  - {fileID: 21300000, guid: 616cdf632feee2c49a3c5e8cd68dd14b, type: 3}
+  - {fileID: 21300000, guid: e71f2d3e19848ef49938a04899819984, type: 3}
+  - {fileID: 21300000, guid: b516399cde5e9f7489e6210af6a7d3dc, type: 3}
+  - {fileID: 21300000, guid: 3d35d3db85a8a1c47829c88fd117d24b, type: 3}
   characterMoving: {fileID: 1974132063}
   hpSystem: {fileID: 234698823}
   audioSourceSounds: {fileID: 1974132064}
@@ -4086,18 +4086,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillsSprites:
-  - {fileID: 21300000, guid: a9878e82136ec3e48a3c81b6265815a5, type: 3}
-  - {fileID: 21300000, guid: c90b4d27f9d348c4fb3feeed4578b66b, type: 3}
-  - {fileID: 21300000, guid: 4eb7b9f56efa2d247b5eca18627f0cf6, type: 3}
-  - {fileID: 21300000, guid: a8054509d424d4b4f9287d87d53e149a, type: 3}
+  - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
+  - {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
+  - {fileID: 21300000, guid: eabce6fb7120fc74a80651c432aedea3, type: 3}
+  - {fileID: 21300000, guid: ff042691ca32a2e488da89f6f4392cd1, type: 3}
   skillBtnsImgs:
   - {fileID: 1486441355}
   - {fileID: 1038905261}
   skillsSpritesActive:
-  - {fileID: 21300000, guid: a19246b2b7d705a4c89c356b555e98b6, type: 3}
-  - {fileID: 21300000, guid: c7b370dfc6c1e5f4ca8bf050d4ac59e2, type: 3}
-  - {fileID: 21300000, guid: 76372bf8f5d159c49b178d1f30074a38, type: 3}
-  - {fileID: 21300000, guid: e48b44fec2115ea42b859137b5175b5e, type: 3}
+  - {fileID: 21300000, guid: 616cdf632feee2c49a3c5e8cd68dd14b, type: 3}
+  - {fileID: 21300000, guid: e71f2d3e19848ef49938a04899819984, type: 3}
+  - {fileID: 21300000, guid: b516399cde5e9f7489e6210af6a7d3dc, type: 3}
+  - {fileID: 21300000, guid: 3d35d3db85a8a1c47829c88fd117d24b, type: 3}
   characterMoving: {fileID: 1974132063}
   hpSystem: {fileID: 234698823}
   audioSourceSounds: {fileID: 1974132064}
@@ -4914,18 +4914,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillsSprites:
-  - {fileID: 21300000, guid: a9878e82136ec3e48a3c81b6265815a5, type: 3}
-  - {fileID: 21300000, guid: c90b4d27f9d348c4fb3feeed4578b66b, type: 3}
-  - {fileID: 21300000, guid: 4eb7b9f56efa2d247b5eca18627f0cf6, type: 3}
-  - {fileID: 21300000, guid: a8054509d424d4b4f9287d87d53e149a, type: 3}
+  - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
+  - {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
+  - {fileID: 21300000, guid: eabce6fb7120fc74a80651c432aedea3, type: 3}
+  - {fileID: 21300000, guid: ff042691ca32a2e488da89f6f4392cd1, type: 3}
   skillBtnsImgs:
   - {fileID: 1486441355}
   - {fileID: 1038905261}
   skillsSpritesActive:
-  - {fileID: 21300000, guid: a19246b2b7d705a4c89c356b555e98b6, type: 3}
-  - {fileID: 21300000, guid: c7b370dfc6c1e5f4ca8bf050d4ac59e2, type: 3}
-  - {fileID: 21300000, guid: 76372bf8f5d159c49b178d1f30074a38, type: 3}
-  - {fileID: 21300000, guid: e48b44fec2115ea42b859137b5175b5e, type: 3}
+  - {fileID: 21300000, guid: 616cdf632feee2c49a3c5e8cd68dd14b, type: 3}
+  - {fileID: 21300000, guid: e71f2d3e19848ef49938a04899819984, type: 3}
+  - {fileID: 21300000, guid: b516399cde5e9f7489e6210af6a7d3dc, type: 3}
+  - {fileID: 21300000, guid: 3d35d3db85a8a1c47829c88fd117d24b, type: 3}
   characterMoving: {fileID: 1974132063}
   hpSystem: {fileID: 234698823}
   audioSourceSounds: {fileID: 1974132064}
@@ -5187,7 +5187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &975398574
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5407,8 +5407,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 705, y: -359.4953}
-  m_SizeDelta: {x: 69.2972, y: 67.0592}
+  m_AnchoredPosition: {x: 696.22314, y: -366.33365}
+  m_SizeDelta: {x: 63.893, y: 53.018}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1038905260
 MonoBehaviour:
@@ -5486,7 +5486,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c90b4d27f9d348c4fb3feeed4578b66b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -5661,18 +5661,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillsSprites:
-  - {fileID: 21300000, guid: a9878e82136ec3e48a3c81b6265815a5, type: 3}
-  - {fileID: 21300000, guid: c90b4d27f9d348c4fb3feeed4578b66b, type: 3}
-  - {fileID: 21300000, guid: 4eb7b9f56efa2d247b5eca18627f0cf6, type: 3}
-  - {fileID: 21300000, guid: a8054509d424d4b4f9287d87d53e149a, type: 3}
+  - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
+  - {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
+  - {fileID: 21300000, guid: eabce6fb7120fc74a80651c432aedea3, type: 3}
+  - {fileID: 21300000, guid: ff042691ca32a2e488da89f6f4392cd1, type: 3}
   skillBtnsImgs:
   - {fileID: 1486441355}
   - {fileID: 1038905261}
   skillsSpritesActive:
-  - {fileID: 21300000, guid: a19246b2b7d705a4c89c356b555e98b6, type: 3}
-  - {fileID: 21300000, guid: c7b370dfc6c1e5f4ca8bf050d4ac59e2, type: 3}
-  - {fileID: 21300000, guid: 76372bf8f5d159c49b178d1f30074a38, type: 3}
-  - {fileID: 21300000, guid: e48b44fec2115ea42b859137b5175b5e, type: 3}
+  - {fileID: 21300000, guid: 616cdf632feee2c49a3c5e8cd68dd14b, type: 3}
+  - {fileID: 21300000, guid: e71f2d3e19848ef49938a04899819984, type: 3}
+  - {fileID: 21300000, guid: b516399cde5e9f7489e6210af6a7d3dc, type: 3}
+  - {fileID: 21300000, guid: 3d35d3db85a8a1c47829c88fd117d24b, type: 3}
   characterMoving: {fileID: 1974132063}
   hpSystem: {fileID: 234698823}
   audioSourceSounds: {fileID: 1974132064}
@@ -7587,8 +7587,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 505, y: -362.1}
-  m_SizeDelta: {x: 96.1077, y: 69.6639}
+  m_AnchoredPosition: {x: 511.82043, y: -366.3542}
+  m_SizeDelta: {x: 88.6127, y: 76.1445}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1486441354
 MonoBehaviour:
@@ -7666,7 +7666,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a9878e82136ec3e48a3c81b6265815a5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -7775,10 +7775,10 @@ MonoBehaviour:
   - {fileID: 1486441355}
   - {fileID: 1038905261}
   skillsSprites:
-  - {fileID: 21300000, guid: a9878e82136ec3e48a3c81b6265815a5, type: 3}
-  - {fileID: 21300000, guid: c90b4d27f9d348c4fb3feeed4578b66b, type: 3}
-  - {fileID: 21300000, guid: 4eb7b9f56efa2d247b5eca18627f0cf6, type: 3}
-  - {fileID: 21300000, guid: a8054509d424d4b4f9287d87d53e149a, type: 3}
+  - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
+  - {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
+  - {fileID: 21300000, guid: eabce6fb7120fc74a80651c432aedea3, type: 3}
+  - {fileID: 21300000, guid: ff042691ca32a2e488da89f6f4392cd1, type: 3}
   spritesCharacters:
   - {fileID: 21300000, guid: 93c5b0ce2232e45428271c96d120774f, type: 3}
   - {fileID: 21300000, guid: 28cb17d103ab1c843b499335f0522082, type: 3}
@@ -9941,18 +9941,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillsSprites:
-  - {fileID: 21300000, guid: a9878e82136ec3e48a3c81b6265815a5, type: 3}
-  - {fileID: 21300000, guid: c90b4d27f9d348c4fb3feeed4578b66b, type: 3}
-  - {fileID: 21300000, guid: 4eb7b9f56efa2d247b5eca18627f0cf6, type: 3}
-  - {fileID: 21300000, guid: a8054509d424d4b4f9287d87d53e149a, type: 3}
+  - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
+  - {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
+  - {fileID: 21300000, guid: eabce6fb7120fc74a80651c432aedea3, type: 3}
+  - {fileID: 21300000, guid: ff042691ca32a2e488da89f6f4392cd1, type: 3}
   skillBtnsImgs:
   - {fileID: 1486441355}
   - {fileID: 1038905261}
   skillsSpritesActive:
-  - {fileID: 21300000, guid: a19246b2b7d705a4c89c356b555e98b6, type: 3}
-  - {fileID: 21300000, guid: c7b370dfc6c1e5f4ca8bf050d4ac59e2, type: 3}
-  - {fileID: 21300000, guid: 76372bf8f5d159c49b178d1f30074a38, type: 3}
-  - {fileID: 21300000, guid: e48b44fec2115ea42b859137b5175b5e, type: 3}
+  - {fileID: 21300000, guid: 616cdf632feee2c49a3c5e8cd68dd14b, type: 3}
+  - {fileID: 21300000, guid: e71f2d3e19848ef49938a04899819984, type: 3}
+  - {fileID: 21300000, guid: b516399cde5e9f7489e6210af6a7d3dc, type: 3}
+  - {fileID: 21300000, guid: 3d35d3db85a8a1c47829c88fd117d24b, type: 3}
   characterMoving: {fileID: 1974132063}
   hpSystem: {fileID: 234698823}
   audioSourceSounds: {fileID: 1974132064}
@@ -10496,18 +10496,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillsSprites:
-  - {fileID: 21300000, guid: a9878e82136ec3e48a3c81b6265815a5, type: 3}
-  - {fileID: 21300000, guid: c90b4d27f9d348c4fb3feeed4578b66b, type: 3}
-  - {fileID: 21300000, guid: 4eb7b9f56efa2d247b5eca18627f0cf6, type: 3}
-  - {fileID: 21300000, guid: a8054509d424d4b4f9287d87d53e149a, type: 3}
+  - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
+  - {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
+  - {fileID: 21300000, guid: eabce6fb7120fc74a80651c432aedea3, type: 3}
+  - {fileID: 21300000, guid: ff042691ca32a2e488da89f6f4392cd1, type: 3}
   skillBtnsImgs:
   - {fileID: 1486441355}
   - {fileID: 1038905261}
   skillsSpritesActive:
-  - {fileID: 21300000, guid: a19246b2b7d705a4c89c356b555e98b6, type: 3}
-  - {fileID: 21300000, guid: c7b370dfc6c1e5f4ca8bf050d4ac59e2, type: 3}
-  - {fileID: 21300000, guid: 76372bf8f5d159c49b178d1f30074a38, type: 3}
-  - {fileID: 21300000, guid: e48b44fec2115ea42b859137b5175b5e, type: 3}
+  - {fileID: 21300000, guid: 616cdf632feee2c49a3c5e8cd68dd14b, type: 3}
+  - {fileID: 21300000, guid: e71f2d3e19848ef49938a04899819984, type: 3}
+  - {fileID: 21300000, guid: b516399cde5e9f7489e6210af6a7d3dc, type: 3}
+  - {fileID: 21300000, guid: 3d35d3db85a8a1c47829c88fd117d24b, type: 3}
   characterMoving: {fileID: 1974132063}
   hpSystem: {fileID: 234698823}
   audioSourceSounds: {fileID: 1974132064}
@@ -11566,18 +11566,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillsSprites:
-  - {fileID: 21300000, guid: a9878e82136ec3e48a3c81b6265815a5, type: 3}
-  - {fileID: 21300000, guid: c90b4d27f9d348c4fb3feeed4578b66b, type: 3}
-  - {fileID: 21300000, guid: 4eb7b9f56efa2d247b5eca18627f0cf6, type: 3}
-  - {fileID: 21300000, guid: a8054509d424d4b4f9287d87d53e149a, type: 3}
+  - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
+  - {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
+  - {fileID: 21300000, guid: eabce6fb7120fc74a80651c432aedea3, type: 3}
+  - {fileID: 21300000, guid: ff042691ca32a2e488da89f6f4392cd1, type: 3}
   skillBtnsImgs:
   - {fileID: 1486441355}
   - {fileID: 1038905261}
   skillsSpritesActive:
-  - {fileID: 21300000, guid: a19246b2b7d705a4c89c356b555e98b6, type: 3}
-  - {fileID: 21300000, guid: c7b370dfc6c1e5f4ca8bf050d4ac59e2, type: 3}
-  - {fileID: 21300000, guid: 76372bf8f5d159c49b178d1f30074a38, type: 3}
-  - {fileID: 21300000, guid: e48b44fec2115ea42b859137b5175b5e, type: 3}
+  - {fileID: 21300000, guid: 616cdf632feee2c49a3c5e8cd68dd14b, type: 3}
+  - {fileID: 21300000, guid: e71f2d3e19848ef49938a04899819984, type: 3}
+  - {fileID: 21300000, guid: b516399cde5e9f7489e6210af6a7d3dc, type: 3}
+  - {fileID: 21300000, guid: 3d35d3db85a8a1c47829c88fd117d24b, type: 3}
   characterMoving: {fileID: 1974132063}
   hpSystem: {fileID: 234698823}
   audioSourceSounds: {fileID: 1974132064}
