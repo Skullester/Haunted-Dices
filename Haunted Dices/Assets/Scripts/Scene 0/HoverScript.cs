@@ -21,8 +21,6 @@ public class HoverScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     private void Update()
     {
-        /*  if (objText.gameObject.transform.position != Input.mousePosition)
-             objText.transform.position = Input.mousePosition; */
     }
 
     private void Awake()
@@ -36,8 +34,6 @@ public class HoverScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             outline.enabled = true;
         switch (this.gameObject.tag)
         {
-            case "Yes":
-
             case "Radio":
                 textHint.text = "Настройки";
                 break;
