@@ -221,14 +221,21 @@ public class EventTree : MonoBehaviour
         if (indexChar == 1 & indexSkill == 1) // Шерон Призрачная связь
         {
             Debug.Log($"{indexChar}, {indexSkill}");
-            interactGameObj[4].gameObject.SetActive(true);
+            Debug.Log($"{gameOverobj}");
+            interactGameObj[3].SetActive(true);
+            StartCoroutine(CloseHintMenu());
             hint.CallHintMenu(text[23]);
             gameOverobj.LockMovement();
-            gameOverobj.gameObject.SetActive(true);
-            Interaction.isButtonClicked = false;
-            imgGameOver[0].enabled = true;
-            eventDict.Clear();
         }
+    }
+
+    IEnumerator CloseHintMenu()
+    {
+        yield return new WaitForSeconds(2.0f);
+        gameOverobj.gameOverObj.SetActive(true);
+        Interaction.isButtonClicked = false;
+        imgGameOver[0].enabled = true;
+        eventDict.Clear();
     }
 
     public void SeventhPointInteraction(int indexChar, int indexSkill) //6 Таинственная коробка

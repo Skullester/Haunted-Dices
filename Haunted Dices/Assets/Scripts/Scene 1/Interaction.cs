@@ -29,8 +29,7 @@ public class Interaction : MonoBehaviour
     [SerializeField]
     private AudioClip audioClipHPLost;
 
-    [SerializeField]
-    private GameObject gameOverObj;
+    public GameObject gameOverObj;
     private bool isDistanceAccept;
 
     [SerializeField, TextArea]
@@ -40,7 +39,7 @@ public class Interaction : MonoBehaviour
     private TMP_Text textDice;
 
     public static bool isButtonClicked;
-    private int indexSkillButton;
+    private static int indexSkillButton;
 
     [SerializeField]
     private GameObject[] keyPointsObjects;
@@ -55,8 +54,7 @@ public class Interaction : MonoBehaviour
     private Texture2D cursorTexture;
     private Vector2 hotSpot = Vector2.zero;
 
-    [SerializeField]
-    private GameObject hintPoint;
+    public GameObject hintPoint;
     private TMP_Text textHint;
 
     [SerializeField]
@@ -114,6 +112,26 @@ public class Interaction : MonoBehaviour
             else
                 CallHintMenu("Для взаимодействия с точкой сначала выберите умение персонажа!");
         }
+    }
+
+    public void ChooseSkill(int indexButton)
+    {
+        if (SwitchingCharacter.indexOfCharacter == 0)
+        {
+            if (s_buttonIndex != indexButton)
+                skillBtnsImgs[s_buttonIndex].sprite = skillsSprites[s_buttonIndex];
+            skillBtnsImgs[indexButton].sprite = skillsSpritesActive[indexButton];
+        }
+        if (SwitchingCharacter.indexOfCharacter == 1)
+        {
+            if (s_buttonIndex != indexButton)
+                skillBtnsImgs[s_buttonIndex].sprite = skillsSprites[s_buttonIndex + 2];
+            skillBtnsImgs[indexButton].sprite = skillsSpritesActive[indexButton + 2];
+        }
+        indexSkillButton = indexButton;
+        isButtonClicked = true;
+        s_buttonIndex = indexButton;
+        Debug.Log(indexSkillButton);
     }
 
     private void UseSkill()
@@ -195,26 +213,6 @@ public class Interaction : MonoBehaviour
             GameObject.Find("MartinDialog").SetActive(false);
         else
             GameObject.Find("SheronDialog").SetActive(false);
-    }
-
-    public void ChooseSkill(int indexButton)
-    {
-        if (SwitchingCharacter.indexOfCharacter == 0)
-        {
-            if (s_buttonIndex != indexButton)
-                skillBtnsImgs[s_buttonIndex].sprite = skillsSprites[s_buttonIndex];
-            skillBtnsImgs[indexButton].sprite = skillsSpritesActive[indexButton];
-        }
-        if (SwitchingCharacter.indexOfCharacter == 1)
-        {
-            if (s_buttonIndex != indexButton)
-                skillBtnsImgs[s_buttonIndex].sprite = skillsSprites[s_buttonIndex + 2];
-            skillBtnsImgs[indexButton].sprite = skillsSpritesActive[indexButton + 2];
-        }
-        indexSkillButton = indexButton;
-        isButtonClicked = true;
-        s_buttonIndex = indexButton;
-        Debug.Log(indexSkillButton);
     }
 
     IEnumerator TimerDice(int randomNumber)
