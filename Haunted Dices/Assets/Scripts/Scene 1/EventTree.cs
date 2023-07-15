@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.Rendering.Universal;
 
 public class EventTree : MonoBehaviour
 {
@@ -63,12 +64,16 @@ public class EventTree : MonoBehaviour
         {
             hint.CallHintMenu(text[0]);
             points[1].gameObject.GetComponent<BoxCollider>().enabled = true;
+
+            interactGameObj[3].gameObject.GetComponent<Light2D>().enabled = true;
         }
         if (indexChar == 0 & indexSkill == 1) // Мартин орлиный глаз
         {
             audioSourceSounds?.PlayOneShot(soundsPoints[1]);
             indTog.MissionCompleted(0); //0-Who
+
             interactGameObj[0].SetActive(true);
+
             hint.CallHintMenu(text[1]);
 
             points[1].gameObject.GetComponent<BoxCollider>().enabled = true;
@@ -77,7 +82,11 @@ public class EventTree : MonoBehaviour
         {
             audioSourceSounds?.PlayOneShot(soundsPoints[0]);
             hint.CallHintMenu(text[2]);
+
+            interactGameObj[0].SetActive(false);
+            interactGameObj[1].SetActive(true);
             interactGameObj[2].SetActive(true);
+
             points[0].gameObject.GetComponent<BoxCollider>().enabled = false;
         }
         if (indexChar == 1 & indexSkill == 1) // Шерон Призрачная связь
@@ -97,6 +106,7 @@ public class EventTree : MonoBehaviour
             hint.CallHintMenu(text[4]);
 
             points[1].gameObject.GetComponent<BoxCollider>().enabled = false;
+            interactGameObj[3].gameObject.GetComponent<Light2D>().enabled = false;
         }
         if (indexChar == 0 & indexSkill == 1) // Мартин орлиный глаз
         {
@@ -106,12 +116,14 @@ public class EventTree : MonoBehaviour
             hint.CallHintMenu(text[5]);
 
             points[1].gameObject.GetComponent<BoxCollider>().enabled = false;
+            interactGameObj[3].gameObject.GetComponent<Light2D>().enabled = false;
         }
         if (indexChar == 1 & indexSkill == 0) // Шерон Идеальная отмычка
         {
             hint.CallHintMenu(text[6]);
 
             points[1].gameObject.GetComponent<BoxCollider>().enabled = false;
+            interactGameObj[3].gameObject.GetComponent<Light2D>().enabled = false;
             interactGameObj[6].SetActive(false);
         }
         if (indexChar == 1 & indexSkill == 1) // Шерон Призрачная связь
