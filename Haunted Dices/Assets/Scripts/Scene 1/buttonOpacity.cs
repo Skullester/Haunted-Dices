@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class buttonOpacity : MonoBehaviour
 {
     [SerializeField]
-    private float alpha;
+    private float alpha = 0.5f;
 
     void Start()
     {
