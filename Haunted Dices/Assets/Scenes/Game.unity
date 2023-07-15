@@ -535,6 +535,7 @@ GameObject:
   - component: {fileID: 29340217}
   - component: {fileID: 29340216}
   - component: {fileID: 29340219}
+  - component: {fileID: 29340220}
   m_Layer: 0
   m_Name: "\u041F\u0440\u0438\u0437\u0440\u0430\u043A"
   m_TagString: Points
@@ -705,8 +706,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef5447948262c24b8a19db314f34c11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDistanceAccept: 0
   playerTrans: {fileID: 1974132062}
+  isCursorEnter: 0
+--- !u!114 &29340220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29340214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8d55c127f99ea40aba03270744b686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   pointer: {fileID: 2800000, guid: 3d6ebe26a02a1454aa382ec47e6987a2, type: 3}
+  playerTrans: {fileID: 1974132062}
+  pointsHover:
+  - {fileID: 1882326832}
+  - {fileID: 947888105}
+  - {fileID: 1971517236}
+  - {fileID: 1081283955}
+  - {fileID: 794339796}
+  - {fileID: 2067701678}
+  - {fileID: 200113746}
+  - {fileID: 632158237}
+  - {fileID: 189224951}
+  - {fileID: 29340219}
 --- !u!1 &54739869
 GameObject:
   m_ObjectHideFlags: 0
@@ -1879,6 +1906,7 @@ GameObject:
   - component: {fileID: 189224948}
   - component: {fileID: 189224947}
   - component: {fileID: 189224951}
+  - component: {fileID: 189224952}
   m_Layer: 0
   m_Name: "\u0427\u0435\u0440\u043D\u044B\u0439 \u043F\u043E\u0440\u043E\u0448\u043E\u043A"
   m_TagString: Points
@@ -2049,8 +2077,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef5447948262c24b8a19db314f34c11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDistanceAccept: 0
   playerTrans: {fileID: 1974132062}
+  isCursorEnter: 0
+--- !u!114 &189224952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189224946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8d55c127f99ea40aba03270744b686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   pointer: {fileID: 2800000, guid: 3d6ebe26a02a1454aa382ec47e6987a2, type: 3}
+  playerTrans: {fileID: 1974132062}
+  pointsHover:
+  - {fileID: 1882326832}
+  - {fileID: 947888105}
+  - {fileID: 1971517236}
+  - {fileID: 1081283955}
+  - {fileID: 794339796}
+  - {fileID: 2067701678}
+  - {fileID: 200113746}
+  - {fileID: 632158237}
+  - {fileID: 189224951}
+  - {fileID: 29340219}
 --- !u!1 &197095800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2193,6 +2247,7 @@ GameObject:
   - component: {fileID: 200113743}
   - component: {fileID: 200113745}
   - component: {fileID: 200113746}
+  - component: {fileID: 200113747}
   m_Layer: 0
   m_Name: "\u0422\u0430\u0438\u043D\u0441\u0442\u0432\u0435\u043D\u043D\u0430\u044F
     \u043A\u043E\u0440\u043E\u0431\u043A\u0430"
@@ -2364,8 +2419,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef5447948262c24b8a19db314f34c11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDistanceAccept: 0
   playerTrans: {fileID: 1974132062}
+  isCursorEnter: 0
+--- !u!114 &200113747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200113740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8d55c127f99ea40aba03270744b686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   pointer: {fileID: 2800000, guid: 3d6ebe26a02a1454aa382ec47e6987a2, type: 3}
+  playerTrans: {fileID: 1974132062}
+  pointsHover:
+  - {fileID: 1882326832}
+  - {fileID: 947888105}
+  - {fileID: 1971517236}
+  - {fileID: 1081283955}
+  - {fileID: 794339796}
+  - {fileID: 2067701678}
+  - {fileID: 200113746}
+  - {fileID: 632158237}
+  - {fileID: 189224951}
+  - {fileID: 29340219}
 --- !u!1 &234698821
 GameObject:
   m_ObjectHideFlags: 0
@@ -5378,6 +5459,7 @@ GameObject:
   - component: {fileID: 632158234}
   - component: {fileID: 632158236}
   - component: {fileID: 632158237}
+  - component: {fileID: 632158238}
   m_Layer: 0
   m_Name: "\u0412\u0430\u043D\u043D\u0430"
   m_TagString: Points
@@ -5548,8 +5630,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef5447948262c24b8a19db314f34c11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDistanceAccept: 0
   playerTrans: {fileID: 1974132062}
+  isCursorEnter: 0
+--- !u!114 &632158238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632158231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8d55c127f99ea40aba03270744b686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   pointer: {fileID: 2800000, guid: 3d6ebe26a02a1454aa382ec47e6987a2, type: 3}
+  playerTrans: {fileID: 1974132062}
+  pointsHover:
+  - {fileID: 1882326832}
+  - {fileID: 947888105}
+  - {fileID: 1971517236}
+  - {fileID: 1081283955}
+  - {fileID: 794339796}
+  - {fileID: 2067701678}
+  - {fileID: 200113746}
+  - {fileID: 632158237}
+  - {fileID: 189224951}
+  - {fileID: 29340219}
 --- !u!1 &642980765
 GameObject:
   m_ObjectHideFlags: 0
@@ -7125,6 +7233,7 @@ GameObject:
   - component: {fileID: 794339792}
   - component: {fileID: 794339795}
   - component: {fileID: 794339796}
+  - component: {fileID: 794339797}
   m_Layer: 0
   m_Name: "\u041E\u0442\u043F\u0435\u0447\u0430\u0442\u043A\u0438 \u043B\u0430\u0434\u043E\u043D\u0435\u0439"
   m_TagString: Points
@@ -7295,8 +7404,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef5447948262c24b8a19db314f34c11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDistanceAccept: 0
   playerTrans: {fileID: 1974132062}
+  isCursorEnter: 0
+--- !u!114 &794339797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794339790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8d55c127f99ea40aba03270744b686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   pointer: {fileID: 2800000, guid: 3d6ebe26a02a1454aa382ec47e6987a2, type: 3}
+  playerTrans: {fileID: 1974132062}
+  pointsHover:
+  - {fileID: 1882326832}
+  - {fileID: 947888105}
+  - {fileID: 1971517236}
+  - {fileID: 1081283955}
+  - {fileID: 794339796}
+  - {fileID: 2067701678}
+  - {fileID: 200113746}
+  - {fileID: 632158237}
+  - {fileID: 189224951}
+  - {fileID: 29340219}
 --- !u!1 &830429153
 GameObject:
   m_ObjectHideFlags: 0
@@ -8732,6 +8867,7 @@ GameObject:
   - component: {fileID: 947888101}
   - component: {fileID: 947888104}
   - component: {fileID: 947888105}
+  - component: {fileID: 947888106}
   m_Layer: 0
   m_Name: "\u0418\u0433\u0440\u0443\u0448\u043A\u0438"
   m_TagString: Points
@@ -8902,8 +9038,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef5447948262c24b8a19db314f34c11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDistanceAccept: 0
   playerTrans: {fileID: 1974132062}
+  isCursorEnter: 0
+--- !u!114 &947888106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947888099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8d55c127f99ea40aba03270744b686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   pointer: {fileID: 2800000, guid: 3d6ebe26a02a1454aa382ec47e6987a2, type: 3}
+  playerTrans: {fileID: 1974132062}
+  pointsHover:
+  - {fileID: 1882326832}
+  - {fileID: 947888105}
+  - {fileID: 1971517236}
+  - {fileID: 1081283955}
+  - {fileID: 794339796}
+  - {fileID: 2067701678}
+  - {fileID: 200113746}
+  - {fileID: 632158237}
+  - {fileID: 189224951}
+  - {fileID: 29340219}
 --- !u!1 &949420075
 GameObject:
   m_ObjectHideFlags: 0
@@ -10429,6 +10591,7 @@ GameObject:
   - component: {fileID: 1081283951}
   - component: {fileID: 1081283954}
   - component: {fileID: 1081283955}
+  - component: {fileID: 1081283956}
   m_Layer: 0
   m_Name: "\u041F\u0438\u0441\u044C\u043C\u043E"
   m_TagString: Points
@@ -10547,8 +10710,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef5447948262c24b8a19db314f34c11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDistanceAccept: 0
   playerTrans: {fileID: 1974132062}
+  isCursorEnter: 0
+--- !u!114 &1081283956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081283949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8d55c127f99ea40aba03270744b686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   pointer: {fileID: 2800000, guid: 3d6ebe26a02a1454aa382ec47e6987a2, type: 3}
+  playerTrans: {fileID: 1974132062}
+  pointsHover:
+  - {fileID: 1882326832}
+  - {fileID: 947888105}
+  - {fileID: 1971517236}
+  - {fileID: 1081283955}
+  - {fileID: 794339796}
+  - {fileID: 2067701678}
+  - {fileID: 200113746}
+  - {fileID: 632158237}
+  - {fileID: 189224951}
+  - {fileID: 29340219}
 --- !u!114 &1084838064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17926,6 +18115,7 @@ GameObject:
   - component: {fileID: 1882326830}
   - component: {fileID: 1882326831}
   - component: {fileID: 1882326832}
+  - component: {fileID: 1882326833}
   m_Layer: 0
   m_Name: "\u0422\u0435\u043B\u043E"
   m_TagString: Points
@@ -18104,8 +18294,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef5447948262c24b8a19db314f34c11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDistanceAccept: 0
   playerTrans: {fileID: 1974132062}
+  isCursorEnter: 0
+--- !u!114 &1882326833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882326826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8d55c127f99ea40aba03270744b686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   pointer: {fileID: 2800000, guid: 3d6ebe26a02a1454aa382ec47e6987a2, type: 3}
+  playerTrans: {fileID: 1974132062}
+  pointsHover:
+  - {fileID: 1882326832}
+  - {fileID: 947888105}
+  - {fileID: 1971517236}
+  - {fileID: 1081283955}
+  - {fileID: 794339796}
+  - {fileID: 2067701678}
+  - {fileID: 200113746}
+  - {fileID: 632158237}
+  - {fileID: 189224951}
+  - {fileID: 29340219}
 --- !u!114 &1887324786 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8598014131429827664, guid: 2c554e05fcb625949a48eba5e45a91ec, type: 3}
@@ -18884,6 +19100,7 @@ GameObject:
   - component: {fileID: 1971517232}
   - component: {fileID: 1971517235}
   - component: {fileID: 1971517236}
+  - component: {fileID: 1971517237}
   m_Layer: 0
   m_Name: "\u0417\u0430\u043A\u0440\u044B\u0442\u0430\u044F \u0434\u0432\u0435\u0440\u044C"
   m_TagString: Points
@@ -19054,8 +19271,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef5447948262c24b8a19db314f34c11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDistanceAccept: 0
   playerTrans: {fileID: 1974132062}
+  isCursorEnter: 0
+--- !u!114 &1971517237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971517230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8d55c127f99ea40aba03270744b686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   pointer: {fileID: 2800000, guid: 3d6ebe26a02a1454aa382ec47e6987a2, type: 3}
+  playerTrans: {fileID: 1974132062}
+  pointsHover:
+  - {fileID: 1882326832}
+  - {fileID: 947888105}
+  - {fileID: 1971517236}
+  - {fileID: 1081283955}
+  - {fileID: 794339796}
+  - {fileID: 2067701678}
+  - {fileID: 200113746}
+  - {fileID: 632158237}
+  - {fileID: 189224951}
+  - {fileID: 29340219}
 --- !u!1 &1974132057
 GameObject:
   m_ObjectHideFlags: 0
@@ -19330,6 +19573,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c60b78dc2e8822349bc94e10827ec704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSourceSounds: {fileID: 1974132064}
+  soundsPoints:
+  - {fileID: 8300000, guid: fbda47a2e03e6794ca849f20cdbda548, type: 3}
+  - {fileID: 8300000, guid: f8ffe14ddc501f24d916a70570853a13, type: 3}
+  - {fileID: 8300000, guid: 6a4ae9f4fc0a5714da50d7b300f5ebf7, type: 3}
+  - {fileID: 8300000, guid: 5bd9a4281ac44944ea5d92c6df1a1315, type: 3}
+  - {fileID: 8300000, guid: 2ae428d8f51c11a418f432ba9b2083e9, type: 3}
   victoryObj: {fileID: 2062520233}
   hint: {fileID: 1882326831}
   text:
@@ -20417,6 +20667,7 @@ GameObject:
   - component: {fileID: 2067701675}
   - component: {fileID: 2067701677}
   - component: {fileID: 2067701678}
+  - component: {fileID: 2067701679}
   m_Layer: 0
   m_Name: "\u041A\u043E\u0440\u043E\u0431\u043A\u0430 \u0441 \u0444\u0438\u043B\u044C\u043C\u0430\u043C\u0438"
   m_TagString: Points
@@ -20587,8 +20838,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef5447948262c24b8a19db314f34c11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDistanceAccept: 0
   playerTrans: {fileID: 1974132062}
+  isCursorEnter: 0
+--- !u!114 &2067701679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067701672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8d55c127f99ea40aba03270744b686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   pointer: {fileID: 2800000, guid: 3d6ebe26a02a1454aa382ec47e6987a2, type: 3}
+  playerTrans: {fileID: 1974132062}
+  pointsHover:
+  - {fileID: 1882326832}
+  - {fileID: 947888105}
+  - {fileID: 1971517236}
+  - {fileID: 1081283955}
+  - {fileID: 794339796}
+  - {fileID: 2067701678}
+  - {fileID: 200113746}
+  - {fileID: 632158237}
+  - {fileID: 189224951}
+  - {fileID: 29340219}
 --- !u!1 &2091783253
 GameObject:
   m_ObjectHideFlags: 0
@@ -20684,8 +20961,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef5447948262c24b8a19db314f34c11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDistanceAccept: 0
   playerTrans: {fileID: 0}
-  pointer: {fileID: 0}
+  isCursorEnter: 0
 --- !u!1 &2092213113
 GameObject:
   m_ObjectHideFlags: 0

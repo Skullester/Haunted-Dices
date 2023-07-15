@@ -6,6 +6,11 @@ using System;
 
 public class EventTree : MonoBehaviour
 {
+    [SerializeField]
+    private AudioSource audioSourceSounds;
+
+    [SerializeField]
+    private List<AudioClip> soundsPoints;
     public static Dictionary<int, Action<int, int>> eventDict =
         new Dictionary<int, Action<int, int>>();
 
@@ -54,7 +59,6 @@ public class EventTree : MonoBehaviour
 
     public void FirstPointInteraction(int indexChar, int indexSkill) //0 Тело
     {
-        Debug.Log("Нулевой поинт");
         if (indexChar == 0 & indexSkill == 0) // Мартин бескостный язык
         {
             hint.CallHintMenu(text[0]);
@@ -62,6 +66,7 @@ public class EventTree : MonoBehaviour
         }
         if (indexChar == 0 & indexSkill == 1) // Мартин орлиный глаз
         {
+            audioSourceSounds?.PlayOneShot(soundsPoints[1]);
             indTog.MissionCompleted(0); //0-Who
             interactGameObj[0].SetActive(true);
             hint.CallHintMenu(text[1]);
@@ -70,6 +75,7 @@ public class EventTree : MonoBehaviour
         }
         if (indexChar == 1 & indexSkill == 0) // Шерон Идеальная отмычка
         {
+            audioSourceSounds?.PlayOneShot(soundsPoints[0]);
             hint.CallHintMenu(text[2]);
             interactGameObj[2].SetActive(true);
             points[0].gameObject.GetComponent<BoxCollider>().enabled = false;
@@ -84,7 +90,6 @@ public class EventTree : MonoBehaviour
 
     public void SecondPointInteraction(int indexChar, int indexSkill) //1 Игрушки
     {
-        Debug.Log("Первый поинт");
         if (indexChar == 0 & indexSkill == 0) // Мартин бескостный язык
         {
             indTog.MissionCompleted(3); //3-ByWhat
@@ -121,6 +126,7 @@ public class EventTree : MonoBehaviour
     {
         if (indexChar == 0 & indexSkill == 0) // Мартин бескостный язык
         {
+            audioSourceSounds?.PlayOneShot(soundsPoints[4]);
             hint.CallHintMenu(text[8]);
         }
         if (indexChar == 0 & indexSkill == 1) // Мартин орлиный глаз
@@ -129,6 +135,7 @@ public class EventTree : MonoBehaviour
         }
         if (indexChar == 1 & indexSkill == 0) // Шерон Идеальная отмычка
         {
+            audioSourceSounds?.PlayOneShot(soundsPoints[2]);
             hint.CallHintMenu(text[10]);
             interactGameObj[1].SetActive(false);
             points[2].gameObject.GetComponent<BoxCollider>().enabled = false;
@@ -222,6 +229,7 @@ public class EventTree : MonoBehaviour
         }
         if (indexChar == 1 & indexSkill == 1) // Шерон Призрачная связь
         {
+            audioSourceSounds?.PlayOneShot(soundsPoints[3]);
             Debug.Log($"{indexChar}, {indexSkill}");
             Debug.Log($"{gameOverobj}");
             interactGameObj[3].SetActive(true);
@@ -268,7 +276,6 @@ public class EventTree : MonoBehaviour
 
     public void EighthPointInteraction(int indexChar, int indexSkill) //7 Ванна
     {
-        Debug.Log("Седьмой поинт");
         if (indexChar == 0 & indexSkill == 0) // Мартин бескостный язык
         {
             hint.CallHintMenu(text[28]);

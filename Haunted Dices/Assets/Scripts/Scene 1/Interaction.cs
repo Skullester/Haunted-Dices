@@ -44,7 +44,7 @@ public class Interaction : MonoBehaviour
     [SerializeField]
     private GameObject[] keyPointsObjects;
 
-    private float sqrDistancePlayer = 3;
+    private float sqrDistancePlayer = 3.5f;
 
     [SerializeField]
     private Transform player;
@@ -71,6 +71,7 @@ public class Interaction : MonoBehaviour
     [SerializeField]
     private Animator animDice;
     private bool isCursorEnter;
+    public static bool isSkillUsed;
 
     void Awake()
     {
@@ -85,17 +86,6 @@ public class Interaction : MonoBehaviour
             < sqrDistancePlayer * sqrDistancePlayer;
     }
 
-    /*     void OnMouseEnter()
-        {
-            isCursorEnter = isDistanceAccept ? true : false;
-        }
-    
-        void OnMouseExit()
-        {
-            isCursorEnter = isDistanceAccept ? false : true;
-            Cursor.SetCursor(null, hotSpot, CursorMode.Auto);
-        } */
-
     void OnMouseOver()
     {
         if (Input.GetKeyDown(KeyCode.Mouse1) && isDistanceAccept)
@@ -104,7 +94,6 @@ public class Interaction : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Mouse0) && isDistanceAccept)
         {
-            Debug.Log($"Используем скилл №{indexSkillButton}");
             if (isButtonClicked)
                 UseSkill();
             else
@@ -129,7 +118,6 @@ public class Interaction : MonoBehaviour
         indexSkillButton = indexButton;
         isButtonClicked = true;
         s_buttonIndex = indexButton;
-        Debug.Log(indexSkillButton);
     }
 
     private void UseSkill()
