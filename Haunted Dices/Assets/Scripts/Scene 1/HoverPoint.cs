@@ -19,7 +19,6 @@ public class HoverPoint : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(isDistanceAccept);
         isDistanceAccept =
             (playerTrans.position - transform.position).sqrMagnitude
             < sqrDistancePlayer * sqrDistancePlayer;
