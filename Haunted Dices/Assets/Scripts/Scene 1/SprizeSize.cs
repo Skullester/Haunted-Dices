@@ -2,50 +2,36 @@ using UnityEngine;
 
 public class SprizeSize : MonoBehaviour
 {
-    private void Update()
+    private Vector3 transformPos;
+    private Vector3 transformScale;
+    private Vector3 transform2;
+    private SpriteRenderer spriteRenderer;
+
+    void Awake()
     {
-        Debug.Log(Camera.main.fieldOfView);
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        ResizeSprite();
     }
-    /*  public Vector2 DefaultResolution = new Vector2(720, 1280);
- 
-     [Range(0f, 1f)]
-     public float WidthOrHeight = 0;
- 
-     private Camera componentCamera;
- 
-     private float initialSize;
-     private float targetAspect;
- 
-     private float initialFov;
-     private float horizontalFov = 120f;
- 
-     private void Start()
-     {
-         componentCamera = GetComponent<Camera>();
-         initialSize = componentCamera.orthographicSize;
- 
-         targetAspect = DefaultResolution.x / DefaultResolution.y;
- 
-         initialFov = componentCamera.fieldOfView;
-         horizontalFov = CalcVerticalFov(initialFov, 1 / targetAspect);
-     }
- 
-     private void Update()
-     {
-         float constantWidthSize = initialSize * (targetAspect / componentCamera.aspect);
-         componentCamera.orthographicSize = Mathf.Lerp(
-             constantWidthSize,
-             initialSize,
-             WidthOrHeight
-         );
-     }
- 
-     private float CalcVerticalFov(float hFovInDeg, float aspectRatio)
-     {
-         float hFovInRads = hFovInDeg * Mathf.Deg2Rad;
- 
-         float vFovInRads = 2 * Mathf.Atan(Mathf.Tan(hFovInRads / 2) / aspectRatio);
- 
-         return vFovInRads * Mathf.Rad2Deg;
-     } */
+
+    private void ResizeSprite()
+    {
+        bool isScreen = false;
+        Vector3 scale = spriteRenderer.transform.localScale;
+        if (Screen.width > 1920)
+        {
+            transformPos = new Vector3(-62.2514f, transform.position.y, transform.position.z);
+            transformScale = new Vector3(3.135089f, transform.localScale.y, transform.localScale.z);
+            isScreen = true;
+        }
+        if (Screen.width <= 1920)
+        {
+            transformPos = new Vector3(-62.2514f, transform.position.y, transform.position.z);
+            transformScale = new Vector3(3.135089f, transform.localScale.y, transform.localScale.z);
+            isScreen = true;
+        }
+        if (!isScreen)
+            return;
+        spriteRenderer.transform.position = transformPos;
+        spriteRenderer.transform.localScale = transformScale;
+    }
 }

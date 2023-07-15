@@ -70,6 +70,7 @@ public class Interaction : MonoBehaviour
 
     [SerializeField]
     private Animator animDice;
+    private bool isCursorEnter;
 
     void Awake()
     {
@@ -77,25 +78,23 @@ public class Interaction : MonoBehaviour
         textHint = hintPoint.transform.Find("Text (TMP)").GetComponent<TMP_Text>();
     }
 
-    private void Update()
+    void Update()
     {
         isDistanceAccept =
             (player.position - transform.position).sqrMagnitude
             < sqrDistancePlayer * sqrDistancePlayer;
     }
 
-    void OnMouseEnter()
-    {
-        if (isDistanceAccept)
+    /*     void OnMouseEnter()
         {
-            Cursor.SetCursor(cursorTexture, hotSpot, CursorMode.Auto);
+            isCursorEnter = isDistanceAccept ? true : false;
         }
-    }
-
-    void OnMouseExit()
-    {
-        Cursor.SetCursor(null, hotSpot, CursorMode.Auto);
-    }
+    
+        void OnMouseExit()
+        {
+            isCursorEnter = isDistanceAccept ? false : true;
+            Cursor.SetCursor(null, hotSpot, CursorMode.Auto);
+        } */
 
     void OnMouseOver()
     {
