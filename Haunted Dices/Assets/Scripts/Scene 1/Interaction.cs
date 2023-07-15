@@ -97,7 +97,6 @@ public class Interaction : MonoBehaviour
         Cursor.SetCursor(null, hotSpot, CursorMode.Auto);
     }
 
-    #region cringe
     void OnMouseOver()
     {
         if (Input.GetKeyDown(KeyCode.Mouse1) && isDistanceAccept)
@@ -228,13 +227,15 @@ public class Interaction : MonoBehaviour
             imageEnd.imgGameOver[1].enabled = true;
             EventTree.eventDict.Clear();
         }
+        yield return new WaitForSeconds(4f);
+        textDice.text = string.Empty;
     }
 
     public void LockMovement()
     {
+        CharacterMoving.animCharacter.SetBool("isRunning", false);
         Pause.s_dof.active = true;
         playerMoving.enabled = false;
         characterMoving.rb.velocity = new Vector2(0, 0);
     }
-    #endregion
 }

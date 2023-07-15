@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 212b6bc84f77cc14a9fa2fc1ff40592f
+guid: b22cc9c3c00bb314cbcacb8b57ceb6da
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -39,17 +39,16 @@ ScriptedImporter:
   spriteData:
     TessellationDetail: 0
     SpriteRect:
-      name: "\u0412\u044B \u0442\u043E\u0447\u043D\u043E \u0445\u043E\u0442\u0438\u0442\u0435
-        \u0432\u044B\u0439\u0442\u0438_Sprite"
+      name: 
       originalName: 
-      pivot: {x: 0.50028056, y: 0.50040936}
+      pivot: {x: 0, y: 0}
       alignment: 0
       border: {x: 0, y: 0, z: 0, w: 0}
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 440
-        height: 259
-      spriteID: a124a17bfd4e5684b9d2736facb89492
+        width: 0
+        height: 0
+      spriteID: 333c47e2e3034af4dbe836c758333098
     PhysicsOutlines: []
