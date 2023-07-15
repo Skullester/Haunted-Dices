@@ -71,13 +71,14 @@ public class EventTree : MonoBehaviour
         if (indexChar == 1 & indexSkill == 0) // Шерон Идеальная отмычка
         {
             hint.CallHintMenu(text[2]);
+            interactGameObj[2].SetActive(true);
+            points[0].gameObject.GetComponent<BoxCollider>().enabled = false;
         }
         if (indexChar == 1 & indexSkill == 1) // Шерон Призрачная связь
         {
             hint.CallHintMenu(text[3]);
 
             points[0].gameObject.GetComponent<BoxCollider>().enabled = false;
-            points[3].gameObject.GetComponent<BoxCollider>().enabled = true;
         }
     }
 
@@ -106,6 +107,7 @@ public class EventTree : MonoBehaviour
             hint.CallHintMenu(text[6]);
 
             points[1].gameObject.GetComponent<BoxCollider>().enabled = false;
+            interactGameObj[6].SetActive(false);
         }
         if (indexChar == 1 & indexSkill == 1) // Шерон Призрачная связь
         {
