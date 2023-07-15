@@ -97,7 +97,7 @@ public class Interaction : MonoBehaviour
             if (isButtonClicked)
                 UseSkill();
             else
-                CallHintMenu("Для взаимодействия с точкой сначала выберите умение персонажа!");
+                CallHintMenu("Хм...\nИнтересно, может стоит потратить пару душ?");
         }
     }
 
@@ -193,7 +193,7 @@ public class Interaction : MonoBehaviour
     public void CloseHint()
     {
         hintPoint.SetActive(false);
-        Pause.s_dof.active = false;
+        // Pause.s_dof.active = false;
         playerMoving.enabled = true;
         if (SwitchingCharacter.indexOfCharacter == 0)
             GameObject.Find("MartinDialog").SetActive(false);
@@ -221,7 +221,7 @@ public class Interaction : MonoBehaviour
     public void LockMovement()
     {
         CharacterMoving.animCharacter.SetBool("isRunning", false);
-        Pause.s_dof.active = true;
+        //  Pause.s_dof.active = true;
         playerMoving.enabled = false;
         characterMoving.rb.velocity = new Vector2(0, 0);
     }
