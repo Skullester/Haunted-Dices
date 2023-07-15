@@ -72,7 +72,7 @@ public class EventTree : MonoBehaviour
             audioSourceSounds?.PlayOneShot(soundsPoints[1]);
             indTog.MissionCompleted(0); //0-Who
 
-            interactGameObj[0].SetActive(true);
+            interactGameObj[4].SetActive(true);
 
             hint.CallHintMenu(text[1]);
 
@@ -85,15 +85,14 @@ public class EventTree : MonoBehaviour
 
             interactGameObj[0].SetActive(false);
             interactGameObj[1].SetActive(true);
-            interactGameObj[2].SetActive(true);
+            interactGameObj[7].SetActive(true);
 
             points[0].gameObject.GetComponent<BoxCollider>().enabled = false;
+            points[3].gameObject.GetComponent<BoxCollider>().enabled = true;
         }
         if (indexChar == 1 & indexSkill == 1) // Шерон Призрачная связь
         {
             hint.CallHintMenu(text[3]);
-
-            points[0].gameObject.GetComponent<BoxCollider>().enabled = false;
         }
     }
 
@@ -124,13 +123,13 @@ public class EventTree : MonoBehaviour
 
             points[1].gameObject.GetComponent<BoxCollider>().enabled = false;
             interactGameObj[3].gameObject.GetComponent<Light2D>().enabled = false;
-            interactGameObj[6].SetActive(false);
         }
         if (indexChar == 1 & indexSkill == 1) // Шерон Призрачная связь
         {
             hint.CallHintMenu(text[7]);
 
             points[2].gameObject.GetComponent<BoxCollider>().enabled = true;
+            interactGameObj[5].gameObject.GetComponent<Light2D>().enabled = true;
         }
     }
 
@@ -149,9 +148,10 @@ public class EventTree : MonoBehaviour
         {
             audioSourceSounds?.PlayOneShot(soundsPoints[2]);
             hint.CallHintMenu(text[10]);
-            interactGameObj[1].SetActive(false);
+            interactGameObj[6].SetActive(false);
             points[2].gameObject.GetComponent<BoxCollider>().enabled = false;
             points[5].gameObject.GetComponent<BoxCollider>().enabled = true;
+            points[5].gameObject.GetComponent<Light2D>().enabled = true;
         }
         if (indexChar == 1 & indexSkill == 1) // Шерон Призрачная связь
         {
@@ -161,7 +161,6 @@ public class EventTree : MonoBehaviour
 
     public void FourthPointInteraction(int indexChar, int indexSkill) //3 Письмо
     {
-        Debug.Log("Третий поинт");
         if (indexChar == 0 & indexSkill == 0) // Мартин бескостный язык
         {
             hint.CallHintMenu(text[12]);
@@ -172,12 +171,14 @@ public class EventTree : MonoBehaviour
 
             points[3].gameObject.GetComponent<BoxCollider>().enabled = false;
             points[6].gameObject.GetComponent<BoxCollider>().enabled = true;
+            interactGameObj[9].gameObject.GetComponent<Light2D>().enabled = true;
         }
         if (indexChar == 1 & indexSkill == 0) // Шерон Идеальная отмычка
         {
             hint.CallHintMenu(text[14]);
 
             points[3].gameObject.GetComponent<BoxCollider>().enabled = false;
+            interactGameObj[7].SetActive(false);
         }
         if (indexChar == 1 & indexSkill == 1) // Шерон Призрачная связь
         {
@@ -185,12 +186,12 @@ public class EventTree : MonoBehaviour
 
             points[3].gameObject.GetComponent<BoxCollider>().enabled = false;
             points[7].gameObject.GetComponent<BoxCollider>().enabled = true;
+            points[7].gameObject.GetComponent<Light2D>().enabled = true;
         }
     }
 
     public void FifthPointInteraction(int indexChar, int indexSkill) //4 Отпечатки ладоней
     {
-        Debug.Log("Четвертый поинт");
         if (indexChar == 0 & indexSkill == 0) // Мартин бескостный язык
         {
             hint.CallHintMenu(text[16]);
@@ -207,6 +208,7 @@ public class EventTree : MonoBehaviour
         {
             hint.CallHintMenu(text[18]);
             points[4].gameObject.GetComponent<BoxCollider>().enabled = false;
+            interactGameObj[2].SetActive(false);
         }
         if (indexChar == 1 & indexSkill == 1) // Шерон Призрачная связь
         {
@@ -218,7 +220,6 @@ public class EventTree : MonoBehaviour
 
     public void SixthPointInteraction(int indexChar, int indexSkill) //5 Коробка с фильмами
     {
-        Debug.Log("Пятый поинт");
         if (indexChar == 0 & indexSkill == 0) // Мартин бескостный язык
         {
             hint.CallHintMenu(text[20]);
@@ -234,7 +235,6 @@ public class EventTree : MonoBehaviour
         }
         if (indexChar == 1 & indexSkill == 0) // Шерон Идеальная отмычка
         {
-            Debug.Log($"{indexChar}, {indexSkill}");
             hint.CallHintMenu(text[22]);
 
             points[5].gameObject.GetComponent<BoxCollider>().enabled = false;
@@ -242,8 +242,6 @@ public class EventTree : MonoBehaviour
         if (indexChar == 1 & indexSkill == 1) // Шерон Призрачная связь
         {
             audioSourceSounds?.PlayOneShot(soundsPoints[3]);
-            Debug.Log($"{indexChar}, {indexSkill}");
-            Debug.Log($"{gameOverobj}");
             interactGameObj[3].SetActive(true);
             StartCoroutine(CloseHintMenu());
             hint.CallHintMenu(text[23]);
@@ -262,7 +260,6 @@ public class EventTree : MonoBehaviour
 
     public void SeventhPointInteraction(int indexChar, int indexSkill) //6 Таинственная коробка
     {
-        Debug.Log("Шестой поинт");
         if (indexChar == 0 & indexSkill == 0) // Мартин бескостный язык
         {
             hint.CallHintMenu(text[24]);
@@ -277,12 +274,16 @@ public class EventTree : MonoBehaviour
 
             points[6].gameObject.GetComponent<BoxCollider>().enabled = false;
             points[8].gameObject.GetComponent<BoxCollider>().enabled = true;
+
+            interactGameObj[9].SetActive(false);
+            interactGameObj[10].SetActive(true);
         }
         if (indexChar == 1 & indexSkill == 1) // Шерон Призрачная связь
         {
             hint.CallHintMenu(text[27]);
 
             points[7].gameObject.GetComponent<BoxCollider>().enabled = true;
+            points[7].gameObject.GetComponent<Light2D>().enabled = true;
         }
     }
 
@@ -299,24 +300,26 @@ public class EventTree : MonoBehaviour
             hint.CallHintMenu(text[29]);
 
             points[7].gameObject.GetComponent<BoxCollider>().enabled = false;
+            points[7].gameObject.GetComponent<Light2D>().enabled = false;
         }
         if (indexChar == 1 & indexSkill == 0) // Шерон Идеальная отмычка
         {
+            indTog.MissionCompleted(1); //1-Why
             hint.CallHintMenu(text[30]);
+
+            points[7].gameObject.GetComponent<BoxCollider>().enabled = false;
+            points[7].gameObject.GetComponent<Light2D>().enabled = false;
         }
         if (indexChar == 1 & indexSkill == 1) // Шерон Призрачная связь
         {
-            indTog.MissionCompleted(1); //1-Why
-
             hint.CallHintMenu(text[31]);
-
-            points[7].gameObject.GetComponent<BoxCollider>().enabled = false;
+            points[6].gameObject.GetComponent<BoxCollider>().enabled = true;
+            interactGameObj[9].gameObject.GetComponent<Light2D>().enabled = true;
         }
     }
 
     public void NinthPointInteraction(int indexChar, int indexSkill) //8 Черный порошок
     {
-        Debug.Log("Восьмой поинт");
         if (indexChar == 0 & indexSkill == 0) // Мартин бескостный язык
         {
             hint.CallHintMenu(text[32]);
@@ -328,19 +331,18 @@ public class EventTree : MonoBehaviour
         if (indexChar == 1 & indexSkill == 0) // Шерон Идеальная отмычка
         {
             hint.CallHintMenu(text[34]);
-
-            points[8].gameObject.GetComponent<BoxCollider>().enabled = false;
-            points[9].gameObject.GetComponent<BoxCollider>().enabled = true;
         }
         if (indexChar == 1 & indexSkill == 1) // Шерон Призрачная связь
         {
+            points[8].gameObject.GetComponent<BoxCollider>().enabled = false;
+            points[9].gameObject.GetComponent<BoxCollider>().enabled = true;
+            interactGameObj[10].GetComponent<Light2D>().enabled = false;
             hint.CallHintMenu(text[35]);
         }
     }
 
     public void TenthPointInteraction(int indexChar, int indexSkill) //9 Призрак
     {
-        Debug.Log("Девятый поинт");
         if (indexChar == 0 & indexSkill == 0) // Мартин бескостный язык
         {
             indTog.MissionCompleted(0); //0-Who
@@ -351,6 +353,8 @@ public class EventTree : MonoBehaviour
             hint.CallHintMenu(text[36]);
 
             points[9].gameObject.GetComponent<BoxCollider>().enabled = false;
+            points[9].gameObject.GetComponent<Light2D>().enabled = false;
+            interactGameObj[11].SetActive(false);
         }
         if (indexChar == 0 & indexSkill == 1) // Мартин орлиный глаз
         {
@@ -361,12 +365,16 @@ public class EventTree : MonoBehaviour
             hint.CallHintMenu(text[38]);
 
             points[9].gameObject.GetComponent<BoxCollider>().enabled = false;
+            points[9].gameObject.GetComponent<Light2D>().enabled = false;
+            interactGameObj[11].SetActive(false);
         }
         if (indexChar == 1 & indexSkill == 1) // Шерон Призрачная связь
         {
             hint.CallHintMenu(text[39]);
 
             points[9].gameObject.GetComponent<BoxCollider>().enabled = false;
+            points[9].gameObject.GetComponent<Light2D>().enabled = false;
+            interactGameObj[11].SetActive(false);
         }
     }
 }
