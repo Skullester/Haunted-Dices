@@ -14,7 +14,7 @@ public class CharacterMoving : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (Input.GetKey(KeyCode.W))
             transform.rotation = Quaternion.Euler(0, 0, -180);
@@ -24,6 +24,10 @@ public class CharacterMoving : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, -270);
         if (Input.GetKey(KeyCode.A))
             transform.rotation = Quaternion.Euler(0, 0, -90);
+    }
+
+    void FixedUpdate()
+    {
         float moveX = Input.GetAxis("Horizontal") * speed;
         float moveY = Input.GetAxis("Vertical") * speed;
         if (moveX == 0 && moveY == 0)
