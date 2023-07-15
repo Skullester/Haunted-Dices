@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class Interaction : MonoBehaviour
 {
     [SerializeField]
+    private AudioClip diceSound;
+
+    [SerializeField]
     private Sprite[] skillsSprites;
     public static int s_buttonIndex;
 
@@ -124,6 +127,7 @@ public class Interaction : MonoBehaviour
     {
         animDice.SetTrigger("Rotate");
         int randomNumber = Dice.GetRandomNumber();
+        audioSourceSounds.PlayOneShot(diceSound);
         textDice.text = randomNumber.ToString();
         StartCoroutine(TimerDice(randomNumber));
         Action<int, int> action = EventTree.eventDict[GetIndexOfPoint()];

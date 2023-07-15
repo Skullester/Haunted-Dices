@@ -572,6 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diceSound: {fileID: 8300000, guid: 63b47a59d6cfac342aeb91083583d8fa, type: 3}
   skillsSprites:
   - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
   - {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
@@ -2045,6 +2046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diceSound: {fileID: 8300000, guid: 63b47a59d6cfac342aeb91083583d8fa, type: 3}
   skillsSprites:
   - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
   - {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
@@ -2476,6 +2478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diceSound: {fileID: 8300000, guid: 63b47a59d6cfac342aeb91083583d8fa, type: 3}
   skillsSprites:
   - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
   - {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
@@ -3669,7 +3672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7287077874192411539, guid: 8d287e5391a781142a766366ee7cbe7a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.20727539
+      value: -0.20898438
       objectReference: {fileID: 0}
     - target: {fileID: 7287077874192411539, guid: 8d287e5391a781142a766366ee7cbe7a, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3726,6 +3729,10 @@ PrefabInstance:
     - target: {fileID: 8917482997152779461, guid: 8d287e5391a781142a766366ee7cbe7a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200443411815002715, guid: 8d287e5391a781142a766366ee7cbe7a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.0356445
       objectReference: {fileID: 0}
     - target: {fileID: 9200443411815002715, guid: 8d287e5391a781142a766366ee7cbe7a, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5760,6 +5767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diceSound: {fileID: 8300000, guid: 63b47a59d6cfac342aeb91083583d8fa, type: 3}
   skillsSprites:
   - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
   - {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
@@ -7005,7 +7013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6675276216745334638, guid: 2c554e05fcb625949a48eba5e45a91ec, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -316
+      value: -315.99805
       objectReference: {fileID: 0}
     - target: {fileID: 6675276216745334638, guid: 2c554e05fcb625949a48eba5e45a91ec, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -7584,6 +7592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diceSound: {fileID: 8300000, guid: 63b47a59d6cfac342aeb91083583d8fa, type: 3}
   skillsSprites:
   - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
   - {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
@@ -8420,7 +8429,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.11259269, y: 0.157}
   m_AnchorMax: {x: 0.89074504, y: 0.8175324}
-  m_AnchoredPosition: {x: -0.71313477, y: 2.489502}
+  m_AnchoredPosition: {x: -0.7128906, y: 2.4892578}
   m_SizeDelta: {x: -7.169922, y: -5.7459717}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &866955876
@@ -9233,6 +9242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diceSound: {fileID: 8300000, guid: 63b47a59d6cfac342aeb91083583d8fa, type: 3}
   skillsSprites:
   - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
   - {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
@@ -11026,6 +11036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diceSound: {fileID: 8300000, guid: 63b47a59d6cfac342aeb91083583d8fa, type: 3}
   skillsSprites:
   - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
   - {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
@@ -13527,7 +13538,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.11259269, y: 0.157}
   m_AnchorMax: {x: 0.89074504, y: 0.8175324}
-  m_AnchoredPosition: {x: -0.71313477, y: 2.489502}
+  m_AnchoredPosition: {x: -0.7128906, y: 2.4892578}
   m_SizeDelta: {x: -7.169922, y: -5.7459717}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1296072163
@@ -18757,6 +18768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diceSound: {fileID: 8300000, guid: 63b47a59d6cfac342aeb91083583d8fa, type: 3}
   skillsSprites:
   - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
   - {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
@@ -19911,6 +19923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diceSound: {fileID: 8300000, guid: 63b47a59d6cfac342aeb91083583d8fa, type: 3}
   skillsSprites:
   - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
   - {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
@@ -20165,6 +20178,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6723f15ac971dfd44a15de57522bf920, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer: 0.4
+  footsteps:
+  - {fileID: 8300000, guid: 9a47b64b8d432b94eb7317d268127b1d, type: 3}
+  - {fileID: 8300000, guid: 520f55c41638a0d408571ddf515810d0, type: 3}
+  - {fileID: 8300000, guid: 52c5e1808bea0b34e8abeab31591f4cc, type: 3}
+  - {fileID: 8300000, guid: f7c73eb9b5b8af24b87031b591566444, type: 3}
+  - {fileID: 8300000, guid: 150e70d1ee30a0547ab9ded90647ad8d, type: 3}
+  - {fileID: 8300000, guid: 2c7ab9bda8ff6364ba31cc57a90a16d5, type: 3}
   speed: 5
   rb: {fileID: 0}
 --- !u!82 &1974132064
@@ -21400,6 +21421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diceSound: {fileID: 8300000, guid: 63b47a59d6cfac342aeb91083583d8fa, type: 3}
   skillsSprites:
   - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
   - {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
@@ -22795,7 +22817,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 6.4970703, y: -36.6593}
+  m_AnchoredPosition: {x: 6.498047, y: -36.65918}
   m_SizeDelta: {x: -771.4978, y: -306.07217}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6394516721345755160
@@ -22986,7 +23008,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 1.0533447}
+  m_AnchoredPosition: {x: 0, y: 1.0532227}
   m_SizeDelta: {x: 1.310791, y: 1.7421265}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &8298460792671887343
