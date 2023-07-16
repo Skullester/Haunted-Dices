@@ -339,7 +339,7 @@ public class EventTree : MonoBehaviour
             audioSourceSounds?.PlayOneShot(soundsPoints[3]);
             interactGameObj[8].SetActive(true); // демон появляется
             hint.CallHintMenu(text[23]);
-            preGameOver.SetActive(true);
+
             StartCoroutine(CloseHintMenu());
             gameOverobj.LockMovement();
         }
@@ -351,7 +351,9 @@ public class EventTree : MonoBehaviour
 
     IEnumerator CloseHintMenu()
     {
-        yield return new WaitForSeconds(6.0f);
+        yield return new WaitForSeconds(1.2f);
+        preGameOver.SetActive(true);
+        yield return new WaitForSeconds(4.0f);
         gameOverobj.gameOverObj.SetActive(true);
         Interaction.isButtonClicked = false;
         imgGameOver[0].enabled = true;

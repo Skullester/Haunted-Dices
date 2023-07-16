@@ -1798,7 +1798,6 @@ RectTransform:
   - {fileID: 183141062}
   - {fileID: 1858207334}
   - {fileID: 1612751332}
-  - {fileID: 975398574}
   - {fileID: 1880867277}
   - {fileID: 867131754}
   - {fileID: 57079735}
@@ -1808,6 +1807,7 @@ RectTransform:
   - {fileID: 686070821}
   - {fileID: 6675276217173646255}
   - {fileID: 2062520234}
+  - {fileID: 975398574}
   - {fileID: 1397107209}
   - {fileID: 1842462397}
   m_Father: {fileID: 0}
