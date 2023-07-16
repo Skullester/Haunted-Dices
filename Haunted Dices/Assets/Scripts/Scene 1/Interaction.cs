@@ -70,7 +70,7 @@ public class Interaction : MonoBehaviour
     [SerializeField]
     private EventTree imageEnd;
 
-    private int tempChar = -1;
+    private bool tempChar = false;
 
     [SerializeField]
     private Animator animDice;
@@ -140,15 +140,7 @@ public class Interaction : MonoBehaviour
     public void CallHintMenu(string textHint = "")
     {
         Transform textTransorm = this.hintPoint.transform.Find("Text (TMP)");
-        if (SwitchingCharacter.indexOfCharacter == 0)
-        {
-            ChangeScaleHint(0, textTransorm, tempChar);
-        }
-        else if (SwitchingCharacter.indexOfCharacter == 1)
-        {
-            ChangeScaleHint(1, textTransorm, tempChar);
-        }
-
+        ChangeScaleHint(SwitchingCharacter.indexOfCharacter, textTransorm, tempChar);
         LockMovement();
         if (textHint == string.Empty)
         {
@@ -156,14 +148,14 @@ public class Interaction : MonoBehaviour
             return;
         }
         this.textHint.text = textHint;
-        this.tempChar = SwitchingCharacter.indexOfCharacter;
     }
 
-    private void ChangeScaleHint(int indexChar, Transform textTransorm, int tempChar)
+    private void ChangeScaleHint(int indexChar, Transform textTransorm, bool tempChar)
     {
         imgChar[indexChar].gameObject.SetActive(true);
-        if (indexChar != tempChar)
+        if (indexChar != Convert.ToInt32(tempChar))
         {
+            this.tempChar = !tempChar;
             scale.localScale = new Vector3(
                 scale.localScale.x * -1,
                 scale.localScale.y,
