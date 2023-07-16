@@ -19,7 +19,7 @@ public class SwitchingCharacter : MonoBehaviour
 
     [SerializeField]
     private Sprite[] skillsSprites;
-    private Button[] btnCharacters = new Button[s_characterNumbers];
+    public static Button[] btnCharacters = new Button[s_characterNumbers];
 
     [SerializeField]
     private Sprite[] spritesCharacters;
