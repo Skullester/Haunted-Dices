@@ -6,6 +6,11 @@ using System;
 
 public class SwitchingCharacter : MonoBehaviour
 {
+    [SerializeField]
+    private AudioClip cardFlipSound;
+
+    [SerializeField]
+    private AudioSource audioSourceSound;
     public static int s_characterNumbers = 2;
     public static int indexOfCharacter;
 
@@ -43,6 +48,7 @@ public class SwitchingCharacter : MonoBehaviour
 
     public void ChangeCardsOfCharacter(int buttonIndex)
     {
+        audioSourceSound.PlayOneShot(cardFlipSound);
         Interaction.isButtonClicked = false;
         for (int i = 0; i < animButtons.Length; i++)
         {
