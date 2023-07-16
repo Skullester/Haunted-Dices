@@ -145,7 +145,7 @@ public class Interaction : MonoBehaviour
 
     public void CallHintMenu(string textHint = "")
     {
-        Transform textTransorm = this.hintPoint.transform.Find("Text (TMP)");
+        Transform textTransorm = hintPoint.transform.Find("Text (TMP)");
         ChangeScaleHint(SwitchingCharacter.indexOfCharacter, textTransorm, tempChar);
         LockMovement();
         if (textHint == string.Empty)
