@@ -79,7 +79,18 @@ public class EventTree : MonoBehaviour
                 winImages[2].gameObject.SetActive(true);
             else if (IsBoxFilmsWhy == false && (IsBathroomWhy || IsGhostWhy)) // не с помощью
                 winImages[0].gameObject.SetActive(true);
-            eventDict.Clear();
+        }
+    }
+
+    void CheckBoxColider()
+    {
+        for (int i = 0; i < eventDict.Count; i++)
+        {
+            if (points[i].gameObject.GetComponent<BoxCollider>().enabled)
+                return;
+            gameOverobj.gameOverObj.SetActive(true);
+            Interaction.isButtonClicked = false;
+            imgGameOver[2].enabled = true;
         }
     }
 
@@ -315,7 +326,6 @@ public class EventTree : MonoBehaviour
         gameOverobj.gameOverObj.SetActive(true);
         Interaction.isButtonClicked = false;
         imgGameOver[0].enabled = true;
-        eventDict.Clear();
     }
 
     IEnumerator TimerPoint()
