@@ -125,6 +125,8 @@ public class Interaction : MonoBehaviour
 
     private void UseSkill()
     {
+        if (!EventTree.isTimePassed)
+            return;
         animDice.SetTrigger("Rotate");
         int randomNumber = Dice.GetRandomNumber();
         audioSourceSounds.PlayOneShot(diceSound);

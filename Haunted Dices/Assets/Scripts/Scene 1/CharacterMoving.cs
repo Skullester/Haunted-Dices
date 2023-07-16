@@ -3,7 +3,7 @@ using UnityEngine;
 public class CharacterMoving : MonoBehaviour
 {
     [SerializeField]
-    private float Timer = 0.4f;
+    private float Timer = 0.35f;
     private float TimerDown = 0.0001f;
     private AudioSource audioSourceSounds;
 

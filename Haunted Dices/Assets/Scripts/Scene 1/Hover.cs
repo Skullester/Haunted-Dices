@@ -36,6 +36,11 @@ public class Hover : MonoBehaviour
 
     void Update()
     {
+        if (!EventTree.isTimePassed)
+        {
+            Cursor.SetCursor(null, hotSpot, CursorMode.Auto);
+            return;
+        }
         if (pointsHover[indexOfPoint].isCursorEnter)
             Cursor.SetCursor(pointer, hotSpot, CursorMode.Auto);
         else
