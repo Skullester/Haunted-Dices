@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -80,6 +81,9 @@ public class Interaction : MonoBehaviour
     private bool isCursorEnter;
     public static bool isSkillUsed;
 
+    public static Dictionary<(int, int, int), bool> SkillsUsed =
+        new Dictionary<(int, int, int), bool>();
+
     void Awake()
     {
         playerMoving = player.GetComponent<CharacterMoving>();
@@ -101,11 +105,29 @@ public class Interaction : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Mouse0) && isDistanceAccept)
         {
-            if (isButtonClicked)
+            Debug.Log(
+                $"Перс{SwitchingCharacter.indexOfCharacter}, кнопка {indexSkillButton}, точка {GetIndexOfPoint()}"
+            );
+
+            if (
+                isButtonClicked
+                && SkillsUsed[
+                    (SwitchingCharacter.indexOfCharacter, indexSkillButton, GetIndexOfPoint())
+                ] == false
+            )
                 UseSkill();
+            else if (
+                isButtonClicked
+                && SkillsUsed[
+                    (SwitchingCharacter.indexOfCharacter, indexSkillButton, GetIndexOfPoint())
+                ]
+            )
+                CallHintMenu(
+                    "*Эта способность уже была использована для этой точки*\n А ведь голос в моей голове мне не лжет!"
+                );
             else
                 CallHintMenu(
-                    "Для взаимодействия с этим необходимо сначала выбрать умение\nЧто?! Откуда этот голос в моей голове?"
+                    "*Для взаимодействия с этим необходимо сначала выбрать умение*\nЧто?! Откуда этот голос в моей голове?"
                 );
         }
     }

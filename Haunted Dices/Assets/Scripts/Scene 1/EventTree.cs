@@ -54,6 +54,17 @@ public class EventTree : MonoBehaviour
 
     void Awake()
     {
+        for (int i = 0; i < 2; i++)
+        {
+            for (int j = 0; j < 2; j++)
+            {
+                for (int k = 0; k < 10; k++)
+                {
+                    Interaction.SkillsUsed.Add((i, j, k), false);
+                }
+            }
+        }
+
         eventDict.Clear();
         isTimePassed = true;
         eventDict.Add(0, FirstPointInteraction);
@@ -139,6 +150,8 @@ public class EventTree : MonoBehaviour
         {
             hint.CallHintMenu(text[3]);
         }
+
+        Interaction.SkillsUsed[(indexChar, indexSkill, 0)] = true;
         isTimePassed = false;
         StartCoroutine(TimerPoint());
         StartCoroutine(CheckBoxColider());
@@ -178,6 +191,7 @@ public class EventTree : MonoBehaviour
             points[2].gameObject.GetComponent<BoxCollider>().enabled = true; // коллайдер закрытой двери появляется
             interactGameObj[5].SetActive(true); // свет у закрытой двери появляется
         }
+        Interaction.SkillsUsed[(indexChar, indexSkill, 1)] = true;
         isTimePassed = false;
         StartCoroutine(TimerPoint());
         StartCoroutine(CheckBoxColider());
@@ -211,6 +225,8 @@ public class EventTree : MonoBehaviour
         {
             hint.CallHintMenu(text[11]);
         }
+
+        Interaction.SkillsUsed[(indexChar, indexSkill, 2)] = true;
         isTimePassed = false;
         StartCoroutine(TimerPoint());
         StartCoroutine(CheckBoxColider());
@@ -250,6 +266,7 @@ public class EventTree : MonoBehaviour
             points[7].gameObject.GetComponent<BoxCollider>().enabled = true;
             points[7].gameObject.GetComponent<Light2D>().enabled = true;
         }
+        Interaction.SkillsUsed[(indexChar, indexSkill, 3)] = true;
         isTimePassed = false;
         StartCoroutine(TimerPoint());
         StartCoroutine(CheckBoxColider());
@@ -285,6 +302,7 @@ public class EventTree : MonoBehaviour
 
             points[4].gameObject.GetComponent<BoxCollider>().enabled = false; // коллайдер у ладоней пропадает
         }
+        Interaction.SkillsUsed[(indexChar, indexSkill, 4)] = true;
         isTimePassed = false;
         StartCoroutine(TimerPoint());
         StartCoroutine(CheckBoxColider());
@@ -325,6 +343,7 @@ public class EventTree : MonoBehaviour
             StartCoroutine(CloseHintMenu());
             gameOverobj.LockMovement();
         }
+        Interaction.SkillsUsed[(indexChar, indexSkill, 5)] = true;
         isTimePassed = false;
         StartCoroutine(TimerPoint());
         StartCoroutine(CheckBoxColider());
@@ -376,6 +395,7 @@ public class EventTree : MonoBehaviour
             points[7].gameObject.GetComponent<BoxCollider>().enabled = true; // коллайдер у ванны появляется
             points[7].gameObject.GetComponent<Light2D>().enabled = true; // свет у ванны появляется
         }
+        Interaction.SkillsUsed[(indexChar, indexSkill, 6)] = true;
         isTimePassed = false;
         StartCoroutine(TimerPoint());
         StartCoroutine(CheckBoxColider());
@@ -416,6 +436,7 @@ public class EventTree : MonoBehaviour
             points[6].gameObject.GetComponent<BoxCollider>().enabled = true; // коллайдер таинственной коробки появляется
             interactGameObj[9].gameObject.GetComponent<Light2D>().enabled = true; // свет у закрытой коробки появляется
         }
+        Interaction.SkillsUsed[(indexChar, indexSkill, 7)] = true;
         isTimePassed = false;
         StartCoroutine(TimerPoint());
         StartCoroutine(CheckBoxColider());
@@ -448,6 +469,7 @@ public class EventTree : MonoBehaviour
             interactGameObj[11].SetActive(true); // спрайт призрака появляется
             hint.CallHintMenu(text[35]);
         }
+        Interaction.SkillsUsed[(indexChar, indexSkill, 8)] = true;
         isTimePassed = false;
         StartCoroutine(TimerPoint());
         StartCoroutine(CheckBoxColider());
@@ -487,6 +509,7 @@ public class EventTree : MonoBehaviour
             points[9].gameObject.GetComponent<Light2D>().enabled = false; // свет призрака пропадает
             interactGameObj[11].SetActive(false); // спрайт призрака пропадает
         }
+        Interaction.SkillsUsed[(indexChar, indexSkill, 9)] = true;
         isTimePassed = false;
         StartCoroutine(TimerPoint());
         StartCoroutine(CheckBoxColider());
