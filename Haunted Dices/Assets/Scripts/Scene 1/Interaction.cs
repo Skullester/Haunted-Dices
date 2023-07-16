@@ -8,6 +8,9 @@ using UnityEngine.SceneManagement;
 public class Interaction : MonoBehaviour
 {
     [SerializeField]
+    private AudioClip chooseSound;
+
+    [SerializeField]
     private AudioClip diceSound;
 
     [SerializeField]
@@ -101,12 +104,15 @@ public class Interaction : MonoBehaviour
             if (isButtonClicked)
                 UseSkill();
             else
-                CallHintMenu("Хм...\nИнтересно, может стоит потратить пару душ?");
+                CallHintMenu(
+                    "Для взаимодействия с этим необходимо сначала выбрать умение\nЧто?! Откуда этот голос в моей голове?"
+                );
         }
     }
 
     public void ChooseSkill(int indexButton)
     {
+        audioSourceSounds.PlayOneShot(chooseSound);
         if (SwitchingCharacter.indexOfCharacter == 0)
         {
             if (s_buttonIndex != indexButton)

@@ -572,6 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chooseSound: {fileID: 8300000, guid: e9df8f60fd6bfa4428b91d1e6161a68b, type: 3}
   diceSound: {fileID: 8300000, guid: 63b47a59d6cfac342aeb91083583d8fa, type: 3}
   skillsSprites:
   - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
@@ -2209,6 +2210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chooseSound: {fileID: 8300000, guid: e9df8f60fd6bfa4428b91d1e6161a68b, type: 3}
   diceSound: {fileID: 8300000, guid: 63b47a59d6cfac342aeb91083583d8fa, type: 3}
   skillsSprites:
   - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
@@ -2668,6 +2670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chooseSound: {fileID: 8300000, guid: e9df8f60fd6bfa4428b91d1e6161a68b, type: 3}
   diceSound: {fileID: 8300000, guid: 63b47a59d6cfac342aeb91083583d8fa, type: 3}
   skillsSprites:
   - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
@@ -6200,6 +6203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chooseSound: {fileID: 8300000, guid: e9df8f60fd6bfa4428b91d1e6161a68b, type: 3}
   diceSound: {fileID: 8300000, guid: 63b47a59d6cfac342aeb91083583d8fa, type: 3}
   skillsSprites:
   - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
@@ -7916,6 +7920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chooseSound: {fileID: 8300000, guid: e9df8f60fd6bfa4428b91d1e6161a68b, type: 3}
   diceSound: {fileID: 8300000, guid: 63b47a59d6cfac342aeb91083583d8fa, type: 3}
   skillsSprites:
   - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
@@ -9723,6 +9728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chooseSound: {fileID: 8300000, guid: e9df8f60fd6bfa4428b91d1e6161a68b, type: 3}
   diceSound: {fileID: 8300000, guid: 63b47a59d6cfac342aeb91083583d8fa, type: 3}
   skillsSprites:
   - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
@@ -11544,6 +11550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chooseSound: {fileID: 8300000, guid: e9df8f60fd6bfa4428b91d1e6161a68b, type: 3}
   diceSound: {fileID: 8300000, guid: 63b47a59d6cfac342aeb91083583d8fa, type: 3}
   skillsSprites:
   - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
@@ -20085,6 +20092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chooseSound: {fileID: 8300000, guid: e9df8f60fd6bfa4428b91d1e6161a68b, type: 3}
   diceSound: {fileID: 8300000, guid: 63b47a59d6cfac342aeb91083583d8fa, type: 3}
   skillsSprites:
   - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
@@ -21635,6 +21643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chooseSound: {fileID: 8300000, guid: e9df8f60fd6bfa4428b91d1e6161a68b, type: 3}
   diceSound: {fileID: 8300000, guid: 63b47a59d6cfac342aeb91083583d8fa, type: 3}
   skillsSprites:
   - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
@@ -23400,6 +23409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc76632f1c6e24489e24fd753b14428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chooseSound: {fileID: 8300000, guid: e9df8f60fd6bfa4428b91d1e6161a68b, type: 3}
   diceSound: {fileID: 8300000, guid: 63b47a59d6cfac342aeb91083583d8fa, type: 3}
   skillsSprites:
   - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
