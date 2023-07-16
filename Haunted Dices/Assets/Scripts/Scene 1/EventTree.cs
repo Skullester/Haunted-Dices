@@ -91,7 +91,7 @@ public class EventTree : MonoBehaviour
             if (points[i].gameObject.GetComponent<BoxCollider>().enabled)
                 isColiderOn = true;
         }
-        if (!isColiderOn)
+        if (!isColiderOn && !imgGameOver[1].enabled)
         {
             gameOverobj.gameOverObj.SetActive(true);
             Interaction.isButtonClicked = false;
@@ -116,10 +116,13 @@ public class EventTree : MonoBehaviour
             audioSourceSounds?.PlayOneShot(soundsPoints[1]);
             indTog.MissionCompleted(2); //2-How
             hint.CallHintMenu(text[1]);
+
+            interactGameObj[2].SetActive(true); // картинка ладоней вкл
             interactGameObj[4].SetActive(true); // след к двери
             interactGameObj[5].SetActive(true); // свет у двери
 
             points[2].gameObject.GetComponent<BoxCollider>().enabled = true; // коллайдер закрытой двери кладовой
+            points[4].gameObject.GetComponent<BoxCollider>().enabled = true;
         }
         if (indexChar == 1 & indexSkill == 0) // Шерон Идеальная отмычка
         {
