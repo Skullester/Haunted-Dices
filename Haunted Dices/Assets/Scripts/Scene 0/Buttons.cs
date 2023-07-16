@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.VectorGraphics;
 
 public class Buttons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {

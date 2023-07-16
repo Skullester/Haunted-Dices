@@ -8,6 +8,12 @@ using UnityEngine.Rendering.Universal;
 public class EventTree : MonoBehaviour
 {
     [SerializeField]
+    private GameObject preGameOver;
+
+    [SerializeField]
+    private Animator animPreGameOver;
+
+    [SerializeField]
     private AudioSource audioSourceSounds;
 
     [SerializeField]
@@ -100,20 +106,18 @@ public class EventTree : MonoBehaviour
     {
         if (indexChar == 0 & indexSkill == 0) // Мартин бескостный язык
         {
+            audioSourceSounds?.PlayOneShot(soundsPoints[6]);
             indTog.MissionCompleted(3); //3-ByWhat
-
             hint.CallHintMenu(text[4]);
-
             points[1].gameObject.GetComponent<BoxCollider>().enabled = false;
             interactGameObj[3].gameObject.GetComponent<Light2D>().enabled = false;
         }
         if (indexChar == 0 & indexSkill == 1) // Мартин орлиный глаз
         {
+            audioSourceSounds?.PlayOneShot(soundsPoints[6]);
             indTog.MissionCompleted(0); //0-Who
             indTog.MissionCompleted(3); //3-ByWhat
-
             hint.CallHintMenu(text[5]);
-
             points[1].gameObject.GetComponent<BoxCollider>().enabled = false;
             interactGameObj[3].gameObject.GetComponent<Light2D>().enabled = false;
         }
@@ -194,6 +198,7 @@ public class EventTree : MonoBehaviour
     {
         if (indexChar == 0 & indexSkill == 0) // Мартин бескостный язык
         {
+            audioSourceSounds?.PlayOneShot(soundsPoints[5]);
             hint.CallHintMenu(text[16]);
         }
         if (indexChar == 0 & indexSkill == 1) // Мартин орлиный глаз
@@ -243,6 +248,7 @@ public class EventTree : MonoBehaviour
         {
             audioSourceSounds?.PlayOneShot(soundsPoints[3]);
             interactGameObj[3].SetActive(true);
+            preGameOver.SetActive(true);
             StartCoroutine(CloseHintMenu());
             hint.CallHintMenu(text[23]);
             gameOverobj.LockMovement();
@@ -345,33 +351,33 @@ public class EventTree : MonoBehaviour
     {
         if (indexChar == 0 & indexSkill == 0) // Мартин бескостный язык
         {
+            audioSourceSounds?.PlayOneShot(soundsPoints[7]);
             indTog.MissionCompleted(0); //0-Who
             indTog.MissionCompleted(1); //1-Why
             indTog.MissionCompleted(2); //2-How
             indTog.MissionCompleted(3); //3-ByWhat
-
             hint.CallHintMenu(text[36]);
-
             points[9].gameObject.GetComponent<BoxCollider>().enabled = false;
             points[9].gameObject.GetComponent<Light2D>().enabled = false;
             interactGameObj[11].SetActive(false);
         }
         if (indexChar == 0 & indexSkill == 1) // Мартин орлиный глаз
         {
+            audioSourceSounds?.PlayOneShot(soundsPoints[7]);
             hint.CallHintMenu(text[37]);
         }
         if (indexChar == 1 & indexSkill == 0) // Шерон Идеальная отмычка
         {
+            audioSourceSounds?.PlayOneShot(soundsPoints[7]);
             hint.CallHintMenu(text[38]);
-
             points[9].gameObject.GetComponent<BoxCollider>().enabled = false;
             points[9].gameObject.GetComponent<Light2D>().enabled = false;
             interactGameObj[11].SetActive(false);
         }
         if (indexChar == 1 & indexSkill == 1) // Шерон Призрачная связь
         {
+            audioSourceSounds?.PlayOneShot(soundsPoints[7]);
             hint.CallHintMenu(text[39]);
-
             points[9].gameObject.GetComponent<BoxCollider>().enabled = false;
             points[9].gameObject.GetComponent<Light2D>().enabled = false;
             interactGameObj[11].SetActive(false);

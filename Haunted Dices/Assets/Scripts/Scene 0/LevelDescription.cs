@@ -13,10 +13,10 @@ public class LevelDescription : MonoBehaviour
 
     private void Awake()
     {
-        levelTitle = transform.Find("LevelTitle").GetComponent<TMP_Text>();
+        //levelTitle = transform.Find("LevelTitle").GetComponent<TMP_Text>();
     }
 
-    void OnEnable()
+    /* void OnEnable()
     {
         switch (Buttons.s_levelTitleNumber)
         {
@@ -29,5 +29,5 @@ public class LevelDescription : MonoBehaviour
                 descriptionLevelText.text = descriptions[1];
                 break;
         }
-    }
+    } */
 }
