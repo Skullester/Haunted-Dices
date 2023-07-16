@@ -59,6 +59,14 @@ public class Pause : MonoBehaviour
         warning.SetActive(true);
     }
 
+    public void ReturnToMenu2()
+    {
+        Interaction.isButtonClicked = false;
+        animTransition.gameObject.SetActive(true);
+        animTransition.SetTrigger("Start");
+        StartCoroutine(DelayBetweenTrans());
+    }
+
     public void CancelReturning()
     {
         warning.SetActive(false);
@@ -80,7 +88,14 @@ public class Pause : MonoBehaviour
 
     public void RestartGame()
     {
+        animTransition.gameObject.SetActive(true);
         animTransition.SetTrigger("Start");
+        StartCoroutine(DelayBetweenTrans2());
+    }
+
+    IEnumerator DelayBetweenTrans2()
+    {
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(1);
     }
 }
