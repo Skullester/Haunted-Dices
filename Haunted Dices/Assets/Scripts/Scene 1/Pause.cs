@@ -77,4 +77,10 @@ public class Pause : MonoBehaviour
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(0);
     }
+
+    public void RestartGame()
+    {
+        animTransition.SetTrigger("Start");
+        SceneManager.LoadScene(1);
+    }
 }

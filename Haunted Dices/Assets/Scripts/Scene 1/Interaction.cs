@@ -3,6 +3,7 @@ using TMPro;
 using System;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Interaction : MonoBehaviour
 {
