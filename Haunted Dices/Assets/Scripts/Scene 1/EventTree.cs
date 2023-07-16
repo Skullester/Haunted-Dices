@@ -82,12 +82,17 @@ public class EventTree : MonoBehaviour
         }
     }
 
-    void CheckBoxColider()
+    IEnumerator CheckBoxColider()
     {
+        bool isColiderOn = false;
+        yield return new WaitForSeconds(3f);
         for (int i = 0; i < eventDict.Count; i++)
         {
             if (points[i].gameObject.GetComponent<BoxCollider>().enabled)
-                return;
+                isColiderOn = true;
+        }
+        if (!isColiderOn)
+        {
             gameOverobj.gameOverObj.SetActive(true);
             Interaction.isButtonClicked = false;
             imgGameOver[2].enabled = true;
@@ -134,6 +139,7 @@ public class EventTree : MonoBehaviour
         }
         isTimePassed = false;
         StartCoroutine(TimerPoint());
+        StartCoroutine(CheckBoxColider());
     }
 
     public void SecondPointInteraction(int indexChar, int indexSkill) //1 Игрушки
@@ -175,6 +181,7 @@ public class EventTree : MonoBehaviour
         }
         isTimePassed = false;
         StartCoroutine(TimerPoint());
+        StartCoroutine(CheckBoxColider());
     }
 
     public void ThirdPointInteraction(int indexChar, int indexSkill) //2 Закрытая дверь
@@ -207,6 +214,7 @@ public class EventTree : MonoBehaviour
         }
         isTimePassed = false;
         StartCoroutine(TimerPoint());
+        StartCoroutine(CheckBoxColider());
     }
 
     public void FourthPointInteraction(int indexChar, int indexSkill) //3 Письмо
@@ -245,6 +253,7 @@ public class EventTree : MonoBehaviour
         }
         isTimePassed = false;
         StartCoroutine(TimerPoint());
+        StartCoroutine(CheckBoxColider());
     }
 
     public void FifthPointInteraction(int indexChar, int indexSkill) //4 Отпечатки ладоней
@@ -279,6 +288,7 @@ public class EventTree : MonoBehaviour
         }
         isTimePassed = false;
         StartCoroutine(TimerPoint());
+        StartCoroutine(CheckBoxColider());
     }
 
     public void SixthPointInteraction(int indexChar, int indexSkill) //5 Коробка с фильмами
@@ -318,6 +328,7 @@ public class EventTree : MonoBehaviour
         }
         isTimePassed = false;
         StartCoroutine(TimerPoint());
+        StartCoroutine(CheckBoxColider());
     }
 
     IEnumerator CloseHintMenu()
@@ -330,7 +341,7 @@ public class EventTree : MonoBehaviour
 
     IEnumerator TimerPoint()
     {
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(3.0f);
         isTimePassed = true;
     }
 
@@ -367,6 +378,7 @@ public class EventTree : MonoBehaviour
         }
         isTimePassed = false;
         StartCoroutine(TimerPoint());
+        StartCoroutine(CheckBoxColider());
     }
 
     public void EighthPointInteraction(int indexChar, int indexSkill) //7 Ванна
@@ -405,6 +417,7 @@ public class EventTree : MonoBehaviour
         }
         isTimePassed = false;
         StartCoroutine(TimerPoint());
+        StartCoroutine(CheckBoxColider());
     }
 
     public void NinthPointInteraction(int indexChar, int indexSkill) //8 Черный порошок
@@ -436,6 +449,7 @@ public class EventTree : MonoBehaviour
         }
         isTimePassed = false;
         StartCoroutine(TimerPoint());
+        StartCoroutine(CheckBoxColider());
     }
 
     public void TenthPointInteraction(int indexChar, int indexSkill) //9 Призрак
@@ -474,5 +488,6 @@ public class EventTree : MonoBehaviour
         }
         isTimePassed = false;
         StartCoroutine(TimerPoint());
+        StartCoroutine(CheckBoxColider());
     }
 }
