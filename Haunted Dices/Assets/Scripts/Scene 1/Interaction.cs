@@ -105,10 +105,6 @@ public class Interaction : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Mouse0) && isDistanceAccept)
         {
-            Debug.Log(
-                $"Перс{SwitchingCharacter.indexOfCharacter}, кнопка {indexSkillButton}, точка {GetIndexOfPoint()}"
-            );
-
             if (
                 isButtonClicked
                 && SkillsUsed[

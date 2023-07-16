@@ -12,15 +12,14 @@ public class Education : MonoBehaviour
 
     [SerializeField]
     private GameObject[] objects;
-    public static bool isEducationPassed; //костыль
 
     public void GotItButton()
     {
         if (count == objects.Length)
         {
-            isEducationPassed = true;
             cm.enabled = true;
             gameObject.SetActive(false);
+            PlayerPrefs.SetInt("Education", 1);
             return;
         }
         objects[count - 1].SetActive(false);
@@ -29,7 +28,7 @@ public class Education : MonoBehaviour
 
     private void Start()
     {
-        if (isEducationPassed)
+        if (PlayerPrefs.HasKey("Education"))
         {
             gameObject.SetActive(false);
             return;
@@ -40,7 +39,7 @@ public class Education : MonoBehaviour
 
     IEnumerator Timer()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
         objects[0].SetActive(true);
         btn.SetActive(true);
     }
