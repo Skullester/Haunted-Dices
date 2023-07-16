@@ -48,7 +48,7 @@ public class SettingsGame : MonoBehaviour
     {
         if (!audioSourceMusic.isPlaying)
         {
-            int index = UnityEngine.Random.Range(0, clipSoundToggle.Length + 1);
+            int index = UnityEngine.Random.Range(0, songsRadio.Length);
             audioSourceMusic.PlayOneShot(songsRadio[index]);
         }
     }

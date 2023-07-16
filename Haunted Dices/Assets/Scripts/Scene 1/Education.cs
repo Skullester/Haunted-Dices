@@ -30,7 +30,10 @@ public class Education : MonoBehaviour
     private void Start()
     {
         if (isEducationPassed)
+        {
             gameObject.SetActive(false);
+            return;
+        }
         cm.enabled = false;
         StartCoroutine(Timer());
     }

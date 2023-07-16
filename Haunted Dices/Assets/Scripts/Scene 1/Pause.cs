@@ -30,6 +30,12 @@ public class Pause : MonoBehaviour
         //s_dof = tmp;
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            SetPause();
+    }
+
     public void SetPause()
     {
         pauseUI.SetActive(true);

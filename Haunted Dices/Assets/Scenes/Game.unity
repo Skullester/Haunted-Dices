@@ -6069,7 +6069,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1435359966}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TestChangeCards, Assembly-CSharp
         m_MethodName: ChangeCardsOfCharacter
         m_Mode: 3
@@ -7091,7 +7091,7 @@ MonoBehaviour:
   m_IsGlobal: 1
   priority: 0
   blendDistance: 0
-  weight: 1
+  weight: 0.97
   sharedProfile: {fileID: 11400000, guid: 8d872ff3964a2644b9be19c934c94842, type: 2}
 --- !u!1 &627785400
 GameObject:
@@ -10409,7 +10409,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 887878889}
-  - component: {fileID: 887878892}
   m_Layer: 5
   m_Name: Health (1)
   m_TagString: Untagged
@@ -10439,19 +10438,6 @@ RectTransform:
   m_AnchoredPosition: {x: 644.8326, y: -96.00003}
   m_SizeDelta: {x: 797.0526, y: 329.75}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &887878892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887878888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 205ff9fa32483a448b98e6d209ac521f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textHp: {fileID: 0}
 --- !u!114 &887890670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12087,7 +12073,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u042D\u0442\u043E \u0438\u043D\u0434\u0438\u043A\u0430\u0442\u043E\u0440
     \u0434\u0443\u0448 \u0434\u0435\u0442\u0435\u043A\u0442\u0438\u0432\u043E\u0432.\n\u041F\u043E
-    \u0438\u0445 \u0438\u0441\u0442\u0435\u0447\u0435\u043D\u0438\u044E \u0432\u044B
+    \u0438\u0445 \u0438\u0441\u0442\u0435\u0447\u0435\u043D\u0438\u0438 \u0432\u044B
     \u043F\u0440\u043E\u0438\u0433\u0440\u0430\u0435\u0442\u0435. \u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0439\u0442\u0435
     \u0441\u0432\u043E\u0438 \u0441\u043F\u043E\u0441\u043E\u0431\u043D\u043E\u0441\u0442\u0438
     \u0441 \u0443\u043C\u043E\u043C!"
@@ -17890,7 +17876,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1435359965}
-  - component: {fileID: 1435359966}
   m_Layer: 5
   m_Name: SwitchingCharacterBtns (1)
   m_TagString: Untagged
@@ -17921,35 +17906,6 @@ RectTransform:
   m_AnchoredPosition: {x: -949, y: -253}
   m_SizeDelta: {x: 497.12622, y: 530.0365}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1435359966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1435359964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e9e7408388088543ab1b516f4eb014e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardFlipSound: {fileID: 8300000, guid: 4265660c7a389014fbe55f98a7be1456, type: 3}
-  audioSourceSound: {fileID: 1974132064}
-  skillBtnsImgs:
-  - {fileID: 1486441355}
-  - {fileID: 1038905261}
-  skillsSprites:
-  - {fileID: 21300000, guid: 8e6c77609fe0e0443838693e2bdb1b4e, type: 3}
-  - {fileID: 21300000, guid: 0f2857c5f61e1b446a2e8c10ac0ca3ad, type: 3}
-  - {fileID: 21300000, guid: eabce6fb7120fc74a80651c432aedea3, type: 3}
-  - {fileID: 21300000, guid: ff042691ca32a2e488da89f6f4392cd1, type: 3}
-  spritesCharacters:
-  - {fileID: 21300000, guid: 5ec6dc777bdb8434ca7f13b178fe3807, type: 3}
-  - {fileID: 21300000, guid: 3a8edbcae7175ad40a88c5387b77fed4, type: 3}
-  sRenderer: {fileID: 1974132061}
-  animSkills:
-  - {fileID: 1486441357}
-  - {fileID: 1038905263}
 --- !u!1 &1437901578
 GameObject:
   m_ObjectHideFlags: 0
@@ -22963,7 +22919,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1435359966}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SwitchingCharacter, Assembly-CSharp
         m_MethodName: ChangeCardsOfCharacter
         m_Mode: 3
