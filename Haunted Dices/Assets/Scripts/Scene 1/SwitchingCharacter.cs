@@ -30,7 +30,6 @@ public class SwitchingCharacter : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log(indexOfCharacter);
         indexOfCharacter = 0;
 
         for (int i = 0; i < characters.Length; i++)

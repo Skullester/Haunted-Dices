@@ -68,14 +68,15 @@ public class EventTree : MonoBehaviour
     void Update()
     {
         if (indTog.CheckWin())
-            victoryObj.SetActive(true);
         {
+            victoryObj.SetActive(true);
             if (IsBoxFilmsWhy && (IsBathroomWhy || IsGhostWhy)) // не только
                 winImages[3].gameObject.SetActive(true);
             else if (IsBoxFilmsWhy && IsBathroomWhy == false && IsGhostWhy == false) // только
                 winImages[2].gameObject.SetActive(true);
             else if (IsBoxFilmsWhy == false && (IsBathroomWhy || IsGhostWhy)) // не с помощью
                 winImages[0].gameObject.SetActive(true);
+            eventDict.Clear();
         }
     }
 
@@ -91,7 +92,7 @@ public class EventTree : MonoBehaviour
         if (indexChar == 0 & indexSkill == 1) // Мартин орлиный глаз
         {
             audioSourceSounds?.PlayOneShot(soundsPoints[1]);
-            indTog.MissionCompleted(0); //0-Who
+            indTog.MissionCompleted(2); //2-How
 
             hint.CallHintMenu(text[1]);
 
@@ -122,7 +123,7 @@ public class EventTree : MonoBehaviour
         if (indexChar == 0 & indexSkill == 0) // Мартин бескостный язык
         {
             audioSourceSounds?.PlayOneShot(soundsPoints[6]);
-            indTog.MissionCompleted(3); //3-ByWhat
+            indTog.MissionCompleted(1); //1-ByWhat
             hint.CallHintMenu(text[4]);
 
             points[1].gameObject.GetComponent<BoxCollider>().enabled = false; // коллайдер у игрушек пропадает
@@ -132,7 +133,7 @@ public class EventTree : MonoBehaviour
         {
             audioSourceSounds?.PlayOneShot(soundsPoints[6]);
             indTog.MissionCompleted(0); //0-Who
-            indTog.MissionCompleted(3); //3-ByWhat
+            indTog.MissionCompleted(1); //1-ByWhat
             hint.CallHintMenu(text[5]);
 
             points[1].gameObject.GetComponent<BoxCollider>().enabled = false; // коллайдер у игрушек пропадает
@@ -257,7 +258,7 @@ public class EventTree : MonoBehaviour
             hint.CallHintMenu(text[21]);
 
             indTog.MissionCompleted(0); //0-Who
-            indTog.MissionCompleted(1); //1-Why
+            indTog.MissionCompleted(3); //3-Why
 
             IsBoxFilmsWhy = true;
 
@@ -331,7 +332,7 @@ public class EventTree : MonoBehaviour
         }
         if (indexChar == 0 & indexSkill == 1) // Мартин орлиный глаз
         {
-            indTog.MissionCompleted(1); //1-Why
+            indTog.MissionCompleted(3); //3-Why
             IsBathroomWhy = true;
 
             hint.CallHintMenu(text[29]);
@@ -341,7 +342,7 @@ public class EventTree : MonoBehaviour
         }
         if (indexChar == 1 & indexSkill == 0) // Шерон Идеальная отмычка
         {
-            indTog.MissionCompleted(1); //1-Why
+            indTog.MissionCompleted(3); //3-Why
             IsBathroomWhy = true;
 
             hint.CallHintMenu(text[30]);
@@ -389,9 +390,9 @@ public class EventTree : MonoBehaviour
         {
             audioSourceSounds?.PlayOneShot(soundsPoints[7]);
             indTog.MissionCompleted(0); //0-Who
-            indTog.MissionCompleted(1); //1-Why
+            indTog.MissionCompleted(3); //1-Why
             indTog.MissionCompleted(2); //2-How
-            indTog.MissionCompleted(3); //3-ByWhat
+            indTog.MissionCompleted(1); //1-ByWhat
 
             IsGhostWhy = true;
 
