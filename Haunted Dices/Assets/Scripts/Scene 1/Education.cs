@@ -12,6 +12,7 @@ public class Education : MonoBehaviour
 
     [SerializeField]
     private GameObject[] objects;
+    public static bool isPassed;
 
     public void GotItButton()
     {
@@ -19,7 +20,7 @@ public class Education : MonoBehaviour
         {
             cm.enabled = true;
             gameObject.SetActive(false);
-            PlayerPrefs.SetInt("Education", 1);
+            /*  PlayerPrefs.SetInt("Education", 1); */isPassed = true;
             return;
         }
         objects[count - 1].SetActive(false);
@@ -28,11 +29,15 @@ public class Education : MonoBehaviour
 
     private void Start()
     {
-        if (PlayerPrefs.HasKey("Education"))
+        if (isPassed)
         {
             gameObject.SetActive(false);
             return;
-        }
+        } /*  if (PlayerPrefs.HasKey("Education"))
+         {
+             gameObject.SetActive(false);
+             return;
+         } */
         cm.enabled = false;
         StartCoroutine(Timer());
     }
