@@ -589,6 +589,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3d35d3db85a8a1c47829c88fd117d24b, type: 3}
   characterMoving: {fileID: 1974132063}
   hpSystem: {fileID: 234698823}
+  audioSourceMusic: {fileID: 142540148}
   audioSourceSounds: {fileID: 1974132064}
   audioClipHPLost: {fileID: 8300000, guid: c68293341ec4c8b4dbe87bff10f03973, type: 3}
   gameOverObj: {fileID: 686070820}
@@ -1844,7 +1845,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a9aff1fb85885ef4aa1ff6267f572ab7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2465,6 +2466,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3d35d3db85a8a1c47829c88fd117d24b, type: 3}
   characterMoving: {fileID: 1974132063}
   hpSystem: {fileID: 234698823}
+  audioSourceMusic: {fileID: 142540148}
   audioSourceSounds: {fileID: 1974132064}
   audioClipHPLost: {fileID: 8300000, guid: c68293341ec4c8b4dbe87bff10f03973, type: 3}
   gameOverObj: {fileID: 686070820}
@@ -2925,6 +2927,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3d35d3db85a8a1c47829c88fd117d24b, type: 3}
   characterMoving: {fileID: 1974132063}
   hpSystem: {fileID: 234698823}
+  audioSourceMusic: {fileID: 142540148}
   audioSourceSounds: {fileID: 1974132064}
   audioClipHPLost: {fileID: 8300000, guid: c68293341ec4c8b4dbe87bff10f03973, type: 3}
   gameOverObj: {fileID: 686070820}
@@ -7376,6 +7379,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3d35d3db85a8a1c47829c88fd117d24b, type: 3}
   characterMoving: {fileID: 1974132063}
   hpSystem: {fileID: 234698823}
+  audioSourceMusic: {fileID: 142540148}
   audioSourceSounds: {fileID: 1974132064}
   audioClipHPLost: {fileID: 8300000, guid: c68293341ec4c8b4dbe87bff10f03973, type: 3}
   gameOverObj: {fileID: 686070820}
@@ -9094,6 +9098,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3d35d3db85a8a1c47829c88fd117d24b, type: 3}
   characterMoving: {fileID: 1974132063}
   hpSystem: {fileID: 234698823}
+  audioSourceMusic: {fileID: 142540148}
   audioSourceSounds: {fileID: 1974132064}
   audioClipHPLost: {fileID: 8300000, guid: c68293341ec4c8b4dbe87bff10f03973, type: 3}
   gameOverObj: {fileID: 686070820}
@@ -11168,8 +11173,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 1.566633, y: 1.1453718, z: 0.2000017}
-  m_Center: {x: -1.3925364, y: -0.027066262, z: 0}
+  m_Size: {x: 1.5666331, y: 1.2188545, z: 0.20000182}
+  m_Center: {x: -1.3925363, y: 0.009675207, z: 0}
 --- !u!212 &947888103
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11251,6 +11256,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3d35d3db85a8a1c47829c88fd117d24b, type: 3}
   characterMoving: {fileID: 1974132063}
   hpSystem: {fileID: 234698823}
+  audioSourceMusic: {fileID: 142540148}
   audioSourceSounds: {fileID: 1974132064}
   audioClipHPLost: {fileID: 8300000, guid: c68293341ec4c8b4dbe87bff10f03973, type: 3}
   gameOverObj: {fileID: 686070820}
@@ -13289,6 +13295,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3d35d3db85a8a1c47829c88fd117d24b, type: 3}
   characterMoving: {fileID: 1974132063}
   hpSystem: {fileID: 234698823}
+  audioSourceMusic: {fileID: 142540148}
   audioSourceSounds: {fileID: 1974132064}
   audioClipHPLost: {fileID: 8300000, guid: c68293341ec4c8b4dbe87bff10f03973, type: 3}
   gameOverObj: {fileID: 686070820}
@@ -23408,6 +23415,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3d35d3db85a8a1c47829c88fd117d24b, type: 3}
   characterMoving: {fileID: 1974132063}
   hpSystem: {fileID: 234698823}
+  audioSourceMusic: {fileID: 142540148}
   audioSourceSounds: {fileID: 1974132064}
   audioClipHPLost: {fileID: 8300000, guid: c68293341ec4c8b4dbe87bff10f03973, type: 3}
   gameOverObj: {fileID: 686070820}
@@ -25106,6 +25114,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3d35d3db85a8a1c47829c88fd117d24b, type: 3}
   characterMoving: {fileID: 1974132063}
   hpSystem: {fileID: 234698823}
+  audioSourceMusic: {fileID: 142540148}
   audioSourceSounds: {fileID: 1974132064}
   audioClipHPLost: {fileID: 8300000, guid: c68293341ec4c8b4dbe87bff10f03973, type: 3}
   gameOverObj: {fileID: 686070820}
@@ -27255,6 +27264,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3d35d3db85a8a1c47829c88fd117d24b, type: 3}
   characterMoving: {fileID: 1974132063}
   hpSystem: {fileID: 234698823}
+  audioSourceMusic: {fileID: 142540148}
   audioSourceSounds: {fileID: 1974132064}
   audioClipHPLost: {fileID: 8300000, guid: c68293341ec4c8b4dbe87bff10f03973, type: 3}
   gameOverObj: {fileID: 686070820}
@@ -27532,7 +27542,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092213113}
   m_LocalRotation: {x: -0, y: -0, z: 0.7076046, w: 0.7066086}
-  m_LocalPosition: {x: 21.66, y: -0.09, z: 0.00021982193}
+  m_LocalPosition: {x: 21.32, y: 0.15, z: 0.00021982193}
   m_LocalScale: {x: 2.8479934, y: 0.46428996, z: 1.63076}
   m_ConstrainProportionsScale: 0
   m_Children: []
