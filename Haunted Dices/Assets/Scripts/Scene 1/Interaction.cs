@@ -216,7 +216,6 @@ public class Interaction : MonoBehaviour
     public void CloseHint()
     {
         hintPoint.SetActive(false);
-        // Pause.s_dof.active = false;
         playerMoving.enabled = true;
         if (SwitchingCharacter.indexOfCharacter == 0)
             GameObject.Find("MartinDialog").SetActive(false);
@@ -235,7 +234,6 @@ public class Interaction : MonoBehaviour
             gameOverObj.SetActive(true);
             isButtonClicked = false;
             imageEnd.imgGameOver[1].enabled = true;
-            EventTree.eventDict.Clear();
         }
         yield return new WaitForSeconds(4f);
         textDice.text = string.Empty;
@@ -244,7 +242,6 @@ public class Interaction : MonoBehaviour
     public void LockMovement()
     {
         CharacterMoving.animCharacter.SetBool("isRunning", false);
-        //  Pause.s_dof.active = true;
         playerMoving.enabled = false;
         characterMoving.rb.velocity = new Vector2(0, 0);
     }

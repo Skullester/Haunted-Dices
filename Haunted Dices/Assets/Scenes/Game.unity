@@ -1709,6 +1709,7 @@ GameObject:
   - component: {fileID: 142540147}
   - component: {fileID: 142540148}
   - component: {fileID: 142540149}
+  - component: {fileID: 142540150}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1963,6 +1964,18 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cf4a07f0a30e6884da39e3ffc5dd9211, type: 3}
   - {fileID: 8300000, guid: f1fe16ed04e0b304fb7cdb3a5e4aa79a, type: 3}
   - {fileID: 8300000, guid: 781781e9303fff847b3623a356bdb4c7, type: 3}
+--- !u!114 &142540150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142540141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d017d9188bb158143871f4ca54408053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &155419685
 GameObject:
   m_ObjectHideFlags: 0
@@ -3149,7 +3162,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 644.83246, y: -68.453}
+  m_AnchoredPosition: {x: 644.83246, y: -68.453125}
   m_SizeDelta: {x: 797.0526, y: 247.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &234698823
@@ -4284,7 +4297,6 @@ GameObject:
   - component: {fileID: 323229079}
   - component: {fileID: 323229078}
   - component: {fileID: 323229077}
-  - component: {fileID: 323229076}
   - component: {fileID: 323229075}
   m_Layer: 5
   m_Name: RepeatTutorial
@@ -4326,19 +4338,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alpha: 0.5
---- !u!114 &323229076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 323229073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cc6314187083d848aa064fb10571c71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tutorialObj: {fileID: 1612751331}
 --- !u!114 &323229077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4383,7 +4382,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 323229076}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: EducationRepeat, Assembly-CSharp
         m_MethodName: RepeatTutorial
         m_Mode: 1
