@@ -52,6 +52,8 @@ public class EventTree : MonoBehaviour
     public bool IsGhostWhy;
     public static bool isTimePassed = true;
 
+    private AdsYandex ad;
+
     void Awake()
     {
         Interaction.SkillsUsed.Clear();
@@ -86,11 +88,20 @@ public class EventTree : MonoBehaviour
         {
             victoryObj.SetActive(true);
             if (IsBoxFilmsWhy && (IsBathroomWhy || IsGhostWhy)) // не только
+            {
                 winImages[3].gameObject.SetActive(true);
+                ad.Show1();
+            }
             else if (IsBoxFilmsWhy && IsBathroomWhy == false && IsGhostWhy == false) // только
+            {
                 winImages[2].gameObject.SetActive(true);
+                ad.Show1();
+            }
             else if (IsBoxFilmsWhy == false && (IsBathroomWhy || IsGhostWhy)) // не с помощью
+            {
                 winImages[0].gameObject.SetActive(true);
+                ad.Show1();
+            }
         }
     }
 
@@ -108,6 +119,7 @@ public class EventTree : MonoBehaviour
             gameOverobj.gameOverObj.SetActive(true);
             Interaction.isButtonClicked = false;
             imgGameOver[2].enabled = true;
+            ad.Show1();
         }
     }
 
@@ -343,6 +355,7 @@ public class EventTree : MonoBehaviour
 
             StartCoroutine(CloseHintMenu());
             gameOverobj.LockMovement();
+            ad.Show1();
         }
         Interaction.SkillsUsed[(indexChar, indexSkill, 5)] = true;
         isTimePassed = false;
