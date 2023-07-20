@@ -24674,6 +24674,7 @@ GameObject:
   - component: {fileID: 1933549970}
   - component: {fileID: 1933549969}
   - component: {fileID: 1933549971}
+  - component: {fileID: 1933549972}
   - component: {fileID: 1933549968}
   m_Layer: 5
   m_Name: GotItBtn
@@ -24780,7 +24781,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: e6555ba00eb12184b8da29260351d32a, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -24809,6 +24810,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alpha: 0.5
+--- !u!114 &1933549972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933549966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70b91a49eb0f4cd44b6f479fc1d01b16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textHint: {fileID: 0}
+  objText: {fileID: 0}
+  cursorTexture: {fileID: 2800000, guid: 3d6ebe26a02a1454aa382ec47e6987a2, type: 3}
 --- !u!1 &1944611396
 GameObject:
   m_ObjectHideFlags: 0
@@ -29840,6 +29856,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07ca346ee52771649835ac5004f1b939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundOfObjects: []
+  audioSourceCommon: {fileID: 0}
   spritesWarnings:
   - {fileID: 21300000, guid: a599b08f32589e748b9451847191f2c8, type: 3}
   - {fileID: 21300000, guid: 1301126d2475ecb4a8ff26b15acb0f97, type: 3}
@@ -30781,7 +30799,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 6.498047, y: -32}
+  m_AnchoredPosition: {x: 6.498047, y: -31.999939}
   m_SizeDelta: {x: -771.4978, y: -306.07217}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &6353277906180883993
@@ -31009,6 +31027,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07ca346ee52771649835ac5004f1b939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundOfObjects: []
+  audioSourceCommon: {fileID: 0}
   spritesWarnings:
   - {fileID: 21300000, guid: a599b08f32589e748b9451847191f2c8, type: 3}
   - {fileID: 21300000, guid: 1301126d2475ecb4a8ff26b15acb0f97, type: 3}

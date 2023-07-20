@@ -9,6 +9,11 @@ using Unity.VectorGraphics;
 
 public class Buttons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    [SerializeField]
+    private AudioClip[] soundOfObjects;
+
+    [SerializeField]
+    private AudioSource audioSourceCommon;
     private bool isFirst;
 
     [SerializeField]
@@ -25,6 +30,7 @@ public class Buttons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     private GameObject settings;
     private GameObject levelDescription;
     private Vector2 hotSpot = Vector2.zero;
+    private bool isSettings;
 
     [SerializeField]
     private Texture2D cursorTexture;
@@ -34,9 +40,9 @@ public class Buttons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         if (SceneManager.GetActiveScene().buildIndex != 0)
             return;
         settings = transform?.Find("Settings")?.gameObject;
-        levelDescription = transform?.Find("LevelDescription")?.gameObject ?? null;
-        levelSelect = transform?.Find("LevelSelect")?.gameObject ?? null;
-        panelAboutGame = transform?.Find("About")?.gameObject ?? null;
+        levelDescription = transform?.Find("LevelDescription")?.gameObject;
+        levelSelect = transform?.Find("LevelSelect")?.gameObject;
+        panelAboutGame = transform?.Find("About")?.gameObject;
     }
 
     public void OnPointerEnter(PointerEventData pointerEventData)
@@ -52,6 +58,16 @@ public class Buttons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 isFirst = false;
                 imagesWarnings[1].sprite = spritesWarnings[1];
                 break;
+        }
+    }
+
+    private void Update()
+    {
+        if (settings != null && !settings.activeSelf && isSettings)
+        {
+            isSettings = false;
+            audioSourceCommon.Stop();
+            audioSourceCommon.PlayOneShot(soundOfObjects[2]);
         }
     }
 
@@ -78,6 +94,7 @@ public class Buttons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void Play(int indexOfButton)
     {
+        audioSourceCommon.PlayOneShot(soundOfObjects[2]);
         if (levelDescription.activeSelf)
             SceneManager.LoadScene("Game");
         if (levelSelect.activeSelf)
@@ -90,6 +107,7 @@ public class Buttons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void BackToMenu()
     {
+        audioSourceCommon.PlayOneShot(soundOfObjects[2]);
         if (panelAboutGame.activeSelf)
         {
             panelAboutGame.SetActive(false);
@@ -110,11 +128,14 @@ public class Buttons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void ShowSettings()
     {
+        audioSourceCommon.Play();
         settings.SetActive(true);
+        isSettings = true;
     }
 
     public void ShowPanelAboutGame()
     {
+        audioSourceCommon.PlayOneShot(soundOfObjects[0]);
         panelAboutGame.SetActive(true);
     }
 }
