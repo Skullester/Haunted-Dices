@@ -81,6 +81,8 @@ public class Interaction : MonoBehaviour
     private bool isCursorEnter;
     public static bool isSkillUsed;
 
+    private AdsYandex ad;
+
     public static Dictionary<(int, int, int), bool> SkillsUsed =
         new Dictionary<(int, int, int), bool>();
 
@@ -234,6 +236,7 @@ public class Interaction : MonoBehaviour
             gameOverObj.SetActive(true);
             isButtonClicked = false;
             imageEnd.imgGameOver[1].enabled = true;
+            ad.Show1();
         }
         yield return new WaitForSeconds(4f);
         textDice.text = string.Empty;
