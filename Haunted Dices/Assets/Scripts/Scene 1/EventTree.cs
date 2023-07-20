@@ -52,6 +52,7 @@ public class EventTree : MonoBehaviour
     public bool IsGhostWhy;
     public static bool isTimePassed = true;
 
+    [SerializeField]
     private AdsYandex ad;
 
     void Awake()
