@@ -52,9 +52,6 @@ public class EventTree : MonoBehaviour
     public bool IsGhostWhy;
     public static bool isTimePassed = true;
 
-    [SerializeField]
-    private AdsYandex ad;
-
     void Awake()
     {
         Interaction.SkillsUsed.Clear();
@@ -89,20 +86,12 @@ public class EventTree : MonoBehaviour
         {
             victoryObj.SetActive(true);
             if (IsBoxFilmsWhy && (IsBathroomWhy || IsGhostWhy)) // не только
-            {
                 winImages[3].gameObject.SetActive(true);
-                ad.Show1();
-            }
             else if (IsBoxFilmsWhy && IsBathroomWhy == false && IsGhostWhy == false) // только
-            {
+
                 winImages[2].gameObject.SetActive(true);
-                ad.Show1();
-            }
             else if (IsBoxFilmsWhy == false && (IsBathroomWhy || IsGhostWhy)) // не с помощью
-            {
                 winImages[0].gameObject.SetActive(true);
-                ad.Show1();
-            }
         }
     }
 
@@ -111,16 +100,14 @@ public class EventTree : MonoBehaviour
         bool isColiderOn = false;
         yield return new WaitForSeconds(3f);
         for (int i = 0; i < eventDict.Count; i++)
-        {
             if (points[i].gameObject.GetComponent<BoxCollider>().enabled)
                 isColiderOn = true;
-        }
+
         if (!isColiderOn && !imgGameOver[1].enabled)
         {
             gameOverobj.gameOverObj.SetActive(true);
             Interaction.isButtonClicked = false;
             imgGameOver[2].enabled = true;
-            ad.Show1();
         }
     }
 
@@ -356,7 +343,6 @@ public class EventTree : MonoBehaviour
 
             StartCoroutine(CloseHintMenu());
             gameOverobj.LockMovement();
-            ad.Show1();
         }
         Interaction.SkillsUsed[(indexChar, indexSkill, 5)] = true;
         isTimePassed = false;
