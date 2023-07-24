@@ -56,11 +56,10 @@ public class HoverScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         }
         if (objText != null)
         {
-            objText.transform.position = Input.mousePosition;
+            objText.transform.position = transform.position;
             objText?.SetActive(true);
         }
         Cursor.SetCursor(cursorTexture, hotSpot, CursorMode.Auto);
-        print("JointDrive");
     }
 
     public void OnPointerExit(PointerEventData pointerEventData)
