@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.020499136, y: 0.8452783}
   m_AnchorMax: {x: 0.4454853, y: 0.9778425}
-  m_AnchoredPosition: {x: 2.5288086, y: 0.43170166}
+  m_AnchoredPosition: {x: 2.5281982, y: 0.43170166}
   m_SizeDelta: {x: -2.9664001, y: -12.0452}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &191367777
@@ -605,7 +605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 824, y: 284.3}
+  m_AnchoredPosition: {x: 824, y: 321}
   m_SizeDelta: {x: 599.7799, y: 233.97522}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &470191030
@@ -971,7 +971,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 67, y: 38}
+  m_AnchoredPosition: {x: 59, y: 40}
   m_SizeDelta: {x: 207.7925, y: 118.9539}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &584233049
@@ -1105,7 +1105,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -1866.3, y: 8.200012}
+  m_AnchoredPosition: {x: -1866.3, y: 15}
   m_SizeDelta: {x: 207.7925, y: 118.9539}
   m_Pivot: {x: 0.6109351, y: 0.23554404}
 --- !u!114 &621938707
@@ -1471,7 +1471,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -269, y: -412}
+  m_AnchoredPosition: {x: -269, y: -375}
   m_SizeDelta: {x: 880.6694, y: 256.0334}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &776098827
@@ -1555,10 +1555,10 @@ RectTransform:
   m_Father: {fileID: 1933107529}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.26081, y: 0.83268}
-  m_SizeDelta: {x: 1942.4, y: 1000.6}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1065325127
 GameObject:
