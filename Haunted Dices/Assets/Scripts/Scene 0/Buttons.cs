@@ -30,7 +30,6 @@ public class Buttons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     private GameObject settings;
     private GameObject levelDescription;
     private Vector2 hotSpot = Vector2.zero;
-    private bool isSettings;
 
     [SerializeField]
     private Texture2D cursorTexture;
@@ -58,16 +57,6 @@ public class Buttons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 isFirst = false;
                 imagesWarnings[1].sprite = spritesWarnings[1];
                 break;
-        }
-    }
-
-    private void Update()
-    {
-        if (settings != null && !settings.activeSelf && isSettings)
-        {
-            isSettings = false;
-            audioSourceCommon.Stop();
-            audioSourceCommon.PlayOneShot(soundOfObjects[2]);
         }
     }
 
@@ -115,6 +104,8 @@ public class Buttons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         }
         if (settings.activeSelf)
         {
+            audioSourceCommon.Stop();
+            audioSourceCommon.PlayOneShot(soundOfObjects[2]);
             settings.SetActive(false);
             return;
         }
@@ -128,9 +119,9 @@ public class Buttons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void ShowSettings()
     {
-        audioSourceCommon.Play();
+        if (!AudioListener.pause)
+            audioSourceCommon.Play();
         settings.SetActive(true);
-        isSettings = true;
     }
 
     public void ShowPanelAboutGame()

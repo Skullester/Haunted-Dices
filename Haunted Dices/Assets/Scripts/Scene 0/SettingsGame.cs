@@ -78,9 +78,13 @@ public class SettingsGame : MonoBehaviour
     {
         isOn = !isOn;
         int index = Convert.ToInt32(isOn);
+        if (!isOn)
+            audioSourceCommon.Stop();
+        else
+            audioSourceCommon.Play();
+        audioSourceCommon.PlayOneShot(clipSoundToggle[index]);
         imgBtn.sprite = spritesToggleSound[index];
         AudioListener.pause = !isOn;
-        audioSourceCommon.PlayOneShot(clipSoundToggle[index]);
         PlayerPrefs.SetInt("VolumeMutedPref", index);
     }
 
