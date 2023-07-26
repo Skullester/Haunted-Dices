@@ -3450,7 +3450,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274576801}
   m_LocalRotation: {x: -0, y: -0, z: -0.0000058694277, w: 1}
-  m_LocalPosition: {x: 28.07, y: -1.69, z: 0.00021982193}
+  m_LocalPosition: {x: 25.59, y: -1.69, z: 0.00021982193}
   m_LocalScale: {x: 7.6992183, y: 0.46428996, z: 1.63076}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4545,7 +4545,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 344192047}
   m_LocalRotation: {x: -0, y: -0, z: 0.006788181, w: -0.999977}
-  m_LocalPosition: {x: 24.29, y: -19.14, z: 0.00021982193}
+  m_LocalPosition: {x: 22.57, y: -19.12, z: 0.00021982193}
   m_LocalScale: {x: 11.033317, y: 0.46428996, z: 1.63076}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20177,7 +20177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3582810902706118691, guid: 8df6157ef68326a42857a3e4a62ef182, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24595,6 +24595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1924306033}
   - component: {fileID: 1924306034}
+  - component: {fileID: 1924306035}
   m_Layer: 0
   m_Name: "\u041B\u0430\u0434\u043E\u043D\u0438"
   m_TagString: Untagged
@@ -24670,6 +24671,73 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1924306035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924306032}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 2.59
+  m_LightVolumeIntensity: 1
+  m_LightVolumeIntensityEnabled: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensity: 0.7
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0.81
+  m_PointLightOuterRadius: 4.33
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.22175597, y: -0.6983219, z: 0.000000005951563}
+  - {x: -0.14284445, y: -0.71812606, z: 0.000000005951563}
+  - {x: -0.05574738, y: -0.66880643, z: 0.00000016091474}
+  - {x: 0.10267745, y: -0.5465652, z: 0.00000016091474}
+  - {x: 0.2229313, y: -0.5148116, z: 0.00000016091474}
+  - {x: 0.32387242, y: -0.34800974, z: 0.00000016091474}
+  - {x: 0.5274327, y: -0.28609988, z: 0.00000016091474}
+  - {x: 0.69660515, y: -0.15191391, z: 0.00000016091474}
+  - {x: 0.8099619, y: 0.25668463, z: 0.00000016091474}
+  - {x: 0.82473737, y: 0.3471723, z: 0.00000016091474}
+  - {x: 0.750493, y: 0.4102036, z: 0.00000016091474}
+  - {x: 0.64768654, y: 0.51152396, z: 0.00000016091474}
+  - {x: 0.4403356, y: 0.63106996, z: 0.00000016091474}
+  - {x: 0.23249777, y: 0.6901951, z: 0.000000005951563}
+  - {x: -0.097034775, y: 0.666857, z: 0.00000016091474}
+  - {x: -0.5042852, y: 0.509903, z: 0.000000005951563}
+  - {x: -0.6212603, y: 0.14110604, z: 0.00000016091474}
+  - {x: -0.81146103, y: -0.16139428, z: 0.00000016091474}
+  - {x: -0.75800765, y: -0.43445927, z: 0.00000016091474}
+  - {x: 4738053, y: -0.42362657, z: 0.00000016091474}
+  - {x: -0.408186, y: -0.63436234, z: 0.00000016091474}
 --- !u!1 &1933549966
 GameObject:
   m_ObjectHideFlags: 0
@@ -30017,7 +30085,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 61, y: 64}
+  m_AnchoredPosition: {x: 59, y: 40}
   m_SizeDelta: {x: 207.79251, y: 118.95386}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &3249058723899264645
