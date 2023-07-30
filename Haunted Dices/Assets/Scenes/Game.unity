@@ -17605,7 +17605,6 @@ GameObject:
   - component: {fileID: 1370475588}
   - component: {fileID: 1370475587}
   - component: {fileID: 1370475586}
-  - component: {fileID: 1370475585}
   m_Layer: 5
   m_Name: SkillFirstBtn
   m_TagString: Btn1
@@ -17633,21 +17632,6 @@ RectTransform:
   m_AnchoredPosition: {x: 511.82043, y: -326}
   m_SizeDelta: {x: 88.6127, y: 76.1445}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1370475585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1370475583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70b91a49eb0f4cd44b6f479fc1d01b16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textHint: {fileID: 0}
-  objText: {fileID: 0}
-  cursorTexture: {fileID: 2800000, guid: 3d6ebe26a02a1454aa382ec47e6987a2, type: 3}
 --- !u!95 &1370475586
 Animator:
   serializedVersion: 5
@@ -17676,7 +17660,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1370475583}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -26799,7 +26783,6 @@ GameObject:
   - component: {fileID: 2039304370}
   - component: {fileID: 2039304369}
   - component: {fileID: 2039304368}
-  - component: {fileID: 2039304367}
   m_Layer: 5
   m_Name: SkilSecondBtn
   m_TagString: Btn2
@@ -26827,21 +26810,6 @@ RectTransform:
   m_AnchoredPosition: {x: 696.22314, y: -325.97943}
   m_SizeDelta: {x: 63.893, y: 53.018}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2039304367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2039304365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70b91a49eb0f4cd44b6f479fc1d01b16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textHint: {fileID: 0}
-  objText: {fileID: 0}
-  cursorTexture: {fileID: 2800000, guid: 3d6ebe26a02a1454aa382ec47e6987a2, type: 3}
 --- !u!95 &2039304368
 Animator:
   serializedVersion: 5
@@ -26870,7 +26838,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039304365}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -30912,7 +30880,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 6.498047, y: -32}
+  m_AnchoredPosition: {x: 6.498047, y: -31.99997}
   m_SizeDelta: {x: -771.4978, y: -306.07217}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &6353277906180883993

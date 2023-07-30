@@ -20,7 +20,7 @@ public class Education : MonoBehaviour
         {
             cm.enabled = true;
             gameObject.SetActive(false);
-            /*  PlayerPrefs.SetInt("Education", 1); */isPassed = true;
+            isPassed = true;
             return;
         }
         objects[count - 1].SetActive(false);
