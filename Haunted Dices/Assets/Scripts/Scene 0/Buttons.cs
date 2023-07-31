@@ -75,7 +75,6 @@ public class Buttons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     private void OnDisable()
     {
-        print("dis");
         Cursor.SetCursor(null, hotSpot, CursorMode.Auto);
     }
 
