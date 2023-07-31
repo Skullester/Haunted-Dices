@@ -215,6 +215,13 @@ public class Interaction : MonoBehaviour
 
     public void CloseHint()
     {
+        if (Characters.Hp == 0 || EventTree.isEND)
+        {
+            LockMovement();
+            gameOverObj.SetActive(true);
+            isButtonClicked = false;
+            imageEnd.imgGameOver[2].enabled = true;
+        }
         hintPoint.SetActive(false);
         playerMoving.enabled = true;
         if (SwitchingCharacter.indexOfCharacter == 0)
@@ -228,14 +235,7 @@ public class Interaction : MonoBehaviour
         yield return new WaitForSeconds(2f);
         hpSystem.ChangeNumberSouls(randomNumber);
         audioSourceSounds.PlayOneShot(audioClipHPLost);
-        if (Characters.Hp == 0)
-        {
-            LockMovement();
-            gameOverObj.SetActive(true);
-            isButtonClicked = false;
-            imageEnd.imgGameOver[1].enabled = true;
-        }
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(5f);
         textDice.text = string.Empty;
     }
 
