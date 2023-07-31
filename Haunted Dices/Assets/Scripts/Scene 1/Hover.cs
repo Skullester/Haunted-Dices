@@ -15,6 +15,9 @@ public class Hover : MonoBehaviour
     private HoverPoint[] pointsHover;
     public static int indexOfPoint = 0;
 
+    [SerializeField]
+    private GameObject warning;
+
     private int GetIndexOfPoint()
     {
         int indexOfPoint = 0;
@@ -43,7 +46,7 @@ public class Hover : MonoBehaviour
         }
         if (pointsHover[indexOfPoint].isCursorEnter)
             Cursor.SetCursor(pointer, hotSpot, CursorMode.Auto);
-        else
+        else if (!warning.activeSelf)
             Cursor.SetCursor(null, hotSpot, CursorMode.Auto);
     }
 
