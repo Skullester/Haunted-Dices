@@ -29,8 +29,28 @@ public class Dice : MonoBehaviour
 
     public static int GetRandomNumber()
     {
-        int minScore = 1,
+        int minScore = 0,
+            maxScore = 0;
+        if (Interaction.s_buttonIndex == 0 && SwitchingCharacter.indexOfCharacter == 0)
+        {
+            minScore = 1;
+            maxScore = 6;
+        }
+        else if (Interaction.s_buttonIndex == 0 && SwitchingCharacter.indexOfCharacter == 1)
+        {
+            minScore = 3;
             maxScore = 12;
+        }
+        else if (Interaction.s_buttonIndex == 1 && SwitchingCharacter.indexOfCharacter == 0)
+        {
+            minScore = 3;
+            maxScore = 10;
+        }
+        else if (Interaction.s_buttonIndex == 1 && SwitchingCharacter.indexOfCharacter == 1)
+        {
+            minScore = 1;
+            maxScore = 4;
+        }
         int randomNumber = Random.Range(minScore, maxScore + 1);
         if (randomNumber > counterHighScores)
         {

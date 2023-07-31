@@ -87,7 +87,7 @@ public class Interaction : MonoBehaviour
     void Awake()
     {
         playerMoving = player.GetComponent<CharacterMoving>();
-        textHint = hintPoint.transform.Find("Text (TMP)").GetComponent<TMP_Text>();
+        textHint = hintPoint.transform.Find("HintPoint").GetComponentInChildren<TMP_Text>();
     }
 
     void Update()
@@ -163,7 +163,7 @@ public class Interaction : MonoBehaviour
 
     public void CallHintMenu(string textHint = "")
     {
-        Transform textTransorm = hintPoint.transform.Find("Text (TMP)");
+        Transform textTransorm = this.textHint.transform;
         ChangeScaleHint(SwitchingCharacter.indexOfCharacter, textTransorm, tempChar);
         LockMovement();
         if (textHint == string.Empty)
