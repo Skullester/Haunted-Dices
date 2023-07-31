@@ -7,6 +7,8 @@ using UnityEngine.Rendering.Universal;
 
 public class EventTree : MonoBehaviour
 {
+    public static bool isEND;
+
     [SerializeField]
     private GameObject preGameOver;
 
@@ -45,15 +47,20 @@ public class EventTree : MonoBehaviour
     private GameObject[] interactGameObj;
 
     [SerializeField]
+    private CharacterMoving playerMoving;
+
+    [SerializeField]
     private Image[] winImages;
 
     public bool IsBoxFilmsWhy;
     public bool IsBathroomWhy;
     public bool IsGhostWhy;
     public static bool isTimePassed = true;
+    private bool isDemon;
 
     void Awake()
     {
+        isEND = false;
         Interaction.SkillsUsed.Clear();
         for (int i = 0; i < 2; i++)
         {
@@ -65,7 +72,6 @@ public class EventTree : MonoBehaviour
                 }
             }
         }
-
         eventDict.Clear();
         isTimePassed = true;
         eventDict.Add(0, FirstPointInteraction);
@@ -82,13 +88,14 @@ public class EventTree : MonoBehaviour
 
     void Update()
     {
-        if (indTog.CheckWin())
+        if (playerMoving.enabled && isDemon)
+            StartCoroutine(Demon());
+        if (indTog.CheckWin() && playerMoving.enabled)
         {
             victoryObj.SetActive(true);
             if (IsBoxFilmsWhy && (IsBathroomWhy || IsGhostWhy)) // не только
                 winImages[3].gameObject.SetActive(true);
             else if (IsBoxFilmsWhy && IsBathroomWhy == false && IsGhostWhy == false) // только
-
                 winImages[2].gameObject.SetActive(true);
             else if (IsBoxFilmsWhy == false && (IsBathroomWhy || IsGhostWhy)) // не с помощью
                 winImages[0].gameObject.SetActive(true);
@@ -98,17 +105,12 @@ public class EventTree : MonoBehaviour
     IEnumerator CheckBoxColider()
     {
         bool isColiderOn = false;
-        yield return new WaitForSeconds(3f);
+        yield return null;
         for (int i = 0; i < eventDict.Count; i++)
             if (points[i].gameObject.GetComponent<BoxCollider>().enabled)
                 isColiderOn = true;
-
         if (!isColiderOn && !imgGameOver[1].enabled)
-        {
-            gameOverobj.gameOverObj.SetActive(true);
-            Interaction.isButtonClicked = false;
-            imgGameOver[2].enabled = true;
-        }
+            isEND = true;
     }
 
     public void FirstPointInteraction(int indexChar, int indexSkill) //0 Тело
@@ -268,6 +270,19 @@ public class EventTree : MonoBehaviour
         StartCoroutine(CheckBoxColider());
     }
 
+    IEnumerator Demon()
+    {
+        if (playerMoving.enabled && isDemon)
+        {
+            //yield return new WaitForSeconds(0.7f);
+            preGameOver.SetActive(true);
+            yield return new WaitForSeconds(3.0f);
+            gameOverobj.gameOverObj.SetActive(true);
+            Interaction.isButtonClicked = false;
+            imgGameOver[0].enabled = true;
+        }
+    }
+
     public void FifthPointInteraction(int indexChar, int indexSkill) //4 Отпечатки ладоней
     {
         if (!isTimePassed)
@@ -334,7 +349,6 @@ public class EventTree : MonoBehaviour
             audioSourceSounds?.PlayOneShot(soundsPoints[3]);
             interactGameObj[8].SetActive(true); // демон появляется
             hint.CallHintMenu(text[23]);
-
             StartCoroutine(CloseHintMenu());
             gameOverobj.LockMovement();
         }
@@ -346,12 +360,8 @@ public class EventTree : MonoBehaviour
 
     IEnumerator CloseHintMenu()
     {
-        yield return new WaitForSeconds(1.2f);
-        preGameOver.SetActive(true);
-        yield return new WaitForSeconds(4.0f);
-        gameOverobj.gameOverObj.SetActive(true);
-        Interaction.isButtonClicked = false;
-        imgGameOver[0].enabled = true;
+        yield return null;
+        isDemon = true;
     }
 
     IEnumerator TimerPoint()

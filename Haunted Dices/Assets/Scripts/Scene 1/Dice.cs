@@ -36,27 +36,27 @@ public class Dice : MonoBehaviour
             minScore = 1;
             maxScore = 6;
         }
-        else if (Interaction.s_buttonIndex == 0 && SwitchingCharacter.indexOfCharacter == 1)
+        else if (Interaction.s_buttonIndex == 1 && SwitchingCharacter.indexOfCharacter == 0)
         {
             minScore = 3;
             maxScore = 12;
         }
-        else if (Interaction.s_buttonIndex == 1 && SwitchingCharacter.indexOfCharacter == 0)
-        {
-            minScore = 3;
-            maxScore = 10;
-        }
-        else if (Interaction.s_buttonIndex == 1 && SwitchingCharacter.indexOfCharacter == 1)
+        else if (Interaction.s_buttonIndex == 0 && SwitchingCharacter.indexOfCharacter == 1)
         {
             minScore = 1;
             maxScore = 4;
         }
-        int randomNumber = Random.Range(minScore, maxScore + 1);
-        if (randomNumber > counterHighScores)
+        else if (Interaction.s_buttonIndex == 1 && SwitchingCharacter.indexOfCharacter == 1)
         {
-            randomNumber = Random.Range(minScore, maxScore - counterHighScores + 1);
-            counterHighScores--;
+            minScore = 3;
+            maxScore = 10;
         }
+        int randomNumber = Random.Range(minScore, maxScore + 1);
+        /*         if (randomNumber > counterHighScores)
+                {
+                    randomNumber = Random.Range(minScore, maxScore - counterHighScores + 1);
+                    counterHighScores--;
+                } */
         return randomNumber;
     }
 }
