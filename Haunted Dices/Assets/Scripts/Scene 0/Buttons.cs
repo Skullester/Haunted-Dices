@@ -46,18 +46,36 @@ public class Buttons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
-        Cursor.SetCursor(cursorTexture, hotSpot, CursorMode.Auto);
         switch (this.gameObject.tag)
         {
             case "Yes":
+                Cursor.SetCursor(cursorTexture, hotSpot, CursorMode.Auto);
                 isFirst = true;
                 imagesWarnings[0].sprite = spritesWarnings[0];
                 break;
             case "No":
+                Cursor.SetCursor(cursorTexture, hotSpot, CursorMode.Auto);
                 isFirst = false;
                 imagesWarnings[1].sprite = spritesWarnings[1];
                 break;
         }
+    }
+
+    void Start()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+            Cursor.SetCursor(null, hotSpot, CursorMode.Auto);
+    }
+
+    private void OnEnable()
+    {
+        imagesWarnings[0].sprite = spritesWarnings[2];
+        imagesWarnings[1].sprite = spritesWarnings[3];
+    }
+
+    private void OnDisable()
+    {
+        Cursor.SetCursor(null, hotSpot, CursorMode.Auto);
     }
 
     public void OnPointerExit(PointerEventData pointerEventData)
