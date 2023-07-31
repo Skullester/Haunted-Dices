@@ -119,9 +119,6 @@ public class EventTree : MonoBehaviour
         {
             audioSourceSounds?.PlayOneShot(soundsPoints[8]);
             hint.CallHintMenu(text[0]);
-
-            points[1].gameObject.GetComponent<BoxCollider>().enabled = true; // коллайдер игрушек
-            interactGameObj[3].gameObject.GetComponent<Light2D>().enabled = true; // свет игрушек
         }
         if (indexChar == 0 & indexSkill == 1) // Мартин орлиный глаз
         {
@@ -134,6 +131,8 @@ public class EventTree : MonoBehaviour
             interactGameObj[5].SetActive(true); // свет у двери
             points[2].gameObject.GetComponent<BoxCollider>().enabled = true; // коллайдер закрытой двери кладовой
             points[4].gameObject.GetComponent<BoxCollider>().enabled = true;
+            points[1].gameObject.GetComponent<BoxCollider>().enabled = true; // коллайдер игрушек
+            interactGameObj[3].gameObject.GetComponent<Light2D>().enabled = true; // свет игрушек
         }
         if (indexChar == 1 & indexSkill == 0) // Шерон Идеальная отмычка
         {
@@ -142,15 +141,12 @@ public class EventTree : MonoBehaviour
             interactGameObj[0].SetActive(false); // выкл спрайта у тела
             interactGameObj[1].SetActive(true); // вкл спрайт "вскрытый труп"
             interactGameObj[7].SetActive(true); // Появляется письмо
-            points[0].gameObject.GetComponent<BoxCollider>().enabled = false; // коллайдер у тела отрубается
 
+            points[0].gameObject.GetComponent<BoxCollider>().enabled = false; // коллайдер у тела отрубается
             points[3].gameObject.GetComponent<BoxCollider>().enabled = true; // коллайдер у письма появляется
         }
         if (indexChar == 1 & indexSkill == 1) // Шерон Призрачная связь
-        {
             hint.CallHintMenu(text[3]);
-        }
-
         Interaction.SkillsUsed[(indexChar, indexSkill, 0)] = true;
         isTimePassed = false;
         StartCoroutine(TimerPoint());
@@ -259,7 +255,7 @@ public class EventTree : MonoBehaviour
         if (indexChar == 1 & indexSkill == 1) // Шерон Призрачная связь
         {
             hint.CallHintMenu(text[15]);
-
+            interactGameObj[12].SetActive(true);
             points[3].gameObject.GetComponent<BoxCollider>().enabled = false;
             interactGameObj[7].gameObject.GetComponent<Light2D>().enabled = false;
 
@@ -392,7 +388,7 @@ public class EventTree : MonoBehaviour
         if (indexChar == 1 & indexSkill == 1) // Шерон Призрачная связь
         {
             hint.CallHintMenu(text[27]);
-
+            interactGameObj[12].SetActive(true);
             points[7].gameObject.GetComponent<BoxCollider>().enabled = true; // коллайдер у ванны появляется
             points[7].gameObject.GetComponent<Light2D>().enabled = true; // свет у ванны появляется
         }
@@ -414,9 +410,8 @@ public class EventTree : MonoBehaviour
         {
             indTog.MissionCompleted(3); //3-Why
             IsBathroomWhy = true;
-
+            interactGameObj[12].SetActive(false);
             hint.CallHintMenu(text[29]);
-
             points[7].gameObject.GetComponent<BoxCollider>().enabled = false; // коллайдер у ванны пропадает
             points[7].gameObject.GetComponent<Light2D>().enabled = false; // свет у ванны пропадает
         }
@@ -424,9 +419,8 @@ public class EventTree : MonoBehaviour
         {
             indTog.MissionCompleted(3); //3-Why
             IsBathroomWhy = true;
-
+            interactGameObj[12].SetActive(false);
             hint.CallHintMenu(text[30]);
-
             points[7].gameObject.GetComponent<BoxCollider>().enabled = false; // коллайдер у ванны пропадает
             points[7].gameObject.GetComponent<Light2D>().enabled = false; // свет у ванны пропадает
         }
