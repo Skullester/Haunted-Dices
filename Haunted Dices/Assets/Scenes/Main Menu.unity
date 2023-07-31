@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.020499136, y: 0.8452783}
   m_AnchorMax: {x: 0.4454853, y: 0.9778425}
-  m_AnchoredPosition: {x: 2.5266418, y: 0.43170166}
+  m_AnchoredPosition: {x: 2.526703, y: 0.43170166}
   m_SizeDelta: {x: -2.9664001, y: -12.0452}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &191367777
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u0420\u0418\u0417\u0420\u0410\u0427\u041D\u042B\u0415 \u041A\u041E\u0421\u0422\u0418"
+  m_text: HAUNTED DICES
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 265de41c637db8643b4f81a80805d466, type: 2}
   m_sharedMaterial: {fileID: -8334749962514915697, guid: 265de41c637db8643b4f81a80805d466, type: 2}
@@ -1463,16 +1463,16 @@ RectTransform:
   m_GameObject: {fileID: 776098825}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9558, y: 0.9558, z: 0.9558}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1933107529}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.13317963, y: 0}
-  m_AnchorMax: {x: 0.5925449, y: 0.25300002}
-  m_AnchoredPosition: {x: -3, y: -1}
-  m_SizeDelta: {x: -11.330627, y: 2.0333862}
+  m_AnchorMin: {x: 0.11852111, y: 0}
+  m_AnchorMax: {x: 0.5728734, y: 0.252}
+  m_AnchoredPosition: {x: 15, y: -5}
+  m_SizeDelta: {x: -1.3306274, y: 3.0333862}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &776098827
 MonoBehaviour:
@@ -1976,7 +1976,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1204875066
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3225,7 +3225,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1933107529
 RectTransform:
   m_ObjectHideFlags: 0
